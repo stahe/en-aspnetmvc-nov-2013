@@ -828,15 +828,15 @@
 <p><a id="refheading58022676630786"></a></p>
 <h1 id="3-controllers-actions-routing">3. Controllers, Actions, Routing</h1>
 <p>Let’s consider the architecture of an ASP.NET MVC application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000535000001A54D09B830.png" style="display:inline-block; margin:4px;width:17.635cm;height:5.57cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000001A54D09B830.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000535000001A54D09B830.png" width="667" height="211" style="display:inline-block; margin:4px;width:17.635cm;height:5.57cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000001A54D09B830.png" /></td></tr></table>
 
 <p>In this chapter, we examine the process that routes the request [1] to the controller and the action [2a] that will process it, a mechanism known as routing. We also present the various responses [3] that an action can return to the browser. This may be something other than a view <strong>V</strong> [4b].</p>
 <p><a id="refheading10128914791633"></a></p>
 <h2 id="31-the-structure-of-an-aspnet-mvc-project">3.1. The Structure of an ASP.NET MVC Project</h2>
 <p>Let’s build our first ASP.NET MVC project using Visual Studio Express 2012. We’ll add it [1] to the solution used in the previous chapter:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005D80000021E8F8AD477.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.519cm;" class="odt-zoomable" data-zoom-src="images/10000000000005D80000021E8F8AD477.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005D80000021E8F8AD477.png" width="680" height="246" style="display:inline-block; margin:4px;width:17.999cm;height:6.519cm;" class="odt-zoomable" data-zoom-src="images/10000000000005D80000021E8F8AD477.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000515000002D013AB9480.png" style="display:inline-block; margin:4px;width:17.212cm;height:9.525cm;" class="odt-zoomable" data-zoom-src="images/1000000000000515000002D013AB9480.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000515000002D013AB9480.png" width="651" height="360" style="display:inline-block; margin:4px;width:17.212cm;height:9.525cm;" class="odt-zoomable" data-zoom-src="images/1000000000000515000002D013AB9480.png" /></td></tr></table>
 
 <ul>
   <li>in [2], the name of the new project;
@@ -846,7 +846,7 @@
 </ul>
 
 <p>The resulting project is shown in [5]. We will make it [6] the<a id="projet-de-demarrage"></a> starter project of the solution:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000356000003396474F365.png" style="display:inline-block; margin:4px;width:11.298cm;height:10.915cm;" class="odt-zoomable" data-zoom-src="images/1000000000000356000003396474F365.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000356000003396474F365.png" width="427" height="413" style="display:inline-block; margin:4px;width:11.298cm;height:10.915cm;" class="odt-zoomable" data-zoom-src="images/1000000000000356000003396474F365.png" /></td></tr></table>
 
 <p>Note the following points in [5]:</p>
 <ul>
@@ -860,7 +860,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A4000002293447BEB9.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.893cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A4000002293447BEB9.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A4000002293447BEB9.png" width="680" height="261" style="display:inline-block; margin:4px;width:17.999cm;height:6.893cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A4000002293447BEB9.png" /></td></tr></table>
 
 <ul>
   <li>in [1], the [Site.css] file will be the application&#x27;s default CSS file;
@@ -938,7 +938,7 @@
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">   </span></p>
-<p><img src="images/10000000000000960000003AABB03712.png" style="width:3.971cm;height:1.529cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000960000003AABB03712.png" /></p>
+<p><img src="images/10000000000000960000003AABB03712.png" width="150" height="58" style="width:3.971cm;height:1.529cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000960000003AABB03712.png" /></p>
 <ul>
   <li><span style="color: #000000">[Web.config] is the web application&#x27;s configuration file. It is complex. You will need to modify it when using the [Spring.net] framework in a multi-tier architecture.</span>
   </li>
@@ -978,9 +978,9 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
-<p><img src="images/100000000000021E0000026DA93E2986.png" style="width:10.04cm;height:11.501cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000021E0000026DA93E2986.png" /></p>
+<p><img src="images/100000000000021E0000026DA93E2986.png" width="379" height="435" style="width:10.04cm;height:11.501cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000021E0000026DA93E2986.png" /></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004210000006F383712A7.png" style="display:inline-block; margin:4px;width:13.984cm;height:1.469cm;" class="odt-zoomable" data-zoom-src="images/10000000000004210000006F383712A7.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004210000006F383712A7.png" width="529" height="56" style="display:inline-block; margin:4px;width:13.984cm;height:1.469cm;" class="odt-zoomable" data-zoom-src="images/10000000000004210000006F383712A7.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We set [1] as the default namespace. It is then used by default for all classes that will be created in the project.</span></p>
@@ -1032,14 +1032,14 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">For now, you don’t need to understand all of this code. Lines 5–8 define the routes accepted by the web application. Let’s return to the architecture of an ASP.NET MVC application:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000546000001A892AB2DCF.png" style="display:inline-block; margin:4px;width:17.859cm;height:5.609cm;" class="odt-zoomable" data-zoom-src="images/1000000000000546000001A892AB2DCF.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000546000001A892AB2DCF.png" width="675" height="212" style="display:inline-block; margin:4px;width:17.859cm;height:5.609cm;" class="odt-zoomable" data-zoom-src="images/1000000000000546000001A892AB2DCF.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We explained that the [Front Controller] must route a URL to the action responsible for handling it. A route is used to link a URL pattern to an action. These routes are defined in the project’s [App_Start] folder by the [WebApiConfig, FilterConfig, RouteConfig, BundleConfig] classes:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000000A90000005B0B6C09C4.png" style="width:3.129cm;height:1.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000A90000005B0B6C09C4.png" /></p>
+<p><img src="images/10000000000000A90000005B0B6C09C4.png" width="118" height="63" style="width:3.129cm;height:1.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000A90000005B0B6C09C4.png" /></p>
 <p><span style="color: #000000">For now, we are only interested in the [RouteConfig] class:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1111,8 +1111,8 @@
 <p><a id="refheading58026676630786"></a></p>
 <h2 id="33-creating-a-controller-and-a-first-action">3.3. Creating a controller and a first action</h2>
 <p>Let&#x27;s create a first controller:</p>
-<p><img src="images/1000000000000359000000A19E6EE445.png" style="width:14.392cm;height:2.704cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000359000000A19E6EE445.png" /></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000368000001382C98CD67.png" style="display:inline-block; margin:4px;width:11.536cm;height:4.128cm;" class="odt-zoomable" data-zoom-src="images/1000000000000368000001382C98CD67.png" /></td></tr></table>
+<p><img src="images/1000000000000359000000A19E6EE445.png" width="544" height="102" style="width:14.392cm;height:2.704cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000359000000A19E6EE445.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000368000001382C98CD67.png" width="436" height="156" style="display:inline-block; margin:4px;width:11.536cm;height:4.128cm;" class="odt-zoomable" data-zoom-src="images/1000000000000368000001382C98CD67.png" /></td></tr></table>
 
 <ul>
   <li>In [1], enter the controller name with the suffix [Controller];
@@ -1159,7 +1159,7 @@
 </ul>
 
 <p>Let’s create the [Index.cshtml] view:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005820000026E4E43F847.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.939cm;" class="odt-zoomable" data-zoom-src="images/10000000000005820000026E4E43F847.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005820000026E4E43F847.png" width="680" height="300" style="display:inline-block; margin:4px;width:17.999cm;height:7.939cm;" class="odt-zoomable" data-zoom-src="images/10000000000005820000026E4E43F847.png" /></td></tr></table>
 
 <ul>
   <li>in [1], right-click in the action code and select the [Add View] option;
@@ -1212,10 +1212,10 @@
 </ul>
 
 <p>Let’s run the application (CTRL-F5). We get the following page:</p>
-<p><img src="images/10000000000001EB00000112B2039E6A.png" style="width:9.089cm;height:5.069cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB00000112B2039E6A.png" /></p>
+<p><img src="images/10000000000001EB00000112B2039E6A.png" width="344" height="192" style="width:9.089cm;height:5.069cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB00000112B2039E6A.png" /></p>
 <p>In [1], the requested URL was <strong>http://localhost:49302</strong>. There is no path. We know that our router expects URLs in the form <strong>/{controller}/{action}/{id}.</strong> Since these elements are missing, the default values are used. The URL becomes <strong>http://localhost:49302/Home/Index</strong>. The [Home] controller does not exist. Therefore, the URL is rejected.</p>
 <p>Now let’s try the URL <strong>http://localhost:49302/First/Index</strong> by typing it directly into the browser:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028400000136A17562B6.png" style="display:inline-block; margin:4px;width:8.52cm;height:4.101cm;" class="odt-zoomable" data-zoom-src="images/100000000000028400000136A17562B6.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028400000136A17562B6.png" width="322" height="155" style="display:inline-block; margin:4px;width:8.52cm;height:4.101cm;" class="odt-zoomable" data-zoom-src="images/100000000000028400000136A17562B6.png" /></td></tr></table>
 
 <p>The page above was generated by the [Index] action of the [First] controller. The page generated by this action is the [Index] view, whose code was as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1265,7 +1265,7 @@
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>Now let&#x27;s try the URL [/First]:</p>
-<p><img src="images/10000000000001270000009D2838ADF6.png" style="width:5.459cm;height:2.91cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001270000009D2838ADF6.png" /></p>
+<p><img src="images/10000000000001270000009D2838ADF6.png" width="206" height="110" style="width:5.459cm;height:2.91cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001270000009D2838ADF6.png" /></p>
 <p>The URL [/First] was incomplete. It was completed with the route&#x27;s default values and became [/First/Index]. We therefore get the same result as before.</p>
 <p><a id="refheading58028676630786"></a></p>
 <h2 id="34-action-with-a-contentresult-type-result-1">3.4. Action with a [ContentResult] type result - 1</h2>
@@ -1304,7 +1304,7 @@
 
 <p>Rather than using the abstract type [ActionResult], our methods specify the actual return type (lines 9 and 14).</p>
 <p>Let’s request the URL [/First/Action01]. We get the following page:</p>
-<p><img src="images/10000000000001680000007B99162A37.png" style="width:6.669cm;height:2.281cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001680000007B99162A37.png" /></p>
+<p><img src="images/10000000000001680000007B99162A37.png" width="252" height="86" style="width:6.669cm;height:2.281cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001680000007B99162A37.png" /></p>
 <p>Let’s look at the source code of the page received:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&lt;h1&gt;Action [Action01]&lt;/h1&gt;
 </code></pre></div></td></tr></table></div>
@@ -1386,7 +1386,7 @@
 </ul>
 
 <p>In the browser, we get the following page:</p>
-<p><img src="images/10000000000002BE000000B7B494D346.png" style="width:13cm;height:3.39cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002BE000000B7B494D346.png" /></p>
+<p><img src="images/10000000000002BE000000B7B494D346.png" width="491" height="128" style="width:13cm;height:3.39cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002BE000000B7B494D346.png" /></p>
 <p>Let’s look at the server’s HTTP response in Chrome:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
@@ -1420,7 +1420,7 @@
 </ul>
 
 <p>The document sent by the server is this one (Chrome screenshot):</p>
-<p><img src="images/10000000000002760000005B81C3C0C6.png" style="width:13.771cm;height:1.988cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002760000005B81C3C0C6.png" /></p>
+<p><img src="images/10000000000002760000005B81C3C0C6.png" width="520" height="75" style="width:13.771cm;height:1.988cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002760000005B81C3C0C6.png" /></p>
 <p><a id="refheading58032676630786"></a></p>
 <h2 id="36-action-with-a-jsonresult-type-result">3.6. Action with a [JsonResult] type result</h2>
 <p>Let’s add the following action to the [First] controller:</p>
@@ -1447,7 +1447,7 @@
 </ul>
 
 <p>When you request the URL [/First/Action03], the browser displays the following:</p>
-<p><img src="images/10000000000001DA000000766AC21245.png" style="width:8.781cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DA000000766AC21245.png" /></p>
+<p><img src="images/10000000000001DA000000766AC21245.png" width="332" height="83" style="width:8.781cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DA000000766AC21245.png" /></p>
 <p>The server’s HTTP response is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
@@ -1498,7 +1498,7 @@
 </code></pre></div>
 
 <p>When we request the URL [/First/Action04] in Chrome, we get the following response:</p>
-<p><img src="images/100000000000016D000000769909198B.png" style="width:6.759cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016D000000769909198B.png" /></p>
+<p><img src="images/100000000000016D000000769909198B.png" width="255" height="83" style="width:6.759cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016D000000769909198B.png" /></p>
 <p>We can see that the &lt;h3&gt; tag has been interpreted. Let’s look at the server’s HTTP response:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
@@ -1576,9 +1576,9 @@
 
 <p>The action returns a [RedirectResult] type. This type allows sending a redirection request to the client to the URL specified in the constructor (line 4). The client will then send a new GET request to [/First/Action05]. The client therefore makes two requests in total.</p>
 <p>The browser displays the result of the second request:</p>
-<p><img src="images/100000000000016E0000007EE49A70A7.png" style="width:6.78cm;height:2.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016E0000007EE49A70A7.png" /></p>
+<p><img src="images/100000000000016E0000007EE49A70A7.png" width="256" height="88" style="width:6.78cm;height:2.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016E0000007EE49A70A7.png" /></p>
 <p>Let’s examine the server’s HTTP response in Chrome:</p>
-<p><img src="images/10000000000000A1000000C0DD2AF862.png" style="width:2.979cm;height:3.56cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000A1000000C0DD2AF862.png" /></p>
+<p><img src="images/10000000000000A1000000C0DD2AF862.png" width="113" height="135" style="width:2.979cm;height:3.56cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000A1000000C0DD2AF862.png" /></p>
 <p>Above, we see the browser’s two requests. Let’s examine the first request [Action06]. The server’s HTTP response is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
@@ -1733,7 +1733,7 @@
 </ul>
 
 <p>Let’s compile the project and request the URL [/First/Action09?name=someone ][1] and then the URL [/First/Action09 ] [2]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FC000000F0C6E72D5F.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FC000000F0C6E72D5F.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FC000000F0C6E72D5F.png" width="680" height="107" style="display:inline-block; margin:4px;width:17.999cm;height:2.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FC000000F0C6E72D5F.png" /></td></tr></table>
 
 <p>Now let’s look at the server’s HTTP response in Chrome:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
@@ -1754,7 +1754,7 @@
 <p><a id="refheading58046676630786"></a></p>
 <h2 id="313-a-second-controller">3.13. A second controller</h2>
 <p>Let’s create a second controller in the project. We’ll follow the method described in section 3.1, on page<a href="#refheading10128914791633">36</a> . We’ll call it [Second].</p>
-<p><img src="images/10000000000000C50000006F78BB882F.png" style="width:3.649cm;height:2.05cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C50000006F78BB882F.png" /></p>
+<p><img src="images/10000000000000C50000006F78BB882F.png" width="138" height="77" style="width:3.649cm;height:2.05cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C50000006F78BB882F.png" /></p>
 <p>Its generated code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span>
@@ -1793,12 +1793,12 @@
 </code></pre></div>
 
 <p>Then let&#x27;s request the URL [/Second/Action01] using a browser. We get the following response:</p>
-<p><img src="images/10000000000001840000007C98FE446F.png" style="width:7.181cm;height:2.3cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001840000007C98FE446F.png" /></p>
+<p><img src="images/10000000000001840000007C98FE446F.png" width="271" height="87" style="width:7.181cm;height:2.3cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001840000007C98FE446F.png" /></p>
 <p>This URL was requested using an HTTP GET request, as shown in the HTTP logs for the request in Chrome:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>GET /Second/Action01 HTTP/1.1
 </code></pre></div>
 <p>The URL can also be requested using an HTTP POST request. To demonstrate this, let’s use the [Advanced Rest Client] app again:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FB00000180482AEB96.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.514cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FB00000180482AEB96.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FB00000180482AEB96.png" width="680" height="171" style="display:inline-block; margin:4px;width:17.999cm;height:4.514cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FB00000180482AEB96.png" /></td></tr></table>
 
 <ul>
   <li>In [1], launch the application (in the [Applications] tab of a new Chrome tab);
@@ -1873,7 +1873,7 @@
 </ul>
 
 <p>The document sent is as follows:</p>
-<p><img src="images/10000000000001170000006643970F20.png" style="width:5.159cm;height:1.891cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001170000006643970F20.png" /></p>
+<p><img src="images/10000000000001170000006643970F20.png" width="195" height="71" style="width:5.159cm;height:1.891cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001170000006643970F20.png" /></p>
 <p>We get the same document as with the GET request.</p>
 <p><a id="refheading58048676630786"></a></p>
 <h2 id="314-action-filtered-by-an-attribute">3.14. Action filtered by an attribute</h2>
@@ -1891,7 +1891,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpGet</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">serves only the GET request</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpHead</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">serves only the HEAD request</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpOptions</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">supports only the OPTIONS command</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpPut</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">only supports the PUT command</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpDelete</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">is used only for the DELETE command</div></td></tr></table>
 
 <p>Let’s request the URL [/Second/Action02] directly in the browser. It is then requested via a GET. The browser then displays the following response:</p>
-<p><img src="images/100000000000026900000132851B890B.png" style="width:11.419cm;height:5.669cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026900000132851B890B.png" /></p>
+<p><img src="images/100000000000026900000132851B890B.png" width="432" height="214" style="width:11.419cm;height:5.669cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026900000132851B890B.png" /></p>
 <p>The server&#x27;s HTTP response was as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
 <span class="normal"><a href="#__codelineno-19-2">2</a></span>
@@ -1906,7 +1906,7 @@
   </li>
 </ul>
 
-<p><img src="images/10000000000001AD000001572D04E269.png" style="width:7.939cm;height:6.35cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AD000001572D04E269.png" /></p>
+<p><img src="images/10000000000001AD000001572D04E269.png" width="300" height="240" style="width:7.939cm;height:6.35cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AD000001572D04E269.png" /></p>
 <p><a id="refheading58050676630786"></a></p>
 <h2 id="315-retrieving-elements-from-a-route">3.15. Retrieving elements from a route</h2>
 <p>In the two actions described above, we wrote something like:</p>
@@ -1938,7 +1938,7 @@
 
 <p>Line 3: The three route elements can be retrieved using <strong>RouteData.Values[&quot;element&quot;],</strong> where <strong>element</strong> is one of [controller, action, id].</p>
 <p>Let&#x27;s request the URL [http://localhost:49302/Second/Action03]:</p>
-<p><img src="images/100000000000018100000072F6504BF3.png" style="width:7.13cm;height:2.11cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000018100000072F6504BF3.png" /></p>
+<p><img src="images/100000000000018100000072F6504BF3.png" width="269" height="80" style="width:7.13cm;height:2.11cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000018100000072F6504BF3.png" /></p>
 <p>We have successfully retrieved both the controller name and the action name.</p>
 
 

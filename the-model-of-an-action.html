@@ -795,10 +795,10 @@
 <p><a id="refheading58052676630786"></a></p>
 <h1 id="4-the-model-of-an-action">4. The model of an action</h1>
 <p>Let’s return to the architecture of an ASP.NET MVC application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000537000001A9E40F6010.png" style="display:inline-block; margin:4px;width:17.662cm;height:5.623cm;" class="odt-zoomable" data-zoom-src="images/1000000000000537000001A9E40F6010.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000537000001A9E40F6010.png" width="668" height="213" style="display:inline-block; margin:4px;width:17.662cm;height:5.623cm;" class="odt-zoomable" data-zoom-src="images/1000000000000537000001A9E40F6010.png" /></td></tr></table>
 
 <p>In the previous chapter, we looked at the process that routes the request [1] to the controller and action [2a] that will handle it, a mechanism known as routing. We also presented the various responses an action can send back to the browser. So far, we have presented actions that did not process the request presented to them. A request [1] carries various pieces of information that ASP.NET MVC presents [2a] to the action in the form of a <strong>model</strong>. This term should not be confused with the <strong>M</strong> model of a <strong>V</strong> view [2c] that is produced by the action:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000061C00000091EF5447AE.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.669cm;" class="odt-zoomable" data-zoom-src="images/100000000000061C00000091EF5447AE.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000061C00000091EF5447AE.png" width="680" height="63" style="display:inline-block; margin:4px;width:17.999cm;height:1.669cm;" class="odt-zoomable" data-zoom-src="images/100000000000061C00000091EF5447AE.png" /></td></tr></table>
 
 <ul>
   <li>the client’s HTTP request arrives at [1];
@@ -816,9 +816,9 @@
 <p><a id="refheading58054676630786"></a></p>
 <h2 id="41-initializing-action-parameters">4.1. Initializing Action Parameters</h2>
 <p>We add [1] a new basic ASP.NET MVC project to the existing solution:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A600000222F42F5117.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.795cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A600000222F42F5117.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A600000222F42F5117.png" width="680" height="257" style="display:inline-block; margin:4px;width:17.999cm;height:6.795cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A600000222F42F5117.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E0000031BFB58988F.png" style="display:inline-block; margin:4px;width:17.542cm;height:10.518cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E0000031BFB58988F.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E0000031BFB58988F.png" width="663" height="398" style="display:inline-block; margin:4px;width:17.542cm;height:10.518cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E0000031BFB58988F.png" /></td></tr></table>
 
 <ul>
   <li>in [2], the name of the new project;
@@ -831,7 +831,7 @@
 
 <p>We will make the new project the startup project for the solution.</p>
 <p>As done in Section 3.1, we create a controller named [First] [1]:</p>
-<p><img src="images/10000000000000AF000000900D740575.png" style="width:3.24cm;height:2.671cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000AF000000900D740575.png" /></p>
+<p><img src="images/10000000000000AF000000900D740575.png" width="122" height="101" style="width:3.24cm;height:2.671cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000AF000000900D740575.png" /></p>
 <p>In this controller, we create the following action [Action01]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
@@ -854,7 +854,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Request.Form[&quot;name&quot;]</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">a parameter named [name] sent by a POST request</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>RouteData.Values[&quot;name&quot;]</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">a URL element named [name]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Request.QueryString[&quot;name&quot;]</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">a parameter named [name] sent by a GET request</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Request.Files[&quot;name&quot;]</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">an uploaded file named [name]</div></td></tr></table>
 
 <p>Let’s examine these different cases. Let’s enter the URL [/First/Action01?name=someone] directly into the browser. We get the following response:</p>
-<p><img src="images/10000000000001E30000007C82924AE4.png" style="width:8.939cm;height:2.3cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E30000007C82924AE4.png" /></p>
+<p><img src="images/10000000000001E30000007C82924AE4.png" width="338" height="87" style="width:8.939cm;height:2.3cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E30000007C82924AE4.png" /></p>
 <p>The browser’s HTTP request was as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -880,7 +880,7 @@
 <p><span style="color: #000000">This code provides the response sent to the client:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000016800000059F2477EEE.png" style="width:6.669cm;height:1.649cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016800000059F2477EEE.png" /></p>
+<p><img src="images/100000000000016800000059F2477EEE.png" width="252" height="62" style="width:6.669cm;height:1.649cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016800000059F2477EEE.png" /></p>
 <p><strong>Note</strong>: The parameter binding mechanism is <strong>case-insensitive</strong>. So if our action is defined as:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01(</span><span style="color:#0000ff">string</span><span style="color:#000000"> NOM)</span></span>
@@ -890,7 +890,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Now, let’s request the same URL with a POST. To do this, we’ll use the [Advanced Rest Client] application:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FA0000021A09A529B6.png" style="display:inline-block; margin:4px;width:6.694cm;height:7.117cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FA0000021A09A529B6.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FA0000021A09A529B6.png" width="253" height="269" style="display:inline-block; margin:4px;width:6.694cm;height:7.117cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FA0000021A09A529B6.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <ul>
@@ -905,7 +905,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s send this request and look at the HTTP logs. The HTTP request is as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005490000020F18457CB3.png" style="display:inline-block; margin:4px;width:17.9cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/10000000000005490000020F18457CB3.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005490000020F18457CB3.png" width="677" height="264" style="display:inline-block; margin:4px;width:17.9cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/10000000000005490000020F18457CB3.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <ul>
@@ -951,12 +951,12 @@
 <p><span style="color: #000000">Now, let’s recompile the application and request the URL [/First/Action01/zébulon] directly in the browser. We get the following response:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001B300000083D6AE41C1.png" style="width:8.05cm;height:2.431cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B300000083D6AE41C1.png" /></p>
+<p><img src="images/10000000000001B300000083D6AE41C1.png" width="304" height="92" style="width:8.05cm;height:2.431cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B300000083D6AE41C1.png" /></p>
 <p><span style="color: #000000">Among the values tested for the &quot;name&quot; parameter</span><em><span style="color: #000000">—Request.Form[&quot;name&quot;], </span></em><em><span style="color: #2323dc">RouteData.Values[&quot;name&quot;]</span></em><em><span style="color: #000000">, Request.QueryString[&quot;name&quot;], Request.Files[&quot;name&quot;]</span></em><span style="color: #000000">—the second one worked.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s make the same request using a POST request and [Advanced Rest Client]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AD00000222A11C4649.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.763cm;" class="odt-zoomable" data-zoom-src="images/10000000000005AD00000222A11C4649.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AD00000222A11C4649.png" width="680" height="256" style="display:inline-block; margin:4px;width:17.999cm;height:6.763cm;" class="odt-zoomable" data-zoom-src="images/10000000000005AD00000222A11C4649.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <ul>
@@ -995,11 +995,11 @@
 <p><span style="color: #000000">Let’s request the URL [</span><strong><span style="color: #000000">http://localhost:55483/First/Action02?age=21</span></strong><span style="color: #000000">]. We get the following page:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001B80000007669369E94.png" style="width:8.149cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B80000007669369E94.png" /></p>
+<p><img src="images/10000000000001B80000007669369E94.png" width="308" height="83" style="width:8.149cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B80000007669369E94.png" /></p>
 <p><span style="color: #000000">Let&#x27;s request the URL [</span><strong><span style="color: #000000">http://localhost:55483/First/Action02?age=21x</span></strong><span style="color: #000000">]. We get the following page:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001DF00000145F65CEB4F.png" style="width:8.871cm;height:6.02cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DF00000145F65CEB4F.png" /></p>
+<p><img src="images/10000000000001DF00000145F65CEB4F.png" width="335" height="228" style="width:8.871cm;height:6.02cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DF00000145F65CEB4F.png" /></p>
 <p><span style="color: #000000">This time, we received an error page. It is interesting to look at the HTTP headers sent by the server in this case:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -1035,7 +1035,7 @@
 <p><span style="color: #000000">Let’s request the URL [</span><strong><span style="color: #000000">http://localhost:55483/First/Action03?age=21x</span></strong><span style="color: #000000">]. We get the following page:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001B30000007821A5ED57.png" style="width:8.05cm;height:2.221cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B30000007821A5ED57.png" /></p>
+<p><img src="images/10000000000001B30000007821A5ED57.png" width="304" height="84" style="width:8.05cm;height:2.221cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B30000007821A5ED57.png" /></p>
 <p><span style="color: #000000">ASP.NET MVC was unable to convert [21x] to an </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000"> type. It therefore assigned the value </span><strong><span style="color: #000000">null </span></strong><span style="color: #000000">to the [age] parameter, as permitted by its </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000"> type. However, it is possible to determine whether the parameter received a value from the request or not.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We create the following new action [Action04]:</span></p>
@@ -1064,7 +1064,7 @@
 <p><span style="color: #000000">Let’s request the URL [</span><strong><span style="color: #000000">http://localhost:55483/First/Action04?age=21x</span></strong><span style="color: #000000">]. We get the following page:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001BD00000076AF114E5F.png" style="width:8.241cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001BD00000076AF114E5F.png" /></p>
+<p><img src="images/10000000000001BD00000076AF114E5F.png" width="311" height="83" style="width:8.241cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001BD00000076AF114E5F.png" /></p>
 <p><span style="color: #000000">ASP.NET MVC was unable to convert [21x] to type </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000">. It therefore assigned the value </span><strong><span style="color: #000000">null </span></strong><span style="color: #000000">to the [age] parameter, as permitted by its </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000"> type. However, there were conversion errors, as shown by the value of [valid].</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">It is possible to get the error message associated with a failed conversion. Let’s examine the following new action:</span></p>
@@ -1189,7 +1189,7 @@
 <p><span style="color: #000000">Let’s request the URL [</span><strong><span style="color: #000000">http://localhost:55483/First/Action05?age=21x</span></strong><span style="color: #000000">]. We get the following page:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000002DD0000008E8489DDD0.png" style="width:13.57cm;height:2.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002DD0000008E8489DDD0.png" /></p>
+<p><img src="images/10000000000002DD0000008E8489DDD0.png" width="513" height="99" style="width:13.57cm;height:2.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002DD0000008E8489DDD0.png" /></p>
 <p><a id="refheading58058676630786"></a></p>
 <h2 id="43-an-action-with-multiple-parameters">4.3. An action with multiple parameters</h2>
 <p><span style="color: #000000">Consider the following new action:</span></p>
@@ -1213,13 +1213,13 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The rules described above now apply to both parameters. Here are some examples of execution:</span></p>
 <p><span style="color: #000000"> </span></p>
-<p><img src="images/10000000000002D0000000919132A93E.png" style="width:13.33cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D0000000919132A93E.png" /></p>
-<p><img src="images/100000000000025C0000007DD19712C8.png" style="width:11.15cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025C0000007DD19712C8.png" /></p>
+<p><img src="images/10000000000002D0000000919132A93E.png" width="504" height="102" style="width:13.33cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D0000000919132A93E.png" /></p>
+<p><img src="images/100000000000025C0000007DD19712C8.png" width="421" height="87" style="width:11.15cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025C0000007DD19712C8.png" /></p>
 <p><a id="refheading58060676630786"></a></p>
 <h2 id="44-using-a-class-as-an-action-model">4.4. Using a class as an action model</h2>
 <p><span style="color: #000000">Let’s define a class that will serve as the model for an action. We’ll place it in the [Models] folder [1].</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000160000000B7E5E62470.png" style="display:inline-block; margin:4px;width:4.657cm;height:2.422cm;" class="odt-zoomable" data-zoom-src="images/1000000000000160000000B7E5E62470.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000160000000B7E5E62470.png" width="176" height="92" style="display:inline-block; margin:4px;width:4.657cm;height:2.422cm;" class="odt-zoomable" data-zoom-src="images/1000000000000160000000B7E5E62470.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Its code will be as follows:</span></p>
@@ -1257,13 +1257,13 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s revisit the same two examples as before:</span></p>
 <p><span style="color: #000000"> </span></p>
-<p><img src="images/10000000000002D400000092CCDC4975.png" style="width:13.33cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D400000092CCDC4975.png" /></p>
-<p><img src="images/100000000000025D000000809AA65E67.png" style="width:11.15cm;height:2.371cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025D000000809AA65E67.png" /></p>
+<p><img src="images/10000000000002D400000092CCDC4975.png" width="504" height="102" style="width:13.33cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D400000092CCDC4975.png" /></p>
+<p><img src="images/100000000000025D000000809AA65E67.png" width="421" height="90" style="width:11.15cm;height:2.371cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025D000000809AA65E67.png" /></p>
 <p><span style="color: #000000">Note that parameter binding is case-insensitive. The request parameters were [age] and [weight]. They populated the [Age] and [Weight] properties of the [ModelAction01] class.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Furthermore, we have so far used [GET] HTTP requests. Let’s show that [POST] requests behave the same way. To do this, let’s use the [Advanced Rest Client] application again:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D700000229F6675F40.png" style="display:inline-block; margin:4px;width:6.232cm;height:7.317cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D700000229F6675F40.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D700000229F6675F40.png" width="236" height="277" style="display:inline-block; margin:4px;width:6.232cm;height:7.317cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D700000229F6675F40.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <ul>
@@ -1278,7 +1278,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We get the same response as with the GET request:</span></p>
 <p><span style="color: #000000"> </span></p>
-<p><img src="images/100000000000049300000055ECCB8246.png" style="width:17.729cm;height:1.286cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000049300000055ECCB8246.png" /></p>
+<p><img src="images/100000000000049300000055ECCB8246.png" width="670" height="49" style="width:17.729cm;height:1.286cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000049300000055ECCB8246.png" /></p>
 <p><a id="refheading258461901815618"></a></p>
 <h2 id="45-action-model-with-validation-constraints-1">4.5. Action model with validation constraints - 1</h2>
 <p><span style="color: #000000">Using the previous model:</span></p>
@@ -1312,7 +1312,7 @@
 <p><span style="color: #000000">Lines 5 and 6: the [Weight] and [Age] properties can no longer have the value [null]. Let&#x27;s see what happens with this new model when the [weight] and [age] parameters are missing from the request.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000024C0000007FC4C3BCC7.png" style="width:10.89cm;height:2.35cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024C0000007FC4C3BCC7.png" /></p>
+<p><img src="images/100000000000024C0000007FC4C3BCC7.png" width="412" height="89" style="width:10.89cm;height:2.35cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024C0000007FC4C3BCC7.png" /></p>
 <p><span style="color: #000000">There were no errors, and the [Weight] and [Age] properties retained their initialization value: 0. ASP.NET MVC:</span></p>
 <ul>
   <li><span style="color: #000000">created an instance of the model using `</span><i><span style="color: #000000">new ActionModel01</span></i><span style="color: #000000">`. This is where the [Weight] and [Age] properties were assigned the value 0;</span>
@@ -1327,7 +1327,7 @@
 <p><span style="color: #000000">Consider the following new action model:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">   </span></p>
-<p><img src="images/10000000000000B90000006B7CED3721.png" style="width:3.431cm;height:1.981cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000B90000006B7CED3721.png" /></p>
+<p><img src="images/10000000000000B90000006B7CED3721.png" width="130" height="75" style="width:3.431cm;height:1.981cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000B90000006B7CED3721.png" /></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.ComponentModel.DataAnnotations;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
@@ -1379,14 +1379,14 @@
 <p><span style="color: #000000">Let&#x27;s run some tests:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000002DF0000008B2A9D7224.png" style="width:13.61cm;height:2.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002DF0000008B2A9D7224.png" /></p>
+<p><img src="images/10000000000002DF0000008B2A9D7224.png" width="514" height="97" style="width:13.61cm;height:2.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002DF0000008B2A9D7224.png" /></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000002F10000008D4185AEE0.png" style="width:13.94cm;height:2.611cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002F10000008D4185AEE0.png" /></p>
+<p><img src="images/10000000000002F10000008D4185AEE0.png" width="527" height="99" style="width:13.94cm;height:2.611cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002F10000008D4185AEE0.png" /></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000002E30000009092A6B982.png" style="width:13.681cm;height:2.671cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002E30000009092A6B982.png" /></p>
+<p><img src="images/10000000000002E30000009092A6B982.png" width="517" height="101" style="width:13.681cm;height:2.671cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002E30000009092A6B982.png" /></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000025E0000007DF1993F2E.png" style="width:11.22cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025E0000007DF1993F2E.png" /></p>
+<p><img src="images/100000000000025E0000007DF1993F2E.png" width="424" height="87" style="width:11.22cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025E0000007DF1993F2E.png" /></p>
 <p><span style="color: #000000">Errors are detected correctly. Now, let&#x27;s update the model as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1409,7 +1409,7 @@
 <p><span style="color: #000000">Lines 8 and 11: the properties can no longer have the value [null]. Let’s compile and run the test again without parameters:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000002FB0000008BEB209C5E.png" style="width:14.131cm;height:2.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002FB0000008BEB209C5E.png" /></p>
+<p><img src="images/10000000000002FB0000008BEB209C5E.png" width="534" height="97" style="width:14.131cm;height:2.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002FB0000008BEB209C5E.png" /></p>
 <p><span style="color: #000000">The absence of parameters caused the [Weight] and [Age] properties to retain the value they acquired when the model was instantiated: 0. Validation </span><strong><span style="color: #000000">then</span></strong><span style="color: #000000"> occurs. The [Required] attribute is then satisfied. We can see that the error message above is for the [Range] attribute. Therefore, to check for the presence of a parameter, the associated property must be </span><em><span style="color: #000000">nullable</span></em><span style="color: #000000">, i.e., it must be able to accept the value </span><em><span style="color: #000000">null</span></em><span style="color: #000000">.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s return to the initial [ActionModel02] model and consider an action whose model consists of an [ActionModel02] instance and a </span><em><span style="color: #000000">nullable</span></em><span style="color: #000000"> [DateTime] type:</span></p>
@@ -1428,21 +1428,21 @@
 <p><span style="color: #000000">Let&#x27;s run a few tests:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000002F30000008C11907953.png" style="width:13.981cm;height:2.589cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002F30000008C11907953.png" /></p>
+<p><img src="images/10000000000002F30000008C11907953.png" width="528" height="98" style="width:13.981cm;height:2.589cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002F30000008C11907953.png" /></p>
 <p><span style="color: #000000">We did not pass any parameters to the action. The [Required] attributes on the [Weight] and [Age] properties did their job. The date, however, received the </span><em><span style="color: #000000">null</span></em><span style="color: #000000"> value and no errors were reported.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Now let’s pass invalid parameters:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000002E40000009E74F5DE21.png" style="width:13.7cm;height:2.93cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002E40000009E74F5DE21.png" /></p>
+<p><img src="images/10000000000002E40000009E74F5DE21.png" width="518" height="111" style="width:13.7cm;height:2.93cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002E40000009E74F5DE21.png" /></p>
 <p><span style="color: #000000">Now let’s pass valid values:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000033300000084EE2C4D47.png" style="width:15.169cm;height:2.439cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000033300000084EE2C4D47.png" /></p>
+<p><img src="images/100000000000033300000084EE2C4D47.png" width="573" height="92" style="width:15.169cm;height:2.439cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000033300000084EE2C4D47.png" /></p>
 <p><span style="color: #000000">Let’s examine other validation constraints. The new action model is as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">   </span></p>
-<p><img src="images/10000000000000AB000000793D923D1F.png" style="width:3.17cm;height:2.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000AB000000793D923D1F.png" /></p>
+<p><img src="images/10000000000000AB000000793D923D1F.png" width="120" height="85" style="width:3.17cm;height:2.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000AB000000793D923D1F.png" /></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.ComponentModel.DataAnnotations;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
@@ -1509,20 +1509,20 @@
 <p><span style="color: #000000">First, without parameters:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000038100000092744C1112.png" style="width:16.611cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000038100000092744C1112.png" /></p>
+<p><img src="images/100000000000038100000092744C1112.png" width="628" height="102" style="width:16.611cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000038100000092744C1112.png" /></p>
 <p><span style="color: #000000">Then with invalid parameters:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/1000000000000388000000A1676642CB.png" style="width:16.739cm;height:2.979cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000388000000A1676642CB.png" /></p>
+<p><img src="images/1000000000000388000000A1676642CB.png" width="633" height="113" style="width:16.739cm;height:2.979cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000388000000A1676642CB.png" /></p>
 <p><span style="color: #000000">Then with valid parameters:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000003150000007E26B3CF8D.png" style="width:14.61cm;height:2.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003150000007E26B3CF8D.png" /></p>
+<p><img src="images/10000000000003150000007E26B3CF8D.png" width="552" height="88" style="width:14.61cm;height:2.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003150000007E26B3CF8D.png" /></p>
 <p><a id="refheading58062676630786"></a></p>
 <h2 id="46-action-model-with-validity-constraints-2">4.6. Action model with validity constraints - 2</h2>
 <p><span style="color: #000000">We introduce additional integrity constraints. The new action model will be the following [ActionModel04] class:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000159000000F3A47872E8.png" style="display:inline-block; margin:4px;width:4.565cm;height:3.216cm;" class="odt-zoomable" data-zoom-src="images/1000000000000159000000F3A47872E8.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000159000000F3A47872E8.png" width="173" height="122" style="display:inline-block; margin:4px;width:4.565cm;height:3.216cm;" class="odt-zoomable" data-zoom-src="images/1000000000000159000000F3A47872E8.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1570,7 +1570,7 @@
 </code></pre></div>
 
 <p>To test the [Action11] action, we use the [Advanced Rest Client] application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002ED0000036355D360A3.png" style="display:inline-block; margin:4px;width:9.91cm;height:11.471cm;" class="odt-zoomable" data-zoom-src="images/10000000000002ED0000036355D360A3.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002ED0000036355D360A3.png" width="375" height="434" style="display:inline-block; margin:4px;width:9.91cm;height:11.471cm;" class="odt-zoomable" data-zoom-src="images/10000000000002ED0000036355D360A3.png" /></td></tr></table>
 
 <ul>
   <li>in [1], the URL of the [Action11] action;
@@ -1583,7 +1583,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AA000000C6C52B9039.png" style="display:inline-block; margin:4px;width:15.796cm;height:2.619cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AA000000C6C52B9039.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AA000000C6C52B9039.png" width="597" height="99" style="display:inline-block; margin:4px;width:15.796cm;height:2.619cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AA000000C6C52B9039.png" /></td></tr></table>
 
 <ul>
   <li>in [6], the POST parameters.
@@ -1591,17 +1591,17 @@
 </ul>
 
 <p>For this request, we receive the following response:</p>
-<p><img src="images/10000000000004120000005C525584F9.png" style="width:16.54cm;height:1.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004120000005C525584F9.png" /></p>
+<p><img src="images/10000000000004120000005C525584F9.png" width="625" height="55" style="width:16.54cm;height:1.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004120000005C525584F9.png" /></p>
 <p>Let’s pass invalid parameters:</p>
-<p><img src="images/100000000000010F000001EFDF14E5EC.png" style="width:5.02cm;height:9.17cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010F000001EFDF14E5EC.png" /></p>
+<p><img src="images/100000000000010F000001EFDF14E5EC.png" width="190" height="347" style="width:5.02cm;height:9.17cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010F000001EFDF14E5EC.png" /></p>
 <p>We then get the following response:</p>
 <p><span style="color: #000000"> </span></p>
-<p><img src="images/10000000000004A900000054CF6C1668.png" style="width:17.36cm;height:1.221cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004A900000054CF6C1668.png" /></p>
+<p><img src="images/10000000000004A900000054CF6C1668.png" width="656" height="46" style="width:17.36cm;height:1.221cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004A900000054CF6C1668.png" /></p>
 <p><a id="refheading58064676630786"></a></p>
 <h2 id="47-action-model-with-validity-constraints-3">4.7. Action model with validity constraints - 3</h2>
 <p><span style="color: #000000">Sometimes the available integrity constraints aren&#x27;t enough. In that case, you can create your own. In particular, you can use a model that implements the [IValidatableObject] interface. In this case, you add your own model validations to the [Validate] method of this interface. Let&#x27;s look at an example. The new action model will be the following [ActionModel05] class:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000CFF06C3098.png" style="display:inline-block; margin:4px;width:3.942cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000CFF06C3098.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000CFF06C3098.png" width="149" height="104" style="display:inline-block; margin:4px;width:3.942cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000CFF06C3098.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1662,7 +1662,7 @@
 <p><span style="color: #000000">Here is an example of execution:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001FC00000079F4909684.png" style="width:9.41cm;height:2.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001FC00000079F4909684.png" /></p>
+<p><img src="images/10000000000001FC00000079F4909684.png" width="356" height="85" style="width:9.41cm;height:2.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001FC00000079F4909684.png" /></p>
 <p><a id="refheading58066676630786"></a></p>
 <h2 id="48-action-model-of-type-table-or-list">4.8. Action model of type Table or List</h2>
 <p><span style="color: #000000">Consider the following action [Action13]:</span></p>
@@ -1691,7 +1691,7 @@
 <p><span style="color: #000000">Here is an example:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000002830000007DBA96483F.png" style="width:11.91cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002830000007DBA96483F.png" /></p>
+<p><img src="images/10000000000002830000007DBA96483F.png" width="450" height="87" style="width:11.91cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002830000007DBA96483F.png" /></p>
 <p><span style="color: #000000">The model can also be a list:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
@@ -1713,11 +1713,11 @@
 <p><span style="color: #000000">The model here is a list of integers (line 2). Here is the first run:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000022C0000007B7504D046.png" style="width:10.299cm;height:2.281cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022C0000007B7504D046.png" /></p>
+<p><img src="images/100000000000022C0000007B7504D046.png" width="389" height="86" style="width:10.299cm;height:2.281cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022C0000007B7504D046.png" /></p>
 <p><span style="color: #000000">and a second one:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000023F00000089748B880F.png" style="width:10.719cm;height:2.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000023F00000089748B880F.png" /></p>
+<p><img src="images/100000000000023F00000089748B880F.png" width="405" height="96" style="width:10.719cm;height:2.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000023F00000089748B880F.png" /></p>
 <p><a id="refheading58068676630786"></a></p>
 <h2 id="49-filtering-an-action-model">4.9. Filtering an action model</h2>
 <p><span style="color: #000000">Sometimes we have a model but want only certain elements of the model to be initialized by the HTTP request. Consider the following action model [ActionModel06]:</span></p>
@@ -1758,7 +1758,7 @@
 </code></pre></div>
 
 <p>Here is an example of execution:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004180000011A7343A515.png" style="display:inline-block; margin:4px;width:13.864cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004180000011A7343A515.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004180000011A7343A515.png" width="524" height="141" style="display:inline-block; margin:4px;width:13.864cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004180000011A7343A515.png" /></td></tr></table>
 
 <ul>
   <li>in [1]: we pass the [info2] parameter in the URL;
@@ -1770,7 +1770,7 @@
 <p><a id="refheading2400667523874"></a></p>
 <h2 id="410-extending-the-data-binding-model">4.10. Extending the data binding model</h2>
 <p>Let’s revisit the execution architecture of an action:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003FA0000013117EB7B56.png" style="display:inline-block; margin:4px;width:13.467cm;height:4.036cm;" class="odt-zoomable" data-zoom-src="images/10000000000003FA0000013117EB7B56.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003FA0000013117EB7B56.png" width="509" height="153" style="display:inline-block; margin:4px;width:13.467cm;height:4.036cm;" class="odt-zoomable" data-zoom-src="images/10000000000003FA0000013117EB7B56.png" /></td></tr></table>
 
 <p>The action class is instantiated at the start of the client request and destroyed at the end of it. Therefore, it cannot be used to store data between requests, even if it is called repeatedly. You may want to store two types of data:</p>
 <ul>
@@ -1790,7 +1790,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005930000011EB8C6AD74.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.605cm;" class="odt-zoomable" data-zoom-src="images/10000000000005930000011EB8C6AD74.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005930000011EB8C6AD74.png" width="680" height="136" style="display:inline-block; margin:4px;width:17.999cm;height:3.605cm;" class="odt-zoomable" data-zoom-src="images/10000000000005930000011EB8C6AD74.png" /></td></tr></table>
 
 <p>Above, we show the types of memory an action has access to:</p>
 <ul>
@@ -1906,14 +1906,14 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">[Action16] is requested once [1], then the page is refreshed [F5] twice [2]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C4000000F6927C44F8.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.999cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C4000000F6927C44F8.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C4000000F6927C44F8.png" width="680" height="113" style="display:inline-block; margin:4px;width:17.999cm;height:2.999cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C4000000F6927C44F8.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In [2], the client made a total of three requests. Each time, it was able to retrieve the counter updated by the previous request.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">To simulate a second user, we use a second browser to request the same URL:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028F000000FDC947C3D9.png" style="display:inline-block; margin:4px;width:8.666cm;height:3.348cm;" class="odt-zoomable" data-zoom-src="images/100000000000028F000000FDC947C3D9.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028F000000FDC947C3D9.png" width="328" height="127" style="display:inline-block; margin:4px;width:8.666cm;height:3.348cm;" class="odt-zoomable" data-zoom-src="images/100000000000028F000000FDC947C3D9.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In [3], the second user successfully retrieves the same [Application] scope information but has their own [Session] scope counter.</span></p>
@@ -1960,7 +1960,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s see how to do this. First, we need to create the [ApplicationModel] and [SessionModel] classes, which will encapsulate the [Application] and [Session] scope data, respectively. They are as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001410000013948D0013A.png" style="display:inline-block; margin:4px;width:4.247cm;height:4.142cm;" class="odt-zoomable" data-zoom-src="images/10000000000001410000013948D0013A.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001410000013948D0013A.png" width="161" height="157" style="display:inline-block; margin:4px;width:4.247cm;height:4.142cm;" class="odt-zoomable" data-zoom-src="images/10000000000001410000013948D0013A.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -2055,7 +2055,7 @@
 <p><span style="color: #000000">We start by creating an [Infrastructure] folder in the [Example-02] project:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">   </span></p>
-<p><img src="images/10000000000000E40000005E1D40097B.png" style="width:4.219cm;height:1.739cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E40000005E1D40097B.png" /></p>
+<p><img src="images/10000000000000E40000005E1D40097B.png" width="159" height="66" style="width:4.219cm;height:1.739cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E40000005E1D40097B.png" /></p>
 <p><span style="color: #000000">In it, we create the following [ApplicationModelBinder] class:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -2170,7 +2170,7 @@
 <p><span style="color: #000000">Here is an example of the execution of action [Action17]:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000017F0000008B307028DC.png" style="width:7.091cm;height:2.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017F0000008B307028DC.png" /></p>
+<p><img src="images/100000000000017F0000008B307028DC.png" width="268" height="97" style="width:7.091cm;height:2.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017F0000008B307028DC.png" /></p>
 <p><a id="refheading58070676630786"></a></p>
 <h2 id="411-late-binding-of-the-action-model">4.11. Late binding of the action model</h2>
 <p><span style="color: #000000">We have written the following [Action12]:</span></p>
@@ -2225,14 +2225,14 @@
 <p><span style="color: #000000">Here is an example of execution:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001C4000000880BFA7F6D.png" style="width:8.37cm;height:2.521cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C4000000880BFA7F6D.png" /></p>
+<p><img src="images/10000000000001C4000000880BFA7F6D.png" width="316" height="95" style="width:8.37cm;height:2.521cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C4000000880BFA7F6D.png" /></p>
 <p><a id="refheading58072676630786"></a></p>
 <h2 id="412-conclusion">4.12. Conclusion</h2>
 <p>Let’s return to the architecture of an ASP.NET MVC application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000530000001A3C3A7DB2B.png" style="display:inline-block; margin:4px;width:17.568cm;height:5.544cm;" class="odt-zoomable" data-zoom-src="images/1000000000000530000001A3C3A7DB2B.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000530000001A3C3A7DB2B.png" width="664" height="210" style="display:inline-block; margin:4px;width:17.568cm;height:5.544cm;" class="odt-zoomable" data-zoom-src="images/1000000000000530000001A3C3A7DB2B.png" /></td></tr></table>
 
 <p>A request [1] carries various pieces of information that ASP.NET MVC presents [2a] to the action in the form of a <strong>model</strong>, which we have called <strong>the action model</strong>.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006000000008ED32B6F3B.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.663cm;" class="odt-zoomable" data-zoom-src="images/10000000000006000000008ED32B6F3B.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006000000008ED32B6F3B.png" width="680" height="63" style="display:inline-block; margin:4px;width:17.999cm;height:1.663cm;" class="odt-zoomable" data-zoom-src="images/10000000000006000000008ED32B6F3B.png" /></td></tr></table>
 
 <ul>
   <li>The client’s HTTP request arrives at [1];

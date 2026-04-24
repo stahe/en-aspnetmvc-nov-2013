@@ -1074,13 +1074,13 @@
 <p><a id="refheading58076676630786"></a></p>
 <h2 id="51-introduction">5.1. Introduction</h2>
 <p>Let’s return to the architecture of an ASP.NET MVC application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000542000001A8FD741B1F.png" style="display:inline-block; margin:4px;width:17.806cm;height:5.609cm;" class="odt-zoomable" data-zoom-src="images/1000000000000542000001A8FD741B1F.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000542000001A8FD741B1F.png" width="673" height="212" style="display:inline-block; margin:4px;width:17.806cm;height:5.609cm;" class="odt-zoomable" data-zoom-src="images/1000000000000542000001A8FD741B1F.png" /></td></tr></table>
 
 <p>In the previous chapter, we examined how ASP.NET MVC presents request information [1] to an action [2a] in the form of a model that may contain validation constraints. This model was passed as input to the action, and we referred to it as the action model. We will now focus on the most common result of an action, the [ViewResult] type, which corresponds to a view <strong>V</strong> [3] accompanied by its model <strong>M</strong> [2c]. This model will be called <strong>the view model V</strong>, not to be confused with the <strong>action model</strong> we just studied. One is the input to the action, the other is the output.</p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s start by creating a new project [Example-03] [1] within the same solution, of the basic ASP.NET MVC type:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037500000249126DA7AC.png" style="display:inline-block; margin:4px;width:11.709cm;height:7.74cm;" class="odt-zoomable" data-zoom-src="images/100000000000037500000249126DA7AC.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037500000249126DA7AC.png" width="443" height="293" style="display:inline-block; margin:4px;width:11.709cm;height:7.74cm;" class="odt-zoomable" data-zoom-src="images/100000000000037500000249126DA7AC.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1112,7 +1112,7 @@
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000014100000198578C0EAD.png" style="width:5.941cm;height:7.549cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014100000198578C0EAD.png" /></p>
+<p><img src="images/100000000000014100000198578C0EAD.png" width="225" height="285" style="width:5.941cm;height:7.549cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014100000198578C0EAD.png" /></p>
 <ul>
   <li><span style="color: #000000">the first parameter is the name of the view. If it is omitted, the view used is the one with the same name as the action that produces the [ViewResult], and it will be looked for in the [/Views/{controller}] folder, where {controller} is the name of the controller;</span>
   </li>
@@ -1133,15 +1133,15 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">requests that the [</span><a id="creer-vue"></a><span style="color: #000000"> /Views/First/Index.cshtml</span><span style="color: #000000"> ] view be displayed. It does not pass any template to it. Let’s create [1] the [/Views/First] folder:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005240000018071429209.png" style="display:inline-block; margin:4px;width:17.41cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/10000000000005240000018071429209.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005240000018071429209.png" width="658" height="192" style="display:inline-block; margin:4px;width:17.41cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/10000000000005240000018071429209.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">then create the [Index] view [2] inside it:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E000001085737C031.png" style="display:inline-block; margin:4px;width:17.542cm;height:3.493cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E000001085737C031.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E000001085737C031.png" width="663" height="132" style="display:inline-block; margin:4px;width:17.542cm;height:3.493cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E000001085737C031.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C70000021AB600817C.png" style="display:inline-block; margin:4px;width:16.18cm;height:7.117cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C70000021AB600817C.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C70000021AB600817C.png" width="612" height="269" style="display:inline-block; margin:4px;width:16.18cm;height:7.117cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C70000021AB600817C.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We specify the view name in [3]. It is created in [4]. The generated code is as follows:</span></p>
@@ -1213,7 +1213,7 @@
 <p><span style="color: #000000">Now let&#x27;s request the URL [/First/Index]:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000000EF00000083291114D0.png" style="width:4.431cm;height:2.431cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EF00000083291114D0.png" /></p>
+<p><img src="images/10000000000000EF00000083291114D0.png" width="167" height="92" style="width:4.431cm;height:2.431cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EF00000083291114D0.png" /></p>
 <p><span style="color: #000000">The HTML code received is as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -1248,7 +1248,7 @@
 <h2 id="52-using-viewbag-to-pass-information-to-the-view">5.2. Using [ViewBag] to pass information to the view</h2>
 <p><span style="color: #000000">We create a new action called [Action01] associated with the [Action01.cshtml] view:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015B000000D9744D6584.png" style="display:inline-block; margin:4px;width:4.591cm;height:2.872cm;" class="odt-zoomable" data-zoom-src="images/100000000000015B000000D9744D6584.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015B000000D9744D6584.png" width="174" height="109" style="display:inline-block; margin:4px;width:4.591cm;height:2.872cm;" class="odt-zoomable" data-zoom-src="images/100000000000015B000000D9744D6584.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [Action01] action is as follows:</span></p>
@@ -1303,7 +1303,7 @@
 <p><span style="color: #000000">Let&#x27;s test it. We request the URL [/First/Action01]:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000016C00000087152A427E.png" style="width:6.74cm;height:2.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016C00000087152A427E.png" /></p>
+<p><img src="images/100000000000016C00000087152A427E.png" width="255" height="94" style="width:6.74cm;height:2.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016C00000087152A427E.png" /></p>
 <p><a id="refheading58080676630786"></a></p>
 <h2 id="53-using-a-strongly-typed-model-to-pass-information-to-the-view">5.3. Using a strongly typed model to pass information to the view</h2>
 <p><span style="color: #000000">The previous method has the drawback of not allowing for error detection before execution. Thus, if the view [Action01.cshtml] uses the code</span></p>
@@ -1333,7 +1333,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We start by copying [ActionModel03] from the [Example-02] project into the current [Example-03] project:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000016AF4718EA5.png" style="display:inline-block; margin:4px;width:4.671cm;height:4.789cm;" class="odt-zoomable" data-zoom-src="images/10000000000001610000016AF4718EA5.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000016AF4718EA5.png" width="177" height="181" style="display:inline-block; margin:4px;width:4.671cm;height:4.789cm;" class="odt-zoomable" data-zoom-src="images/10000000000001610000016AF4718EA5.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">and we change its namespace to match that of the [Example-03] project:</span></p>
@@ -1377,7 +1377,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Then we create the [ViewModel01] class:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000009B8D5690F5.png" style="display:inline-block; margin:4px;width:4.142cm;height:2.051cm;" class="odt-zoomable" data-zoom-src="images/10000000000001390000009B8D5690F5.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000009B8D5690F5.png" width="157" height="78" style="display:inline-block; margin:4px;width:4.142cm;height:2.051cm;" class="odt-zoomable" data-zoom-src="images/10000000000001390000009B8D5690F5.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The code for [ViewModel01] is as follows:</span></p>
@@ -1434,7 +1434,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We now build the view [/First/Action02.cshtml]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000159000000BD3656509C.png" style="display:inline-block; margin:4px;width:4.565cm;height:2.501cm;" class="odt-zoomable" data-zoom-src="images/1000000000000159000000BD3656509C.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000159000000BD3656509C.png" width="173" height="95" style="display:inline-block; margin:4px;width:4.565cm;height:2.501cm;" class="odt-zoomable" data-zoom-src="images/1000000000000159000000BD3656509C.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Its code is as follows:</span></p>
@@ -1480,19 +1480,19 @@
 <p><span style="color: #000000">First, without parameters:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000002A7000001331E1A1F90.png" style="width:12.569cm;height:5.68cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002A7000001331E1A1F90.png" /></p>
+<p><img src="images/10000000000002A7000001331E1A1F90.png" width="475" height="215" style="width:12.569cm;height:5.68cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002A7000001331E1A1F90.png" /></p>
 <p><span style="color: #000000">then with incorrect parameters:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
-<p><img src="images/10000000000003A30000012AC47EAFF5.png" style="width:17.24cm;height:5.519cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003A30000012AC47EAFF5.png" /></p>
+<p><img src="images/10000000000003A30000012AC47EAFF5.png" width="652" height="209" style="width:17.24cm;height:5.519cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003A30000012AC47EAFF5.png" /></p>
 <p><span style="color: #000000">then with correct parameters:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
-<p><img src="images/100000000000031000000110BBEF64B7.png" style="width:14.52cm;height:5.039cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031000000110BBEF64B7.png" /></p>
+<p><img src="images/100000000000031000000110BBEF64B7.png" width="549" height="190" style="width:14.52cm;height:5.039cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031000000110BBEF64B7.png" /></p>
 <p><span style="color: #000000">In this example, the view model [ViewModel01] uses the information from the action model [ActionModel03]. This is often the case. We can then use a single model that serves as both the action model and the view model. We create a new model [ActionModel04]:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">   </span></p>
-<p><img src="images/10000000000000B50000006F14CF0A96.png" style="width:3.35cm;height:2.05cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000B50000006F14CF0A96.png" /></p>
+<p><img src="images/10000000000000B50000006F14CF0A96.png" width="127" height="77" style="width:3.35cm;height:2.05cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000B50000006F14CF0A96.png" /></p>
 <p><span style="color: #000000">which will be as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1564,7 +1564,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">All that remains is to create the view [/First/Action03.cshtml]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F8000001A96723777C.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.006cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F8000001A96723777C.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F8000001A96723777C.png" width="680" height="189" style="display:inline-block; margin:4px;width:17.999cm;height:5.006cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F8000001A96723777C.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <ul>
@@ -1614,7 +1614,7 @@
 <p><span style="color: #000000">Now let&#x27;s call the action [Action03] without any parameters:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000026C0000012DFDF5602E.png" style="width:11.479cm;height:5.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026C0000012DFDF5602E.png" /></p>
+<p><img src="images/100000000000026C0000012DFDF5602E.png" width="434" height="211" style="width:11.479cm;height:5.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026C0000012DFDF5602E.png" /></p>
 <p><span style="color: #000000">The results are the same as before. It is common to use the same model for both the action and the view, since the view model often reuses information from the action model. We therefore use a broader model that can be used by both the action and the view it generates. We must take care to exclude information that does not belong to the action model from the data binding. Otherwise, a savvy user could initialize parts of the view model without our knowledge.</span></p>
 <p><a id="refheading58082676630786"></a></p>
 <h2 id="54-razor-getting-started">5.4. [Razor] – Getting Started</h2>
@@ -1622,7 +1622,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Suppose we want to display a list of people in an HTML table. The view model could be as follows [ViewModel02]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000B3B8AC0137.png" style="display:inline-block; margin:4px;width:4.142cm;height:2.369cm;" class="odt-zoomable" data-zoom-src="images/1000000000000139000000B3B8AC0137.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000B3B8AC0137.png" width="157" height="90" style="display:inline-block; margin:4px;width:4.142cm;height:2.369cm;" class="odt-zoomable" data-zoom-src="images/1000000000000139000000B3B8AC0137.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1672,7 +1672,7 @@
 </ul>
 
 <p>The view [Action04.cshtml] will display the model [ViewModel02]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014F000000E4BC34567B.png" style="display:inline-block; margin:4px;width:4.433cm;height:3.016cm;" class="odt-zoomable" data-zoom-src="images/100000000000014F000000E4BC34567B.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014F000000E4BC34567B.png" width="168" height="114" style="display:inline-block; margin:4px;width:4.433cm;height:3.016cm;" class="odt-zoomable" data-zoom-src="images/100000000000014F000000E4BC34567B.png" /></td></tr></table>
 
 <p>The code for the view [Action04.cshtml] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1729,10 +1729,10 @@
 </ul>
 
 <p>Executing the [Action04] action yields the following result:</p>
-<p><img src="images/1000000000000176000000C7EA61089B.png" style="width:6.93cm;height:3.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000176000000C7EA61089B.png" /></p>
+<p><img src="images/1000000000000176000000C7EA61089B.png" width="262" height="139" style="width:6.93cm;height:3.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000176000000C7EA61089B.png" /></p>
 <p>Other elements of a view can be populated by a collection: lists (dropdown or otherwise), radio buttons, and checkboxes. Consider the following new example, which displays a dropdown list.</p>
 <p>The model [ViewModel05] will be as follows:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013C000000D023504E45.png" style="display:inline-block; margin:4px;width:4.18cm;height:2.752cm;" class="odt-zoomable" data-zoom-src="images/100000000000013C000000D023504E45.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013C000000D023504E45.png" width="158" height="104" style="display:inline-block; margin:4px;width:4.18cm;height:2.752cm;" class="odt-zoomable" data-zoom-src="images/100000000000013C000000D023504E45.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_03.Models</span></span>
@@ -1778,7 +1778,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [Action05.cshtml] view will display this template:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013E00000101460D0754.png" style="display:inline-block; margin:4px;width:4.207cm;height:3.401cm;" class="odt-zoomable" data-zoom-src="images/100000000000013E00000101460D0754.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013E00000101460D0754.png" width="159" height="129" style="display:inline-block; margin:4px;width:4.207cm;height:3.401cm;" class="odt-zoomable" data-zoom-src="images/100000000000013E00000101460D0754.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Its code is as follows:</span></p>
@@ -1818,7 +1818,7 @@
 <p><span style="color: #000000">The characteristics of the HTML dropdown list were presented in section 2.5.2.6. Let’s review them:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Combo</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><span style="color: #0000ff">&lt;</span><span style="color: #800000">select </span><span style="color: #0000ff">size=&quot;1&quot; name=&quot;cmbValues&quot;&gt;</span></div><div style="margin:0 0 0.5em 0"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option </span><span style="color: #0000ff">value=&quot;1&quot;&gt;</span><span style="color: #000000">choice1</span><span style="color: #0000ff">&lt;</span><span style="color: #800000">/option</span><span style="color: #0000ff">&gt;</span></div><div style="margin:0 0 0.5em 0"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option </span><span style="color: #0000ff">selected=&quot;selected&quot; value=&quot;2&quot;&gt;</span><span style="color: #000000">option2</span><span style="color: #0000ff">&lt;</span><span style="color: #800000">/option</span><span style="color: #0000ff">&gt;</span></div><div style="margin:0 0 0.5em 0"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option </span><span style="color: #0000ff">value=&quot;3&quot;&gt;</span><span style="color: #000000">Option 3</span><span style="color: #0000ff">&lt;</span><span style="color: #800000">/option</span><span style="color: #0000ff">&gt;</span></div><div style="margin:0 0 0.5em 0"><span style="color: #0000ff">&lt;</span><span style="color: #800000">/select</span><span style="color: #0000ff">&gt;</span></div></td></tr></table>
 
-<p><img src="images/10000000000000F30000002B9EB33B41.png" style="width:4.5cm;height:0.801cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F30000002B9EB33B41.png" /></p>
+<p><img src="images/10000000000000F30000002B9EB33B41.png" width="170" height="30" style="width:4.5cm;height:0.801cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F30000002B9EB33B41.png" /></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HTML tag</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>&lt;select size=&quot;..&quot; name=&quot;..&quot;&gt;</b></div><div style="margin:0 0 0.5em 0"><b>    &lt;option [selected=&quot;selected&quot;] value=”v”&gt;...&lt;/option&gt;</b></div><div style="margin:0 0 0.5em 0"><b>    ...</b></div><div style="margin:0 0 0.5em 0"><b>&lt;/select&gt;</b></div><div style="margin:0 0 0.5em 0">displays the text between the &lt;option&gt;...&lt;/option&gt; tags in a list</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>attributes</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>name=&quot;cmbValeurs&quot;</b>: control name.</div><div style="margin:0 0 0.5em 0"><b>size=&quot;1&quot;</b>: number of visible list items. <i>size=&quot;1&quot; </i>makes the list equivalent to a combo box.</div><div style="margin:0 0 0.5em 0"><b>selected=&quot;selected&quot;</b>: if this keyword is present for a list item, that item appears selected in the list. In our example above, the list item <i>choice2 </i>appears as the selected item in the combo box when it is first displayed.</div><div style="margin:0 0 0.5em 0"><b>value=”v</b>”: if the item is selected by the user, this value [v] is posted to the server. If this attribute is absent, the displayed and selected text is posted to the server.</div></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
@@ -1836,7 +1836,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s call the action [Action05]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005BC00000144D3D65047.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.972cm;" class="odt-zoomable" data-zoom-src="images/10000000000005BC00000144D3D65047.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005BC00000144D3D65047.png" width="680" height="150" style="display:inline-block; margin:4px;width:17.999cm;height:3.972cm;" class="odt-zoomable" data-zoom-src="images/10000000000005BC00000144D3D65047.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <ul>
@@ -1884,7 +1884,7 @@
 <p><span style="color: #000000">The form presented to the user will be as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000016E000000EE31AC94B4.png" style="width:6.78cm;height:4.41cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016E000000EE31AC94B4.png" /></p>
+<p><img src="images/100000000000016E000000EE31AC94B4.png" width="256" height="167" style="width:6.78cm;height:4.41cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016E000000EE31AC94B4.png" /></p>
 <p><span style="color: #000000">The view model will be the [ViewModel05] model used previously. The action that will display this view will be as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1907,7 +1907,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The view [/First/Action06Get.cshtml] will be as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001650000012AD07432B6.png" style="display:inline-block; margin:4px;width:4.724cm;height:3.942cm;" class="odt-zoomable" data-zoom-src="images/10000000000001650000012AD07432B6.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001650000012AD07432B6.png" width="179" height="149" style="display:inline-block; margin:4px;width:4.724cm;height:3.942cm;" class="odt-zoomable" data-zoom-src="images/10000000000001650000012AD07432B6.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1975,7 +1975,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <div style="margin:0 0 0.5em 0"><b>HTML control</b></div><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <div style="margin:0 0 0.5em 0"><b>visual</b></div><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<div style="margin:0 0 0.5em 0"><b>returned value(s)</b></div><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">value=&quot;Yes&quot; name=&quot;R1&quot;/</mark>&gt;Yes</div><div style="margin:0 0 0.5em 0">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">name=&quot;R1&quot; value=&quot;No&quot; </mark>checked=&quot;checked&quot;/&gt;No</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001550000004582A42497.png" style="display:inline-block; margin:4px;width:4.51cm;height:0.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001550000004582A42497.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><mark style="background-color: #c0c0c0">R1=Yes</mark></div><div style="margin:0 0 0.5em 0">- the value of the <i>value</i> attribute of the radio button selected by the user.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C1&quot; value=&quot;one&quot;/</mark>&gt;1</div><div style="margin:0 0 0.5em 0">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C2&quot; value=&quot;two&quot; </mark>checked=&quot;checked&quot;/&gt;2</div><div style="margin:0 0 0.5em 0">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C3&quot; value=&quot;three&quot;/</mark>&gt;3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015E0000003FB4AEBD22.png" style="display:inline-block; margin:4px;width:4.63cm;height:0.831cm;" class="odt-zoomable" data-zoom-src="images/100000000000015E0000003FB4AEBD22.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">C1=one</mark></b></div><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">C2=two</mark></b></div><div style="margin:0 0 0.5em 0">- values of the <i>value</i> attributes of the checkboxes selected by the user</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;text&quot; <mark style="background-color: #c0c0c0">name=&quot;txtInput&quot; </mark>size=&quot;20&quot; value=&quot;a few words&quot;/&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A40000003B384FFC1D.png" style="display:inline-block; margin:4px;width:5.56cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A40000003B384FFC1D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">txtInput=Web+programming</mark></b></div><div style="margin:0 0 0.5em 0">- text typed by the user in the input field. Spaces have been replaced by the + sign</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;password&quot; <mark style="background-color: #c0c0c0">name=&quot;txtMdp&quot; </mark>size=&quot;20&quot; value=&quot;aPassword&quot;/&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F0000003C4952F90F.png" style="display:inline-block; margin:4px;width:5.489cm;height:0.79cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F0000003C4952F90F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">txtPassword=thisIsSecret</mark></b></div><div style="margin:0 0 0.5em 0">- text typed by the user in the input field</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;textarea rows=&quot;2&quot; <mark style="background-color: #c0c0c0">name=&quot;inputArea&quot; </mark>cols=&quot;20&quot;&gt;</div><div style="margin:0 0 0.5em 0">line1</div><div style="margin:0 0 0.5em 0">line2</div><div style="margin:0 0 0.5em 0">line3</div><div style="margin:0 0 0.5em 0">&lt;/textarea&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A900000046BF562070.png" style="display:inline-block; margin:4px;width:5.62cm;height:0.93cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A900000046BF562070.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">inputField=the+basics+of+Web%0D%0A</mark></b></div><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">Web+programming</mark></b></div><div style="margin:0 0 0.5em 0">- text typed by the user in the input field. %OD%OA is the end-of-line marker. Spaces have been replaced by the + sign</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;select size=&quot;1&quot; <mark style="background-color: #c0c0c0">name=&quot;cmbValues&quot;</mark>&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;1&#x27;&gt;choice1&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;2&#x27;&gt;choice2&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;3&#x27;&gt;choice3&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;/select&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000404C9A3AF2.png" style="display:inline-block; margin:4px;width:3.941cm;height:0.85cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000404C9A3AF2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">cmbValues=3</mark></b></div><div style="margin:0 0 0.5em 0">- [value] attribute of the element selected by the user</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst1&quot;</mark>&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;list1&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;2&#x27;&gt;list2&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;3&#x27;&gt;list3&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;4&#x27;&gt;list4&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;5&#x27;&gt;list5&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;/select&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B00000067A3FFA096.png" style="display:inline-block; margin:4px;width:4.17cm;height:1.36cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B00000067A3FFA096.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">lst1=3</mark></b></div><div style="margin:0 0 0.5em 0">- [value] attribute of the element selected by the user</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst2&quot; </mark>multiple=&quot;multiple&quot;&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;list1&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;2&#x27;&gt;list2&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;3&#x27;&gt;list3&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;4&#x27;&gt;list4&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;5&#x27;&gt;list5&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;/select&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000609BBC7B2D.png" style="display:inline-block; margin:4px;width:3.851cm;height:1.27cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000609BBC7B2D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">lst2=1</mark></b></div><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">lst2=3</mark></b></div><div style="margin:0 0 0.5em 0">- [value] attributes of the elements selected by the user</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;submit&quot; <mark style="background-color: #c0c0c0">value=&quot;Submit&quot; name=&quot;cmdSubmit&quot;/</mark>&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">cmdRenvoyer=Submit</mark></b></div><div style="margin:0 0 0.5em 0">- name and <i>value</i> attribute of the button used to send the form data to the server</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;hidden&quot; <mark style="background-color: #c0c0c0">name=&quot;secret&quot; </mark>value=&quot;aValue&quot;/&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">secret=aValue</mark></b></div><div style="margin:0 0 0.5em 0">- <i>value</i> attribute of the hidden field</div></td></tr></table>
+<div style="margin:0 0 0.5em 0"><b>returned value(s)</b></div><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">value=&quot;Yes&quot; name=&quot;R1&quot;/</mark>&gt;Yes</div><div style="margin:0 0 0.5em 0">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">name=&quot;R1&quot; value=&quot;No&quot; </mark>checked=&quot;checked&quot;/&gt;No</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001550000004582A42497.png" width="170" height="34" style="display:inline-block; margin:4px;width:4.51cm;height:0.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001550000004582A42497.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><mark style="background-color: #c0c0c0">R1=Yes</mark></div><div style="margin:0 0 0.5em 0">- the value of the <i>value</i> attribute of the radio button selected by the user.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C1&quot; value=&quot;one&quot;/</mark>&gt;1</div><div style="margin:0 0 0.5em 0">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C2&quot; value=&quot;two&quot; </mark>checked=&quot;checked&quot;/&gt;2</div><div style="margin:0 0 0.5em 0">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C3&quot; value=&quot;three&quot;/</mark>&gt;3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015E0000003FB4AEBD22.png" width="175" height="31" style="display:inline-block; margin:4px;width:4.63cm;height:0.831cm;" class="odt-zoomable" data-zoom-src="images/100000000000015E0000003FB4AEBD22.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">C1=one</mark></b></div><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">C2=two</mark></b></div><div style="margin:0 0 0.5em 0">- values of the <i>value</i> attributes of the checkboxes selected by the user</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;text&quot; <mark style="background-color: #c0c0c0">name=&quot;txtInput&quot; </mark>size=&quot;20&quot; value=&quot;a few words&quot;/&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A40000003B384FFC1D.png" width="210" height="29" style="display:inline-block; margin:4px;width:5.56cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A40000003B384FFC1D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">txtInput=Web+programming</mark></b></div><div style="margin:0 0 0.5em 0">- text typed by the user in the input field. Spaces have been replaced by the + sign</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;password&quot; <mark style="background-color: #c0c0c0">name=&quot;txtMdp&quot; </mark>size=&quot;20&quot; value=&quot;aPassword&quot;/&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F0000003C4952F90F.png" width="207" height="30" style="display:inline-block; margin:4px;width:5.489cm;height:0.79cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F0000003C4952F90F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">txtPassword=thisIsSecret</mark></b></div><div style="margin:0 0 0.5em 0">- text typed by the user in the input field</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;textarea rows=&quot;2&quot; <mark style="background-color: #c0c0c0">name=&quot;inputArea&quot; </mark>cols=&quot;20&quot;&gt;</div><div style="margin:0 0 0.5em 0">line1</div><div style="margin:0 0 0.5em 0">line2</div><div style="margin:0 0 0.5em 0">line3</div><div style="margin:0 0 0.5em 0">&lt;/textarea&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A900000046BF562070.png" width="212" height="35" style="display:inline-block; margin:4px;width:5.62cm;height:0.93cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A900000046BF562070.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">inputField=the+basics+of+Web%0D%0A</mark></b></div><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">Web+programming</mark></b></div><div style="margin:0 0 0.5em 0">- text typed by the user in the input field. %OD%OA is the end-of-line marker. Spaces have been replaced by the + sign</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;select size=&quot;1&quot; <mark style="background-color: #c0c0c0">name=&quot;cmbValues&quot;</mark>&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;1&#x27;&gt;choice1&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;2&#x27;&gt;choice2&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;3&#x27;&gt;choice3&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;/select&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000404C9A3AF2.png" width="149" height="32" style="display:inline-block; margin:4px;width:3.941cm;height:0.85cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000404C9A3AF2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">cmbValues=3</mark></b></div><div style="margin:0 0 0.5em 0">- [value] attribute of the element selected by the user</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst1&quot;</mark>&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;list1&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;2&#x27;&gt;list2&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;3&#x27;&gt;list3&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;4&#x27;&gt;list4&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;5&#x27;&gt;list5&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;/select&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B00000067A3FFA096.png" width="158" height="51" style="display:inline-block; margin:4px;width:4.17cm;height:1.36cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B00000067A3FFA096.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">lst1=3</mark></b></div><div style="margin:0 0 0.5em 0">- [value] attribute of the element selected by the user</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst2&quot; </mark>multiple=&quot;multiple&quot;&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;list1&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;2&#x27;&gt;list2&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;3&#x27;&gt;list3&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;4&#x27;&gt;list4&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;5&#x27;&gt;list5&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;/select&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000609BBC7B2D.png" width="146" height="48" style="display:inline-block; margin:4px;width:3.851cm;height:1.27cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000609BBC7B2D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">lst2=1</mark></b></div><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">lst2=3</mark></b></div><div style="margin:0 0 0.5em 0">- [value] attributes of the elements selected by the user</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;submit&quot; <mark style="background-color: #c0c0c0">value=&quot;Submit&quot; name=&quot;cmdSubmit&quot;/</mark>&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">cmdRenvoyer=Submit</mark></b></div><div style="margin:0 0 0.5em 0">- name and <i>value</i> attribute of the button used to send the form data to the server</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;hidden&quot; <mark style="background-color: #c0c0c0">name=&quot;secret&quot; </mark>value=&quot;aValue&quot;/&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">secret=aValue</mark></b></div><div style="margin:0 0 0.5em 0">- <i>value</i> attribute of the hidden field</div></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In our form, we have two tags that can send a value:</span></p>
@@ -2057,7 +2057,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We need an action model to encapsulate these values. This will be the following [ActionModel06] model:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001340000010180098C47.png" style="display:inline-block; margin:4px;width:4.075cm;height:3.401cm;" class="odt-zoomable" data-zoom-src="images/10000000000001340000010180098C47.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001340000010180098C47.png" width="154" height="129" style="display:inline-block; margin:4px;width:4.075cm;height:3.401cm;" class="odt-zoomable" data-zoom-src="images/10000000000001340000010180098C47.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -2079,7 +2079,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [Action06] action receives this model and passes it as-is to the following [Action06Post] view (line 5 of the action):</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C0000014A35CAE784.png" style="display:inline-block; margin:4px;width:5.239cm;height:4.366cm;" class="odt-zoomable" data-zoom-src="images/100000000000018C0000014A35CAE784.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C0000014A35CAE784.png" width="198" height="165" style="display:inline-block; margin:4px;width:5.239cm;height:4.366cm;" class="odt-zoomable" data-zoom-src="images/100000000000018C0000014A35CAE784.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -2113,14 +2113,14 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let&#x27;s look at an example:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F5000001BA8F3A9C4C.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.216cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F5000001BA8F3A9C4C.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F5000001BA8F3A9C4C.png" width="680" height="197" style="display:inline-block; margin:4px;width:17.999cm;height:5.216cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F5000001BA8F3A9C4C.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p>In [1], we select the third person with an [Id] equal to 3. In [2], we submit the form. In [3], the received values. In [4,5], we see that the same URL was called, one via a GET [4], the other via a POST [5]. This is not visible in the URL.</p>
 <p>In the view displayed following the POST, we might want the <em>first</em> and <em>last name</em> of the selected person rather than their number. We must therefore update the POST view and its model.</p>
 <p>We create an action [Action07] to handle this case. This action will need to use the user’s session to store the list of people. We will follow the pattern discussed in Section 4.10, which allows us to include data from the [Application] and [Session] scopes in the action’s model.</p>
 <p>The session model will be the following [SessionModel] class:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001310000012352EF06B8.png" style="display:inline-block; margin:4px;width:4.036cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/10000000000001310000012352EF06B8.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001310000012352EF06B8.png" width="153" height="146" style="display:inline-block; margin:4px;width:4.036cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/10000000000001310000012352EF06B8.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_03.Models</span></span>
@@ -2138,7 +2138,7 @@
 </ul>
 
 <p>We need to bind the previous type [SessionModel] to a binder that we will call [SessionModelBinder]. This will be the same as the one described on page<a href="the-model-of-an-action.html#sessionmodelbinder">74</a> :</p>
-<p><img src="images/10000000000000C200000049C2A2BB22.png" style="width:3.59cm;height:1.349cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C200000049C2A2BB22.png" /></p>
+<p><img src="images/10000000000000C200000049C2A2BB22.png" width="136" height="51" style="width:3.59cm;height:1.349cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C200000049C2A2BB22.png" /></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
 <span class="odt-code-line"> </span>
@@ -2298,14 +2298,14 @@
 <p><span style="color: #000000">Here is an example of execution:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
-<p><img src="images/1000000000000174000000EC0C7C7687.png" style="width:6.89cm;height:4.369cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000174000000EC0C7C7687.png" /></p>
-<p><img src="images/1000000000000176000000C346B64C88.png" style="width:6.93cm;height:3.611cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000176000000C346B64C88.png" /></p>
+<p><img src="images/1000000000000174000000EC0C7C7687.png" width="260" height="165" style="width:6.89cm;height:4.369cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000174000000EC0C7C7687.png" /></p>
+<p><img src="images/1000000000000176000000C346B64C88.png" width="262" height="136" style="width:6.93cm;height:3.611cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000176000000C346B64C88.png" /></p>
 <p><a id="refheading58086676630786"></a></p>
 <h2 id="56-form-a-complete-example">5.6. Form – a complete example</h2>
 <p><span style="color: #000000">In section 2.5.2.1, we examined the following HTML form:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001A5000002663CB3D5D8.png" style="width:8.641cm;height:12.603cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A5000002663CB3D5D8.png" /></p>
+<p><img src="images/10000000000001A5000002663CB3D5D8.png" width="327" height="476" style="width:8.641cm;height:12.603cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A5000002663CB3D5D8.png" /></p>
 <p><span style="color: #000000">We will examine an action [Action08Get] that displays (GET) this form and an action [Action08Post] that processes (POST) the values entered by the user. A classic setup.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The view model [1] above will be an instance of the [ViewModel08] class. This class will serve as both:</span></p>
@@ -2317,10 +2317,10 @@
 </ul>
 
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F1000000A468159F83.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.94cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F1000000A468159F83.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F1000000A468159F83.png" width="680" height="73" style="display:inline-block; margin:4px;width:17.999cm;height:1.94cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F1000000A468159F83.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000607000000C91FF47779.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.344cm;" class="odt-zoomable" data-zoom-src="images/1000000000000607000000C91FF47779.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000607000000C91FF47779.png" width="680" height="89" style="display:inline-block; margin:4px;width:17.999cm;height:2.344cm;" class="odt-zoomable" data-zoom-src="images/1000000000000607000000C91FF47779.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><a id="refheading58088676630786"></a></p>
@@ -2352,7 +2352,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [ApplicationModel] class is used to encapsulate all data within the [Application] scope. Here, it will encapsulate the data that the form needs to display:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000016B717C9AB7.png" style="display:inline-block; margin:4px;width:4.671cm;height:4.803cm;" class="odt-zoomable" data-zoom-src="images/10000000000001610000016B717C9AB7.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000016B717C9AB7.png" width="177" height="182" style="display:inline-block; margin:4px;width:4.671cm;height:4.803cm;" class="odt-zoomable" data-zoom-src="images/10000000000001610000016B717C9AB7.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -2432,7 +2432,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The various collections will populate the following form:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003410000032901B57A69.png" style="display:inline-block; margin:4px;width:11.021cm;height:10.703cm;" class="odt-zoomable" data-zoom-src="images/10000000000003410000032901B57A69.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003410000032901B57A69.png" width="417" height="405" style="display:inline-block; margin:4px;width:11.021cm;height:10.703cm;" class="odt-zoomable" data-zoom-src="images/10000000000003410000032901B57A69.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -2784,7 +2784,7 @@
 <p><a id="refheading58094676630786"></a></p>
 <h3 id="564-the-form-view">5.6.4. The [Form] view</h3>
 <p>The [/First/Formulaire.cshtml] view displays the form:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000182000001ADC572DCBA.png" style="display:inline-block; margin:4px;width:5.106cm;height:5.676cm;" class="odt-zoomable" data-zoom-src="images/1000000000000182000001ADC572DCBA.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000182000001ADC572DCBA.png" width="193" height="215" style="display:inline-block; margin:4px;width:5.106cm;height:5.676cm;" class="odt-zoomable" data-zoom-src="images/1000000000000182000001ADC572DCBA.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">@model Exemple_03.Models.</span><span style="color:#2b91af">ViewModel08</span></span>
@@ -2836,7 +2836,7 @@
   </li>
 </ul>
 
-<p><img src="images/10000000000000D80000001F9C9AC302.png" style="width:4.001cm;height:0.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D80000001F9C9AC302.png" /></p>
+<p><img src="images/10000000000000D80000001F9C9AC302.png" width="151" height="22" style="width:4.001cm;height:0.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D80000001F9C9AC302.png" /></p>
 <ul>
   <li>line 22: we iterate through the collection displayed by the radio button;
   </li>
@@ -3021,14 +3021,14 @@
 </ul>
 
 <p>Let’s look at an example:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000643000004022911C022.png" style="display:inline-block; margin:4px;width:17.999cm;height:11.518cm;" class="odt-zoomable" data-zoom-src="images/1000000000000643000004022911C022.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000643000004022911C022.png" width="680" height="435" style="display:inline-block; margin:4px;width:17.999cm;height:11.518cm;" class="odt-zoomable" data-zoom-src="images/1000000000000643000004022911C022.png" /></td></tr></table>
 
 <p>In [2], the result of the [POST] accurately reflects what was entered in [1].</p>
 <p><a id="refheading58098676630786"></a></p>
 <h3 id="566-handling-post-errors">5.6.6. Handling POST Errors</h3>
 <p>We mentioned that if no value was checked or selected for the [CheckBoxesField, SimpleChoiceListField, MultipleChoiceListField] fields, then the corresponding parameters were not part of the posted string, and therefore the model properties with the same names were not initialized.</p>
 <p>Let’s look at the following example:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000627000001BB1D0EACEF.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.062cm;" class="odt-zoomable" data-zoom-src="images/1000000000000627000001BB1D0EACEF.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000627000001BB1D0EACEF.png" width="680" height="191" style="display:inline-block; margin:4px;width:17.999cm;height:5.062cm;" class="odt-zoomable" data-zoom-src="images/1000000000000627000001BB1D0EACEF.png" /></td></tr></table>
 
 <ul>
   <li>in [1], no checkbox was checked;
@@ -3101,7 +3101,7 @@
 <p><a id="refheading58102676630786"></a></p>
 <h3 id="571-the-new-form">5.7.1. The new form</h3>
 <p>We create a new form [Form2.cshtml] that will generate a form identical to the previous one:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F000001A65D54B10A.png" style="display:inline-block; margin:4px;width:5.491cm;height:5.583cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F000001A65D54B10A.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F000001A65D54B10A.png" width="208" height="211" style="display:inline-block; margin:4px;width:5.491cm;height:5.583cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F000001A65D54B10A.png" /></td></tr></table>
 
 <p>Let’s revisit the code used to generate the form’s dropdown list:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -3572,7 +3572,7 @@
 <h2 id="58-generating-a-form-from-the-models-metadata">5.8. Generating a form from the model&#x27;s metadata</h2>
 <p>There are other methods besides the ones mentioned above for generating a form. One of them involves associating information with a model property that tells the MVC framework which input tag to generate. This information is called metadata.</p>
 <p>Consider the following view model [ViewModel10]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000141000001804DB14B3A.png" style="display:inline-block; margin:4px;width:4.247cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/1000000000000141000001804DB14B3A.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000141000001804DB14B3A.png" width="161" height="192" style="display:inline-block; margin:4px;width:4.247cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/1000000000000141000001804DB14B3A.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System;</span></span>
@@ -3677,7 +3677,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In line 5 above, we instruct the default view for the action [/First/Action10Get.cshtml] to display the view model of type [ViewModel10]. This view is as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000168000001D9260E76B0.png" style="display:inline-block; margin:4px;width:4.763cm;height:6.258cm;" class="odt-zoomable" data-zoom-src="images/1000000000000168000001D9260E76B0.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000168000001D9260E76B0.png" width="180" height="237" style="display:inline-block; margin:4px;width:4.763cm;height:6.258cm;" class="odt-zoomable" data-zoom-src="images/1000000000000168000001D9260E76B0.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3799,7 +3799,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Here is an example of how this works in the Chrome browser:</span></p>
 <p><span style="color: #000000"> </span></p>
-<p><img src="images/10000000000001B30000028D6245A650.png" style="width:8.05cm;height:12.09cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B30000028D6245A650.png" /></p>
+<p><img src="images/10000000000001B30000028D6245A650.png" width="304" height="457" style="width:8.05cm;height:12.09cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B30000028D6245A650.png" /></p>
 <p><span style="color: #000000">Depending on the browser used, the pages may look different. This is because the generated view uses the new tags introduced by HTML version 5, known as HTML5. Not all browsers support this version yet. In the example above, the Chrome browser supports it partially.</span></p>
 <p><a id="refheading58108676630786"></a></p>
 <h3 id="581-the-forms-post">5.8.1. The form&#x27;s [POST]</h3>
@@ -3854,7 +3854,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000018A000000471BEDCDDA.png" style="width:7.301cm;height:1.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000018A000000471BEDCDDA.png" /></p>
+<p><img src="images/100000000000018A000000471BEDCDDA.png" width="276" height="50" style="width:7.301cm;height:1.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000018A000000471BEDCDDA.png" /></p>
 <p><span style="color: #000000"> </span></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
@@ -3936,7 +3936,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001920000003397BA85AF.png" style="width:7.44cm;height:0.94cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001920000003397BA85AF.png" /></p>
+<p><img src="images/10000000000001920000003397BA85AF.png" width="281" height="36" style="width:7.44cm;height:0.94cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001920000003397BA85AF.png" /></p>
 <p><span style="color: #000000"> </span></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
@@ -3995,7 +3995,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000012500000027C5407CA3.png" style="width:5.42cm;height:0.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012500000027C5407CA3.png" /></p>
+<p><img src="images/100000000000012500000027C5407CA3.png" width="205" height="27" style="width:5.42cm;height:0.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012500000027C5407CA3.png" /></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -4024,12 +4024,12 @@
 <p><span style="color: #000000">We enter an incorrect number and submit:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000016D0000005EA30A0B8D.png" style="width:6.759cm;height:1.739cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016D0000005EA30A0B8D.png" /></p>
+<p><img src="images/100000000000016D0000005EA30A0B8D.png" width="255" height="66" style="width:6.759cm;height:1.739cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016D0000005EA30A0B8D.png" /></p>
 <p><span style="color: #000000">In the example above, validation occurred on the client side. The form will not be submitted until the error has been corrected.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Another example: we enter nothing:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005860000013554A20B97.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.933cm;" class="odt-zoomable" data-zoom-src="images/10000000000005860000013554A20B97.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005860000013554A20B97.png" width="680" height="149" style="display:inline-block; margin:4px;width:17.999cm;height:3.933cm;" class="odt-zoomable" data-zoom-src="images/10000000000005860000013554A20B97.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In [1] above, [Action10Post] reports an error. You may recall that we previously achieved this behavior by using the [Required] attribute on the property to be validated (see</span><span style="color: #000000"><a href="the-model-of-an-action.html#contrainte-required">63</a></span><span style="color: #000000"> ), in this case the [Number] property. Here, we didn’t have to do that.</span></p>
@@ -4058,7 +4058,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000013C00000020257BC498.png" style="width:5.851cm;height:0.589cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000013C00000020257BC498.png" /></p>
+<p><img src="images/100000000000013C00000020257BC498.png" width="221" height="22" style="width:5.851cm;height:0.589cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000013C00000020257BC498.png" /></p>
 <p><span style="color: #000000"> </span></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
@@ -4113,7 +4113,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000016600000022544A1188.png" style="width:6.63cm;height:0.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016600000022544A1188.png" /></p>
+<p><img src="images/100000000000016600000022544A1188.png" width="251" height="24" style="width:6.63cm;height:0.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016600000022544A1188.png" /></p>
 <p><span style="color: #000000"> </span></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
@@ -4169,7 +4169,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000017B000000EA415810EB.png" style="width:7.02cm;height:4.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017B000000EA415810EB.png" /></p>
+<p><img src="images/100000000000017B000000EA415810EB.png" width="265" height="164" style="width:7.02cm;height:4.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017B000000EA415810EB.png" /></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -4205,7 +4205,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">An invalid date is flagged on the client side [1], preventing the form from being posted to the server.</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F400000102E772925E.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.046cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F400000102E772925E.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F400000102E772925E.png" width="680" height="115" style="display:inline-block; margin:4px;width:17.999cm;height:3.046cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F400000102E772925E.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The absence of a date is not flagged on the client side but is flagged on the server side [2].</span></p>
@@ -4234,7 +4234,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001390000002406269BAA.png" style="width:5.791cm;height:0.67cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001390000002406269BAA.png" /></p>
+<p><img src="images/10000000000001390000002406269BAA.png" width="219" height="25" style="width:5.791cm;height:0.67cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001390000002406269BAA.png" /></p>
 <p><span style="color: #000000"> </span></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
@@ -4272,7 +4272,7 @@
 <p><span style="color: #000000">It is technically impossible to enter an invalid time. The absence of a time is flagged on the server side:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/1000000000000194000000924A09FEBA.png" style="width:7.481cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000194000000924A09FEBA.png" /></p>
+<p><img src="images/1000000000000194000000924A09FEBA.png" width="283" height="102" style="width:7.481cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000194000000924A09FEBA.png" /></p>
 <p><a id="refheading58124676630786"></a></p>
 <h3 id="589-hiddeninput-property">5.8.9. [HiddenInput] property</h3>
 <p><u><strong><span style="color: #000000">Definition</span></strong></u></p>
@@ -4298,7 +4298,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001430000001C8F5F3E09.png" style="width:5.98cm;height:0.52cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001430000001C8F5F3E09.png" /></p>
+<p><img src="images/10000000000001430000001C8F5F3E09.png" width="226" height="20" style="width:5.98cm;height:0.52cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001430000001C8F5F3E09.png" /></p>
 <p><span style="color: #000000"> </span></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
@@ -4353,7 +4353,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000012F0000001BF8B9C912.png" style="width:5.609cm;height:0.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012F0000001BF8B9C912.png" /></p>
+<p><img src="images/100000000000012F0000001BF8B9C912.png" width="212" height="19" style="width:5.609cm;height:0.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012F0000001BF8B9C912.png" /></p>
 <p><span style="color: #000000"> </span></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
@@ -4409,7 +4409,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/1000000000000141000000214701AFBE.png" style="width:5.941cm;height:0.61cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000141000000214701AFBE.png" /></p>
+<p><img src="images/1000000000000141000000214701AFBE.png" width="225" height="23" style="width:5.941cm;height:0.61cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000141000000214701AFBE.png" /></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -4445,7 +4445,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">An invalid address is reported on the client side [1]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030A000000C5072BB998.png" style="display:inline-block; margin:4px;width:10.292cm;height:2.607cm;" class="odt-zoomable" data-zoom-src="images/100000000000030A000000C5072BB998.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030A000000C5072BB998.png" width="389" height="99" style="display:inline-block; margin:4px;width:10.292cm;height:2.607cm;" class="odt-zoomable" data-zoom-src="images/100000000000030A000000C5072BB998.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Leaving the field blank does not cause an error.</span></p>
@@ -4474,7 +4474,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001AB00000021C0EB6522.png" style="width:7.909cm;height:0.61cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AB00000021C0EB6522.png" /></p>
+<p><img src="images/10000000000001AB00000021C0EB6522.png" width="299" height="23" style="width:7.909cm;height:0.61cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AB00000021C0EB6522.png" /></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -4510,7 +4510,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">An invalid URL is reported on the client side [1]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000029F000000DBB4D46D37.png" style="display:inline-block; margin:4px;width:8.878cm;height:2.898cm;" class="odt-zoomable" data-zoom-src="images/100000000000029F000000DBB4D46D37.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000029F000000DBB4D46D37.png" width="336" height="110" style="display:inline-block; margin:4px;width:8.878cm;height:2.898cm;" class="odt-zoomable" data-zoom-src="images/100000000000029F000000DBB4D46D37.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">No input does not cause an error.</span></p>
@@ -4539,7 +4539,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/1000000000000135000000251F7FB988.png" style="width:5.72cm;height:0.681cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000135000000251F7FB988.png" /></p>
+<p><img src="images/1000000000000135000000251F7FB988.png" width="216" height="26" style="width:5.72cm;height:0.681cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000135000000251F7FB988.png" /></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -4594,7 +4594,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001450000001F5DB24BBD.png" style="width:6.02cm;height:0.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001450000001F5DB24BBD.png" /></p>
+<p><img src="images/10000000000001450000001F5DB24BBD.png" width="228" height="22" style="width:6.02cm;height:0.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001450000001F5DB24BBD.png" /></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -4628,7 +4628,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">An invalid value [1] or a missing value [2] is reported on the server side:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005DB000001190079852F.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.374cm;" class="odt-zoomable" data-zoom-src="images/10000000000005DB000001190079852F.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005DB000001190079852F.png" width="680" height="128" style="display:inline-block; margin:4px;width:17.999cm;height:3.374cm;" class="odt-zoomable" data-zoom-src="images/10000000000005DB000001190079852F.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><a id="refheading58136676630786"></a></p>
@@ -4656,7 +4656,7 @@
 <p><u><strong><span style="color: #000000">Visual</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000001970000001DB68860E7.png" style="width:7.541cm;height:0.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001970000001DB68860E7.png" /></p>
+<p><img src="images/10000000000001970000001DB68860E7.png" width="285" height="20" style="width:7.541cm;height:0.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001970000001DB68860E7.png" /></p>
 <p><u><strong><span style="color: #000000">Generated HTML</span></strong></u></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -4785,7 +4785,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">This model will be displayed by the following view [Action11Get.cshtml]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000196000001FBB6BBA3E0.png" style="display:inline-block; margin:4px;width:5.371cm;height:6.708cm;" class="odt-zoomable" data-zoom-src="images/1000000000000196000001FBB6BBA3E0.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000196000001FBB6BBA3E0.png" width="203" height="254" style="display:inline-block; margin:4px;width:5.371cm;height:6.708cm;" class="odt-zoomable" data-zoom-src="images/1000000000000196000001FBB6BBA3E0.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -4926,12 +4926,12 @@
 <p><span style="color: #000000">Here is an example of execution:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
-<p><img src="images/10000000000002260000020BB3CE3364.png" style="width:8.44cm;height:8.02cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002260000020BB3CE3364.png" /></p>
-<p><img src="images/1000000000000239000001F3AD309953.png" style="width:8.729cm;height:7.661cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000239000001F3AD309953.png" /></p>
+<p><img src="images/10000000000002260000020BB3CE3364.png" width="319" height="303" style="width:8.44cm;height:8.02cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002260000020BB3CE3364.png" /></p>
+<p><img src="images/1000000000000239000001F3AD309953.png" width="330" height="290" style="width:8.729cm;height:7.661cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000239000001F3AD309953.png" /></p>
 <p><span style="color: #000000">Here is another example:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000002E1000001FB4942ABA5.png" style="width:13.651cm;height:9.389cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002E1000001FB4942ABA5.png" /></p>
+<p><img src="images/10000000000002E1000001FB4942ABA5.png" width="516" height="355" style="width:13.651cm;height:9.389cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002E1000001FB4942ABA5.png" /></p>
 <p><span style="color: #000000">Note that both dates are incorrect (the current date is 10/11/2013) but the errors are not reported. These errors are detected by the model’s [Validate] method:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
@@ -4972,14 +4972,14 @@
 <p><span style="color: #000000">The [Validate] method is only executed once all attribute validations have passed. This is demonstrated in a final example:</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">  </span></p>
-<p><img src="images/100000000000023B000001F80EA3CCF5.png" style="width:10.56cm;height:9.329cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000023B000001F80EA3CCF5.png" /></p>
+<p><img src="images/100000000000023B000001F80EA3CCF5.png" width="399" height="353" style="width:10.56cm;height:9.329cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000023B000001F80EA3CCF5.png" /></p>
 <p><a id="refheading58142676630786"></a></p>
 <h3 id="592-client-side-validation">5.9.2. Client-side validation</h3>
 <p><span style="color: #000000">All previous validations were performed on the server side. This requires a round trip between the client and the server for the user to see their errors. Client-side validation uses JavaScript code to notify the user of errors as early as possible, and in any case before the POST request. The POST request can only occur once all detected errors have been corrected.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We’ll use the previous [ViewModel11] model, but now we’ll display it using the following [Action12Get.cshtml] view:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001930000020DA68CC75D.png" style="display:inline-block; margin:4px;width:5.332cm;height:6.946cm;" class="odt-zoomable" data-zoom-src="images/10000000000001930000020DA68CC75D.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001930000020DA68CC75D.png" width="202" height="263" style="display:inline-block; margin:4px;width:5.332cm;height:6.946cm;" class="odt-zoomable" data-zoom-src="images/10000000000001930000020DA68CC75D.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -5045,7 +5045,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [Action12Get] view is identical to the previous [Action11Get] view except for lines 13–15. These lines include the JavaScript scripts required for client-side validation in the view. These scripts are located in the project’s [Scripts] folder:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BE000001EE5E7BFA57.png" style="display:inline-block; margin:4px;width:5.9cm;height:6.535cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BE000001EE5E7BFA57.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BE000001EE5E7BFA57.png" width="223" height="247" style="display:inline-block; margin:4px;width:5.9cm;height:6.535cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BE000001EE5E7BFA57.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Each script has a normal version [.js] and a minified version [min.js]. The latter version is smaller but unreadable. It is used in production. The readable version is used in development.</span></p>
@@ -5076,12 +5076,12 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let&#x27;s see how this works with an example:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003FB0000022ABF3DA9DA.png" style="display:inline-block; margin:4px;width:13.481cm;height:7.329cm;" class="odt-zoomable" data-zoom-src="images/10000000000003FB0000022ABF3DA9DA.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003FB0000022ABF3DA9DA.png" width="510" height="277" style="display:inline-block; margin:4px;width:13.481cm;height:7.329cm;" class="odt-zoomable" data-zoom-src="images/10000000000003FB0000022ABF3DA9DA.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">As soon as you type a character in [1], the message in [2] appears because the expected value must be at least four characters long. Thus, validation occurs with each new character typed. The error message disappears after the fourth character is typed. With that done, let’s submit the form:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003F0000003597FDAECB4.png" style="display:inline-block; margin:4px;width:13.335cm;height:11.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000003F0000003597FDAECB4.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003F0000003597FDAECB4.png" width="504" height="429" style="display:inline-block; margin:4px;width:13.335cm;height:11.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000003F0000003597FDAECB4.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The URL [3] shows us that the [POST] did not take place. But clicking the [Validate] button triggered all client-side validations, and new error messages appeared.</span></p>
@@ -5118,7 +5118,7 @@
 <h2 id="510-handling-navigation-and-action-links">5.10. Handling Navigation and Action Links</h2>
 <p><span style="color: #000000">We will create the following two views to illustrate link management within a view:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000601000001EB7708E770.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.75cm;" class="odt-zoomable" data-zoom-src="images/1000000000000601000001EB7708E770.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000601000001EB7708E770.png" width="680" height="217" style="display:inline-block; margin:4px;width:17.999cm;height:5.75cm;" class="odt-zoomable" data-zoom-src="images/1000000000000601000001EB7708E770.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <ul>
