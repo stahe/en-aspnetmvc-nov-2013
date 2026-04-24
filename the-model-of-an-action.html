@@ -834,18 +834,18 @@
 <p><img src="images/10000000000000AF000000900D740575.png" style="width:3.24cm;height:2.671cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000AF000000900D740575.png" /></p>
 <p>In this controller, we create the following action [Action01]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.Web.Mvc;</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Controllers</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Controllers</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">FirstController </span>: <span style="color:#2b91af">Controller</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">FirstController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#008000">// Action01</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action01(<span style="color:#0000ff">string </span>name)</span>
+<span class="odt-code-line">    <span style="color:#000000">// Action01</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01(</span><span style="color:#0000ff">string</span><span style="color:#000000"> nom)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(<span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;Controller=First, Action=Action01, name={0}&quot;</span>, name));</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur=First, Action=Action01, nom={0}&quot;</span><span style="color:#000000">, nom));</span></span>
 <span class="odt-code-line">    }</span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
@@ -858,7 +858,7 @@
 <p>The browser’s HTTP request was as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>GET /First/Action01?name=someone HTTP/1.1
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>GET /First/Action01?nom=someone HTTP/1.1
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>Host: localhost:55483
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>...
 </code></pre></div></td></tr></table></div>
@@ -868,25 +868,31 @@
 </ul>
 
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action01(<span style="color:#0000ff">string </span>name)</span>
+<span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01(</span><span style="color:#0000ff">string</span><span style="color:#000000"> nom)</span></span>
 </code></pre></div>
 
 <p>To assign a value to the <code>name</code> parameter, ASP.NET MVC checks the following values in order: <code>*Request.Form[&amp;quot;name&amp;quot;], RouteData.Values[&amp;quot;name&amp;quot;],* *&lt;span style="color: #2323dc"&gt;Request.QueryString[&amp;quot;name&amp;quot;]&lt;/span&gt;**, Request.Files[&amp;quot;name&amp;quot;]*.</code> It stops as soon as it finds a value. The [name] parameter embedded in the GET URL has been placed by the framework in <em>Request.QueryString[&quot;name&quot;].</em> It is with this value [someone] that the [name] parameter of [Action01] will be initialized. Then the code of [Action01] executes:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">return </span>Content(<span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;Controller=First, Action=Action01, name={0}&quot;</span>, name), <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur=First, Action=Action01, nom={0}&quot;</span><span style="color:#000000">, nom), </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">This code provides the response sent to the client:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/100000000000016800000059F2477EEE.png" style="width:6.669cm;height:1.649cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016800000059F2477EEE.png" /></p>
 <p><strong>Note</strong>: The parameter binding mechanism is <strong>case-insensitive</strong>. So if our action is defined as:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action01(<span style="color:#0000ff">string </span>NAME)</span>
+<span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01(</span><span style="color:#0000ff">string</span><span style="color:#000000"> NOM)</span></span>
 </code></pre></div>
 
 <p>and the parameter passed is [?Name=zébulon], the binding will still occur. The [Name] parameter of [Action01] will receive the value [zébulon].</p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Now, let’s request the same URL with a POST. To do this, we’ll use the [Advanced Rest Client] application:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FA0000021A09A529B6.png" style="display:inline-block; margin:4px;width:6.694cm;height:7.117cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FA0000021A09A529B6.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">in [1], the requested URL;</span>
   </li>
@@ -896,9 +902,12 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s send this request and look at the HTTP logs. The HTTP request is as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005490000020F18457CB3.png" style="display:inline-block; margin:4px;width:17.9cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/10000000000005490000020F18457CB3.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">in [1], the POST;</span>
   </li>
@@ -908,24 +917,29 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Now, let’s modify the default route in [App_Start/RouteConfig]. Currently, this route is as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">      routes.MapRoute(</span>
-<span class="odt-code-line">          name: <span style="color:#a31515">&quot;Default&quot;</span>,</span>
-<span class="odt-code-line">          url: <span style="color:#a31515">&quot;{controller}/{action}/{id}&quot;</span>,</span>
-<span class="odt-code-line">          defaults: <span style="color:#0000ff">new </span>{ controller = <span style="color:#a31515">&quot;Home&quot;</span>, action = <span style="color:#a31515">&quot;Index&quot;</span>, id = <span style="color:#2b91af">UrlParameter</span>.Optional }</span>
+<span class="odt-code-line"><span style="color:#000000">          name: </span><span style="color:#a31515">&quot;Default&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"><span style="color:#000000">          url: </span><span style="color:#a31515">&quot;{controller}/{action}/{id}&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"><span style="color:#000000">          defaults: </span><span style="color:#0000ff">new</span><span style="color:#000000"> { controller = </span><span style="color:#a31515">&quot;Home&quot;</span><span style="color:#000000">, action = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">, id = </span><span style="color:#2b91af">UrlParameter</span><span style="color:#000000">.Optional }</span></span>
 <span class="odt-code-line">);</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let&#x27;s change it to:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">      routes.MapRoute(</span>
-<span class="odt-code-line">          name: <span style="color:#a31515">&quot;Default&quot;</span>,</span>
-<span class="odt-code-line">          url: <span style="color:#a31515">&quot;{controller}/{action}/{name}&quot;</span>,</span>
-<span class="odt-code-line">          defaults: <span style="color:#0000ff">new </span>{ controller = <span style="color:#a31515">&quot;Home&quot;</span>, action = <span style="color:#a31515">&quot;Index&quot;</span>, name = <span style="color:#2b91af">UrlParameter</span>.Optional }</span>
+<span class="odt-code-line"><span style="color:#000000">          name: </span><span style="color:#a31515">&quot;Default&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"><span style="color:#000000">          url: </span><span style="color:#a31515">&quot;{controller}/{action}/{nom}&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"><span style="color:#000000">          defaults: </span><span style="color:#0000ff">new</span><span style="color:#000000"> { controller = </span><span style="color:#a31515">&quot;Home&quot;</span><span style="color:#000000">, action = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">, nom = </span><span style="color:#2b91af">UrlParameter</span><span style="color:#000000">.Optional }</span></span>
 <span class="odt-code-line">);</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">In line 3, we named the third element of a route [name];</span>
   </li>
@@ -933,12 +947,18 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Now, let’s recompile the application and request the URL [/First/Action01/zébulon] directly in the browser. We get the following response:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000001B300000083D6AE41C1.png" style="width:8.05cm;height:2.431cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B300000083D6AE41C1.png" /></p>
 <p><span style="color: #000000">Among the values tested for the &quot;name&quot; parameter</span><em><span style="color: #000000">—Request.Form[&quot;name&quot;], </span></em><em><span style="color: #2323dc">RouteData.Values[&quot;name&quot;]</span></em><em><span style="color: #000000">, Request.QueryString[&quot;name&quot;], Request.Files[&quot;name&quot;]</span></em><span style="color: #000000">—the second one worked.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s make the same request using a POST request and [Advanced Rest Client]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AD00000222A11C4649.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.763cm;" class="odt-zoomable" data-zoom-src="images/10000000000005AD00000222A11C4649.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">In [1], we assigned a value to the {name} element of the route;</span>
   </li>
@@ -948,30 +968,40 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Of the values tested for the [name] parameter</span><em><span style="color: #000000">—</span></em><em><span style="color: #2323dc">Request.Form[&quot;name&quot;]</span></em><em><span style="color: #000000">, </span></em><em><span style="color: #2323dc">RouteData.Values[&quot;name&quot;]</span></em><em><span style="color: #000000">, Request.QueryString[&quot;name&quot;], Request.Files[&quot;name&quot;]</span></em><span style="color: #000000">—two were valid: the first two. The first one was used.</span></p>
 <p><a id="refheading58056676630786"></a></p>
 <h2 id="42-validating-action-parameters">4.2. Validating Action Parameters</h2>
 <p><span style="color: #000000">If an action has a parameter named [p], ASP.NET MVC will attempt to assign one of the following values to it</span><em><span style="color: #000000">: Request.Form[&quot;p&quot;], </span></em><em>RouteData.Values[&quot;p&quot;]</em><em><span style="color: #000000">, Request.QueryString[&quot;p&quot;], or Request.Files[&quot;p&quot;]</span></em><span style="color: #000000">. The first three values are strings. If the [p] parameter is not of type [string], problems may arise.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s create the following new action:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#008000">// Action02</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action02(<span style="color:#0000ff">int </span>age)</span>
+<span class="odt-code-line">    <span style="color:#000000">// Action02</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action02(</span><span style="color:#0000ff">int</span><span style="color:#000000"> age)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;Controller={0}, Action={1}, age={2}&quot;</span>, RouteData.Values[<span style="color:#a31515">&quot;controller&quot;</span>], RouteData.Values[<span style="color:#a31515">&quot;action&quot;</span>], age);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur={0}, Action={1}, âge={2}&quot;</span><span style="color:#000000">, RouteData.Values[</span><span style="color:#a31515">&quot;controller&quot;</span><span style="color:#000000">], RouteData.Values[</span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000">],age);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 2: The action [Action02] accepts a parameter named [age] of type </span><b><span style="color: #000000">int</span></b><span style="color: #000000">. The retrieved string must be convertible to </span><b><span style="color: #000000">int</span></b><span style="color: #000000">.</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s request the URL [</span><strong><span style="color: #000000">http://localhost:55483/First/Action02?age=21</span></strong><span style="color: #000000">]. We get the following page:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000001B80000007669369E94.png" style="width:8.149cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B80000007669369E94.png" /></p>
 <p><span style="color: #000000">Let&#x27;s request the URL [</span><strong><span style="color: #000000">http://localhost:55483/First/Action02?age=21x</span></strong><span style="color: #000000">]. We get the following page:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000001DF00000145F65CEB4F.png" style="width:8.871cm;height:6.02cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DF00000145F65CEB4F.png" /></p>
 <p><span style="color: #000000">This time, we received an error page. It is interesting to look at the HTTP headers sent by the server in this case:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -982,35 +1012,45 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>...
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a>Content-Length: 12438
 </code></pre></div></td></tr></table></div>
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 1: The server responded with a [500 Internal Server Error] code and sent an HTML page (line 3) of 12,438 bytes (line 5) to explain the possible reasons for this error.</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Now let&#x27;s create the following [Action03] action:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#008000">// Action03</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action03(<span style="color:#0000ff">int</span>? age)</span>
+<span class="odt-code-line">    <span style="color:#000000">// Action03</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action03(</span><span style="color:#0000ff">int</span><span style="color:#000000">? age)</span></span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line">      ...</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">[Action03] is identical to [Action02] except that we changed the type of the [age] parameter to </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000">, which means </span><strong><span style="color: #000000">integer </span></strong><span style="color: #000000">or </span><strong><span style="color: #000000">null</span></strong><span style="color: #000000">.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s request the URL [</span><strong><span style="color: #000000">http://localhost:55483/First/Action03?age=21x</span></strong><span style="color: #000000">]. We get the following page:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000001B30000007821A5ED57.png" style="width:8.05cm;height:2.221cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B30000007821A5ED57.png" /></p>
 <p><span style="color: #000000">ASP.NET MVC was unable to convert [21x] to an </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000"> type. It therefore assigned the value </span><strong><span style="color: #000000">null </span></strong><span style="color: #000000">to the [age] parameter, as permitted by its </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000"> type. However, it is possible to determine whether the parameter received a value from the request or not.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We create the following new action [Action04]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#008000">// Action04</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action04(<span style="color:#0000ff">int</span>? age)</span>
+<span class="odt-code-line">    <span style="color:#000000">// Action04</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action04(</span><span style="color:#0000ff">int</span><span style="color:#000000">? age)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">bool </span>valid = ModelState.IsValid;</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;Controller={0}, Action={1}, age={2}, valid={3}&quot;</span>, RouteData.Values[<span style="color:#a31515">&quot;controller&quot;</span>], RouteData.Values[<span style="color:#a31515">&quot;action&quot;</span>], age, valid);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">bool</span><span style="color:#000000"> valide = ModelState.IsValid;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur={0}, Action={1}, âge={2}, valide={3}&quot;</span><span style="color:#000000">, RouteData.Values[</span><span style="color:#a31515">&quot;controller&quot;</span><span style="color:#000000">], RouteData.Values[</span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000">], age, valide);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 2: We have kept the [int?] type. This specifically allows the request to omit the [age] parameter, which then receives the </span><b><span style="color: #000000">null</span></b><span style="color: #000000"> value;</span>
   </li>
@@ -1020,44 +1060,52 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s request the URL [</span><strong><span style="color: #000000">http://localhost:55483/First/Action04?age=21x</span></strong><span style="color: #000000">]. We get the following page:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000001BD00000076AF114E5F.png" style="width:8.241cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001BD00000076AF114E5F.png" /></p>
 <p><span style="color: #000000">ASP.NET MVC was unable to convert [21x] to type </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000">. It therefore assigned the value </span><strong><span style="color: #000000">null </span></strong><span style="color: #000000">to the [age] parameter, as permitted by its </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000"> type. However, there were conversion errors, as shown by the value of [valid].</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">It is possible to get the error message associated with a failed conversion. Let’s examine the following new action:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="color:#008000">// Action05</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action05(<span style="color:#0000ff">int</span>? age)</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action05(</span><span style="color:#0000ff">int</span><span style="color:#000000">? age)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;Controller={0}, Action={1}, age={2}, valid={3}, errors={4}&quot;</span>, RouteData.Values[<span style="color:#a31515">&quot;controller&quot;</span>], RouteData.Values[<span style="color:#a31515">&quot;action&quot;</span>], age, ModelState.IsValid, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur={0}, Action={1}, âge={2}, valide={3}, erreurs={4}&quot;</span><span style="color:#000000">, RouteData.Values[</span><span style="color:#a31515">&quot;controller&quot;</span><span style="color:#000000">], RouteData.Values[</span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000">], age, ModelState.IsValid, erreurs);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The new feature is on line 4. Here, we call a private method [getErrorMessagesFor] and pass it the action&#x27;s model state. It returns a string containing all the error messages that occurred. This method is as follows:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">private string</span><a id="geterrormessagesfor"></a> getErrorMessagesFor (<span style="color:#2b91af">ModelStateDictionary </span>state)</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
+<span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">string</span> <a id="geterrormessagesfor"></a>getErrorMessagesFor(<span style="color:#2b91af">ModelStateDictionary</span> état)</span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#2b91af">List</span>&lt;<span style="color:#2b91af">String</span>&gt; errors = <span style="color:#0000ff">new </span><span style="color:#2b91af">List</span>&lt;<span style="color:#2b91af">String</span>&gt;();</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>messages = <span style="color:#0000ff">string</span>.Empty;</span>
-<span class="odt-code-line">      <span style="color:#0000ff">if </span>(!state.IsValid)</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">List</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">String</span><span style="color:#000000">&gt; erreurs = </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">List</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">String</span><span style="color:#000000">&gt;();</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> messages = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Empty;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (!état.IsValid)</span></span>
 <span class="odt-code-line">      {</span>
-<span class="odt-code-line">        <span style="color:#0000ff">foreach </span>(<span style="color:#2b91af">ModelState </span>modelState <span style="color:#0000ff">in </span>state.Values)</span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">foreach</span><span style="color:#000000"> (</span><span style="color:#2b91af">ModelState</span><span style="color:#000000"> modelState </span><span style="color:#0000ff">in</span><span style="color:#000000"> état.Values)</span></span>
 <span class="odt-code-line">        {</span>
-<span class="odt-code-line">          <span style="color:#0000ff">foreach </span>(<span style="color:#2b91af">ModelError </span>error <span style="color:#0000ff">in </span>modelState.Errors)</span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">foreach</span><span style="color:#000000"> (</span><span style="color:#2b91af">ModelError</span><span style="color:#000000"> error </span><span style="color:#0000ff">in</span><span style="color:#000000"> modelState.Errors)</span></span>
 <span class="odt-code-line">          {</span>
-<span class="odt-code-line">            errors.Add(getErrorMessageFor(error));</span>
+<span class="odt-code-line">            erreurs.Add(getErrorMessageFor(error));</span>
 <span class="odt-code-line">          }</span>
 <span class="odt-code-line">        }</span>
-<span class="odt-code-line">        <span style="color:#0000ff">foreach </span>(<span style="color:#0000ff">string </span>message <span style="color:#0000ff">in </span>errors)</span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">foreach</span><span style="color:#000000"> (</span><span style="color:#0000ff">string</span><span style="color:#000000"> message </span><span style="color:#0000ff">in</span><span style="color:#000000"> erreurs)</span></span>
 <span class="odt-code-line">        {</span>
-<span class="odt-code-line">          messages += <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;[{0}]&quot;</span>, message);</span>
+<span class="odt-code-line"><span style="color:#000000">          messages += </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;[{0}]&quot;</span><span style="color:#000000">, message);</span></span>
 <span class="odt-code-line">        }</span>
 <span class="odt-code-line">      }</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>messages;</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> messages;</span></span>
 <span class="odt-code-line">    }</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 1: the actual [ModelState] parameter passed to the method is of type [ModelStateDictionary];</span>
   </li>
@@ -1069,6 +1117,7 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <ol>
     <ul>
       <li><b><span style="color: #000000">ModelState[&quot;age&quot;]</span></b><span style="color: #000000">: the model state of the action for the [age] parameter,</span>
@@ -1094,31 +1143,35 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [getErrorMessageFor] method on line 11 is as follows:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#0000ff">private string </span>getErrorMessageFor(<span style="color:#2b91af">ModelError </span>error)</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
+<span class="odt-code-line">    <span style="color:#0000ff">private</span> <span style="color:#0000ff">string</span> getErrorMessageFor(<span style="color:#2b91af">ModelError</span> error)</span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">if </span>(error.ErrorMessage != <span style="color:#0000ff">null </span>&amp;&amp; error.ErrorMessage.Trim() != <span style="color:#0000ff">string</span>.Empty)</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.ErrorMessage != </span><span style="color:#0000ff">null</span><span style="color:#000000"> &amp;&amp; error.ErrorMessage.Trim() != </span><span style="color:#0000ff">string</span><span style="color:#000000">.Empty)</span></span>
 <span class="odt-code-line">      {</span>
-<span class="odt-code-line">        <span style="color:#0000ff">return </span>error.ErrorMessage;</span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">return</span><span style="color:#000000"> error.ErrorMessage;</span></span>
 <span class="odt-code-line">      }</span>
-<span class="odt-code-line">      <span style="color:#0000ff">if </span>(error.Exception != <span style="color:#0000ff">null </span>&amp;&amp; error.Exception.InnerException == <span style="color:#0000ff">null </span>&amp;&amp; error.Exception.Message != <span style="color:#0000ff">string</span>.Empty)</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.Exception != </span><span style="color:#0000ff">null</span><span style="color:#000000"> &amp;&amp; error.Exception.InnerException == </span><span style="color:#0000ff">null</span><span style="color:#000000"> &amp;&amp; error.Exception.Message != </span><span style="color:#0000ff">string</span><span style="color:#000000">.Empty)</span></span>
 <span class="odt-code-line">      {</span>
-<span class="odt-code-line">        <span style="color:#0000ff">return </span>error.Exception.Message;</span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">return</span><span style="color:#000000"> error.Exception.Message;</span></span>
 <span class="odt-code-line">      }</span>
-<span class="odt-code-line">      <span style="color:#0000ff">if </span>(error.Exception != <span style="color:#0000ff">null </span>&amp;&amp; error.Exception.InnerException != <span style="color:#0000ff">null </span>&amp;&amp; error.Exception.InnerException.Message != <span style="color:#0000ff">string</span>.Empty)</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.Exception != </span><span style="color:#0000ff">null</span><span style="color:#000000"> &amp;&amp; error.Exception.InnerException != </span><span style="color:#0000ff">null</span><span style="color:#000000"> &amp;&amp; error.Exception.InnerException.Message != </span><span style="color:#0000ff">string</span><span style="color:#000000">.Empty)</span></span>
 <span class="odt-code-line">      {</span>
-<span class="odt-code-line">        <span style="color:#0000ff">return </span>error.Exception.InnerException.Message;</span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">return</span><span style="color:#000000"> error.Exception.InnerException.Message;</span></span>
 <span class="odt-code-line">      }</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return string</span>.Empty;</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000">.Empty;</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 1: We receive a [ModelError] type that encapsulates an error on one of the elements of the action&#x27;s model. We retrieve the error message from three different locations:</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <ol>
     <ul>
       <li><span style="color: #000000">in [ModelError].ErrorMessage, lines 3–6;</span>
@@ -1130,70 +1183,89 @@
     </ul>
 </ol>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">During testing, we notice that the error message is found in these three locations depending on the nature of the model element. There must be a rule that guarantees we can obtain the error message associated with a model element, but I don’t know it. So I search for it in the various places where I can find it, following a specific order. As soon as a non-empty message is found, it is returned.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s request the URL [</span><strong><span style="color: #000000">http://localhost:55483/First/Action05?age=21x</span></strong><span style="color: #000000">]. We get the following page:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000002DD0000008E8489DDD0.png" style="width:13.57cm;height:2.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002DD0000008E8489DDD0.png" /></p>
 <p><a id="refheading58058676630786"></a></p>
 <h2 id="43-an-action-with-multiple-parameters">4.3. An action with multiple parameters</h2>
 <p><span style="color: #000000">Consider the following new action:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="color:#008000">// Action06</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action06(<span style="color:#0000ff">double</span>? weight, <span style="color:#0000ff">int</span>? age)</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action06(</span><span style="color:#0000ff">double</span><span style="color:#000000">? poids, </span><span style="color:#0000ff">int</span><span style="color:#000000">? age)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;Controller={0}, Action={1}, weight={2}, age={3}, valid={4}, errors={5}&quot;</span>, RouteData.Values[<span style="color:#a31515">&quot;controller&quot;</span>], RouteData.Values[<span style="color:#a31515">&quot;action&quot;</span>], weight, age, ModelState.IsValid, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur={0}, Action={1}, poids={2}, âge={3}, valide={4}, erreurs={5}&quot;</span><span style="color:#000000">, RouteData.Values[</span><span style="color:#a31515">&quot;controller&quot;</span><span style="color:#000000">], RouteData.Values[</span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000">], poids, age, ModelState.IsValid, erreurs);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 2: We have two parameters [weight] and [age].</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The rules described above now apply to both parameters. Here are some examples of execution:</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><img src="images/10000000000002D0000000919132A93E.png" style="width:13.33cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D0000000919132A93E.png" /></p>
 <p><img src="images/100000000000025C0000007DD19712C8.png" style="width:11.15cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025C0000007DD19712C8.png" /></p>
 <p><a id="refheading58060676630786"></a></p>
 <h2 id="44-using-a-class-as-an-action-model">4.4. Using a class as an action model</h2>
 <p><span style="color: #000000">Let’s define a class that will serve as the model for an action. We’ll place it in the [Models] folder [1].</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000160000000B7E5E62470.png" style="display:inline-block; margin:4px;width:4.657cm;height:2.422cm;" class="odt-zoomable" data-zoom-src="images/1000000000000160000000B7E5E62470.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Its code will be as follows:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span> Exemple_02.Models</span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">ActionModel01</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel01</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public double</span>? Weight { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public int</span>? Age { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">double</span><span style="color:#000000">? Poids { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">int</span><span style="color:#000000">? Age { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Our class has as automatic properties the two parameters [Weight] and [Age] discussed earlier. This class will be the input parameter for the action [Action07]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="color:#008000">// Action07</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action07(<span style="color:#2b91af">ActionModel01 </span>model)</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action07(</span><span style="color:#2b91af">ActionModel01</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;Controller={0}, Action={1}, weight={2}, age={3}, valid={4}, errors={5}&quot;</span>, RouteData.Values[<span style="color:#a31515">&quot;controller&quot;</span>], RouteData.Values[<span style="color:#a31515">&quot;action&quot;</span>], model.Weight, model.Age, ModelState.IsValid, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur={0}, Action={1}, poids={2}, âge={3}, valide={4}, erreurs={5}&quot;</span><span style="color:#000000">, RouteData.Values[</span><span style="color:#a31515">&quot;controller&quot;</span><span style="color:#000000">], RouteData.Values[</span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000">], modèle.Poids, modèle.Age, ModelState.IsValid, erreurs);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 2: The action model is an instance of type [ActionModel01].</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s revisit the same two examples as before:</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><img src="images/10000000000002D400000092CCDC4975.png" style="width:13.33cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D400000092CCDC4975.png" /></p>
 <p><img src="images/100000000000025D000000809AA65E67.png" style="width:11.15cm;height:2.371cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025D000000809AA65E67.png" /></p>
 <p><span style="color: #000000">Note that parameter binding is case-insensitive. The request parameters were [age] and [weight]. They populated the [Age] and [Weight] properties of the [ModelAction01] class.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Furthermore, we have so far used [GET] HTTP requests. Let’s show that [POST] requests behave the same way. To do this, let’s use the [Advanced Rest Client] application again:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D700000229F6675F40.png" style="display:inline-block; margin:4px;width:6.232cm;height:7.317cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D700000229F6675F40.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">in [1], the requested URL;</span>
   </li>
@@ -1203,35 +1275,43 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We get the same response as with the GET request:</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><img src="images/100000000000049300000055ECCB8246.png" style="width:17.729cm;height:1.286cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000049300000055ECCB8246.png" /></p>
 <p><a id="refheading258461901815618"></a></p>
 <h2 id="45-action-model-with-validation-constraints-1">4.5. Action model with validation constraints - 1</h2>
 <p><span style="color: #000000">Using the previous model:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span> Exemple_02.Models</span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">ActionModel01</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel01</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public double</span>? Weight { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public int</span>? Age { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">double</span><span style="color:#000000">? Poids { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">int</span><span style="color:#000000">? Age { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [weight] and [age] parameters may be omitted from the request. In this case, the [Weight] and [Age] properties are set to [null], and no error is reported. You might want to transform the model as follows:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span> Exemple_02.Models</span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">ActionModel01</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel01</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public double </span>Weight { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public int </span>Age { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">double</span><span style="color:#000000"> Poids { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">int</span><span style="color:#000000"> Age { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Lines 5 and 6: the [Weight] and [Age] properties can no longer have the value [null]. Let&#x27;s see what happens with this new model when the [weight] and [age] parameters are missing from the request.</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/100000000000024C0000007FC4C3BCC7.png" style="width:10.89cm;height:2.35cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024C0000007FC4C3BCC7.png" /></p>
 <p><span style="color: #000000">There were no errors, and the [Weight] and [Age] properties retained their initialization value: 0. ASP.NET MVC:</span></p>
 <ul>
@@ -1241,25 +1321,30 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The first model allows us to check for the absence of a parameter: the corresponding property then has the value [null]. The second does not allow this. It is possible to add validation constraints beyond the simple type of the parameters. We will now present them.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Consider the following new action model:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000B90000006B7CED3721.png" style="width:3.431cm;height:1.981cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000B90000006B7CED3721.png" /></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.ComponentModel.DataAnnotations;</span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.ComponentModel.DataAnnotations;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">ActionModel02</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel02</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    [<a id="contrainte-required"></a><span style="color:#2b91af"> Required</span> ]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Range</span>(1, 200)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public double</span>? Weight { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Range</span>(1, 150)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public int </span>Age { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><a id="contrainte-required"></a><span style="color:#2b91af">Required</span><span style="color:#000000">]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Range</span><span style="color:#000000">(1, 200)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">double</span><span style="color:#000000">? Poids { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Range</span><span style="color:#000000">(1, 150)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">int</span><span style="color:#000000">? Age { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 6: indicates that the [Weight] field is required;</span>
   </li>
@@ -1271,97 +1356,124 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The action using this template will be the following [Action08]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#008000">// Action08</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action08(<span style="color:#2b91af">ActionModel02 </span>model)</span>
+<span class="odt-code-line">    <span style="color:#000000">// Action08</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action08(</span><span style="color:#2b91af">ActionModel02</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;Controller={0}, Action={1}, weight={2}, age={3}, valid={4}, errors={5}&quot;</span>, RouteData.Values[<span style="color:#a31515">&quot;controller&quot;</span>], RouteData.Values[<span style="color:#a31515">&quot;action&quot;</span>], model.Weight, model.Age, ModelState.IsValid, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur={0}, Action={1}, poids={2}, âge={3}, valide={4}, erreurs={5}&quot;</span><span style="color:#000000">, RouteData.Values[</span><span style="color:#a31515">&quot;controller&quot;</span><span style="color:#000000">], RouteData.Values[</span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000">], modèle.Poids, modèle.Age, ModelState.IsValid, erreurs);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 2: The action receives an instance of the model [ActionModel02];</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let&#x27;s run some tests:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000002DF0000008B2A9D7224.png" style="width:13.61cm;height:2.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002DF0000008B2A9D7224.png" /></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000002F10000008D4185AEE0.png" style="width:13.94cm;height:2.611cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002F10000008D4185AEE0.png" /></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000002E30000009092A6B982.png" style="width:13.681cm;height:2.671cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002E30000009092A6B982.png" /></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/100000000000025E0000007DF1993F2E.png" style="width:11.22cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025E0000007DF1993F2E.png" /></p>
 <p><span style="color: #000000">Errors are detected correctly. Now, let&#x27;s update the model as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.ComponentModel.DataAnnotations;</span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.ComponentModel.DataAnnotations;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">ActionModel02</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel02</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Range</span>(1, 200)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public double </span>Weight { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Range</span>(1, 150)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public int </span>Age { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Range</span><span style="color:#000000">(1, 200)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">double</span><span style="color:#000000"> Poids { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Range</span><span style="color:#000000">(1, 150)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">int</span><span style="color:#000000"> Age { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Lines 8 and 11: the properties can no longer have the value [null]. Let’s compile and run the test again without parameters:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000002FB0000008BEB209C5E.png" style="width:14.131cm;height:2.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002FB0000008BEB209C5E.png" /></p>
 <p><span style="color: #000000">The absence of parameters caused the [Weight] and [Age] properties to retain the value they acquired when the model was instantiated: 0. Validation </span><strong><span style="color: #000000">then</span></strong><span style="color: #000000"> occurs. The [Required] attribute is then satisfied. We can see that the error message above is for the [Range] attribute. Therefore, to check for the presence of a parameter, the associated property must be </span><em><span style="color: #000000">nullable</span></em><span style="color: #000000">, i.e., it must be able to accept the value </span><em><span style="color: #000000">null</span></em><span style="color: #000000">.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s return to the initial [ActionModel02] model and consider an action whose model consists of an [ActionModel02] instance and a </span><em><span style="color: #000000">nullable</span></em><span style="color: #000000"> [DateTime] type:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#008000">// Action09</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action09(<span style="color:#2b91af">ActionModel02 </span>model, <span style="color:#2b91af">DateTime</span>? date)</span>
+<span class="odt-code-line">    <span style="color:#000000">// Action09</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action09(</span><span style="color:#2b91af">ActionModel02</span><span style="color:#000000"> modèle, </span><span style="color:#2b91af">DateTime</span><span style="color:#000000">? date)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;Controller={0}, Action={1}, weight={2}, age={3}, date={4}, valid={5}, errors={6}&quot;</span>, RouteData.Values[<span style="color:#a31515">&quot;controller&quot;</span>], RouteData.Values[<span style="color:#a31515">&quot;action&quot;</span>], model.Weight, model.Age, date, ModelState.IsValid, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur={0}, Action={1}, poids={2}, âge={3}, date={4}, valide={5}, erreurs={6}&quot;</span><span style="color:#000000">, RouteData.Values[</span><span style="color:#a31515">&quot;controller&quot;</span><span style="color:#000000">], RouteData.Values[</span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000">], modèle.Poids, modèle.Age, date, ModelState.IsValid, erreurs);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let&#x27;s run a few tests:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000002F30000008C11907953.png" style="width:13.981cm;height:2.589cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002F30000008C11907953.png" /></p>
 <p><span style="color: #000000">We did not pass any parameters to the action. The [Required] attributes on the [Weight] and [Age] properties did their job. The date, however, received the </span><em><span style="color: #000000">null</span></em><span style="color: #000000"> value and no errors were reported.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Now let’s pass invalid parameters:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000002E40000009E74F5DE21.png" style="width:13.7cm;height:2.93cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002E40000009E74F5DE21.png" /></p>
 <p><span style="color: #000000">Now let’s pass valid values:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/100000000000033300000084EE2C4D47.png" style="width:15.169cm;height:2.439cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000033300000084EE2C4D47.png" /></p>
 <p><span style="color: #000000">Let’s examine other validation constraints. The new action model is as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000AB000000793D923D1F.png" style="width:3.17cm;height:2.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000AB000000793D923D1F.png" /></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.ComponentModel.DataAnnotations;</span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.ComponentModel.DataAnnotations;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">ActionModel03</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel03</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;The email parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">EmailAddress</span>(ErrorMessage = <span style="color:#a31515">&quot;The email parameter is not in a valid format&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Email { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;The day parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">RegularExpression</span>(<span style="color:#a31515">@&quot;^\d{1,2}$&quot;</span>, ErrorMessage = <span style="color:#a31515">&quot;The day parameter must be 1 or 2 digits&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Day { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;The info1 parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">MaxLength</span>(4, ErrorMessage = <span style="color:#a31515">&quot;The info1 parameter cannot be longer than 4 characters&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Info1 { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;The info2 parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">MinLength</span>(2, ErrorMessage = <span style="color:#a31515">&quot;The info2 parameter must be at least 2 characters long&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Info2 { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;The info3 parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">MinLength</span>(4, ErrorMessage = <span style="color:#a31515">&quot;The info3 parameter must be exactly 4 characters long&quot;</span>)]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">MaxLength</span>(4, ErrorMessage = <span style="color:#a31515">&quot;The info3 parameter must be exactly 4 characters long&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Info3 { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre email est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">EmailAddress</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre email n&#x27;a pas un format valide&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Email { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre jour est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">RegularExpression</span><span style="color:#000000">(</span><span style="color:#a31515">@&quot;^\d{1,2}$&quot;</span><span style="color:#000000">, ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre jour doit avoir 1 ou 2 chiffres&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Jour { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre info1 est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">MaxLength</span><span style="color:#000000">(4, ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre info1 ne peut avoir plus de 4 caractères&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Info1 { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre info2 est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">MinLength</span><span style="color:#000000">(2, ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre info2 ne peut avoir moins de 2 caractères&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Info2 { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre info3 est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">MinLength</span><span style="color:#000000">(4, ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre info3 doit avoir 4 caractères exactement&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">MaxLength</span><span style="color:#000000">(4, ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre info3 doit avoir 4 caractères exactement&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Info3 { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 6: the [Required] attribute, this time with an error message that we define ourselves;</span>
   </li>
@@ -1377,48 +1489,61 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Action [Action10] will use this template:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#008000">// Action10</span><span style="color:#008000"></span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action10(<span style="color:#2b91af">ActionModel03 </span>model)</span>
+<span class="odt-code-line">// Action10</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action10(</span><span style="color:#2b91af">ActionModel03</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;email={0}, day={1}, info1={2}, info2={3}, info3={4}, errors={5}&quot;</span>,</span>
-<span class="odt-code-line">        model.Email, model.Day, model.Info1, model.Info2, model.Info3, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;email={0}, jour={1}, info1={2}, info2={3}, info3={4}, erreurs={5}&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line">        modèle.Email, modèle.Jour, modèle.Info1, modèle.Info2, modèle.Info3, erreurs);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">    }</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let&#x27;s run some tests with this action.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">First, without parameters:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/100000000000038100000092744C1112.png" style="width:16.611cm;height:2.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000038100000092744C1112.png" /></p>
 <p><span style="color: #000000">Then with invalid parameters:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/1000000000000388000000A1676642CB.png" style="width:16.739cm;height:2.979cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000388000000A1676642CB.png" /></p>
 <p><span style="color: #000000">Then with valid parameters:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000003150000007E26B3CF8D.png" style="width:14.61cm;height:2.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003150000007E26B3CF8D.png" /></p>
 <p><a id="refheading58062676630786"></a></p>
 <h2 id="46-action-model-with-validity-constraints-2">4.6. Action model with validity constraints - 2</h2>
 <p><span style="color: #000000">We introduce additional integrity constraints. The new action model will be the following [ActionModel04] class:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000159000000F3A47872E8.png" style="display:inline-block; margin:4px;width:4.565cm;height:3.216cm;" class="odt-zoomable" data-zoom-src="images/1000000000000159000000F3A47872E8.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.ComponentModel.DataAnnotations;</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span> System.ComponentModel.DataAnnotations;</span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">ActionModel04</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel04</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage=<span style="color:#a31515">&quot;The url parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Url</span>(ErrorMessage=<span style="color:#a31515">&quot;Invalid URL&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Url { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;The info1 parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Info1 { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;The info2 parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Compare</span>(<span style="color:#a31515">&quot;Info1&quot;</span>, ErrorMessage = <span style="color:#a31515">&quot;The info1 and info2 parameters must be identical&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Info2 { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;The cc parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">CreditCard</span>(ErrorMessage = <span style="color:#a31515">&quot;The cc parameter is not a valid credit card number&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Cc { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage=</span><span style="color:#a31515">&quot;Le paramètre url est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Url</span><span style="color:#000000">(ErrorMessage=</span><span style="color:#a31515">&quot;URL invalide&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Url { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre info1 est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Info1 { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre info2 est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Compare</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;Info1&quot;</span><span style="color:#000000">,ErrorMessage=</span><span style="color:#a31515">&quot;Les paramètres info1 et info2 doivent être identiques&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Info2 { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre cc est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">CreditCard</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre cc n&#x27;est pas un n° de carte de crédit valide&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Cc { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
@@ -1434,13 +1559,13 @@
 
 <p>The action using this template will be as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#008000">// Action11</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action11(<span style="color:#2b91af">ActionModel04 </span>model)</span>
+<span class="odt-code-line">    <span style="color:#000000">// Action11</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action11(</span><span style="color:#2b91af">ActionModel04</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;URL={0}, Info1={1}, Info2={2}, CC={3}, errors={4}&quot;</span>,</span>
-<span class="odt-code-line">        model.Url, model.Info1, model.Info2, model.Cc, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;URL={0}, Info1={1}, Info2={2}, CC={3},erreurs={4}&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line">        modèle.Url, modèle.Info1, modèle.Info2, modèle.Cc, erreurs);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
@@ -1470,36 +1595,41 @@
 <p>Let’s pass invalid parameters:</p>
 <p><img src="images/100000000000010F000001EFDF14E5EC.png" style="width:5.02cm;height:9.17cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010F000001EFDF14E5EC.png" /></p>
 <p>We then get the following response:</p>
+<p><span style="color: #000000"> </span></p>
 <p><img src="images/10000000000004A900000054CF6C1668.png" style="width:17.36cm;height:1.221cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004A900000054CF6C1668.png" /></p>
 <p><a id="refheading58064676630786"></a></p>
 <h2 id="47-action-model-with-validity-constraints-3">4.7. Action model with validity constraints - 3</h2>
 <p><span style="color: #000000">Sometimes the available integrity constraints aren&#x27;t enough. In that case, you can create your own. In particular, you can use a model that implements the [IValidatableObject] interface. In this case, you add your own model validations to the [Validate] method of this interface. Let&#x27;s look at an example. The new action model will be the following [ActionModel05] class:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000CFF06C3098.png" style="display:inline-block; margin:4px;width:3.942cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000CFF06C3098.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.Collections.Generic;</span>
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.ComponentModel.DataAnnotations;</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.ComponentModel.DataAnnotations;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">ActionModel05 </span>: <span style="color:#2b91af">IValidatableObject</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel05</span><span style="color:#000000"> : </span><span style="color:#2b91af">IValidatableObject</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;The rate parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public double</span>? Rate { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">IEnumerable</span>&lt;<span style="color:#2b91af">ValidationResult</span>&gt; Validate(<span style="color:#2b91af">ValidationContext </span>validationContext)</span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre taux est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">double</span><span style="color:#000000">? Taux { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">IEnumerable</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">ValidationResult</span><span style="color:#000000">&gt; Validate(</span><span style="color:#2b91af">ValidationContext</span><span style="color:#000000"> validationContext)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#2b91af">List</span>&lt;<span style="color:#2b91af">ValidationResult</span>&gt; results = <span style="color:#0000ff">new </span><span style="color:#2b91af">List</span>&lt;<span style="color:#2b91af">ValidationResult</span>&gt;();</span>
-<span class="odt-code-line">      <span style="color:#0000ff">bool </span>ok = Rate &lt; 4.2 || Rate &gt; 6.7;</span>
-<span class="odt-code-line">      <span style="color:#0000ff">if </span>(!ok)</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">List</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">ValidationResult</span><span style="color:#000000">&gt; résultats = </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">List</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">ValidationResult</span><span style="color:#000000">&gt;();</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">bool</span><span style="color:#000000"> ok = Taux &lt; 4.2 || Taux &gt; 6.7;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (!ok)</span></span>
 <span class="odt-code-line">      {</span>
-<span class="odt-code-line">        results.Add(<span style="color:#0000ff">new </span><span style="color:#2b91af">ValidationResult</span>(<span style="color:#a31515">&quot;The rate parameter must be &lt; 4.2 or &gt; 6.7&quot;</span>, <span style="color:#0000ff">new string</span>[] { <span style="color:#a31515">&quot;Rate&quot; </span>}));</span>
+<span class="odt-code-line"><span style="color:#000000">        résultats.Add(</span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">ValidationResult</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;Le paramètre taux doit être &lt; 4.2 ou &gt; 6.7&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000">[] { </span><span style="color:#a31515">&quot;Taux&quot;</span><span style="color:#000000"> }));</span></span>
 <span class="odt-code-line">      }</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>results;</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> résultats;</span></span>
 <span class="odt-code-line">    }</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 6: the model implements the [IValidatableObject] interface;</span>
   </li>
@@ -1515,79 +1645,96 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The action using this model will be as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="color:#008000">// Action12</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action12(<span style="color:#2b91af">ActionModel05 </span>model)</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action12(</span><span style="color:#2b91af">ActionModel05</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;rate={0}, errors={1}&quot;</span>, model.Rate, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;taux={0}, erreurs={1}&quot;</span><span style="color:#000000">, modèle.Taux, erreurs);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Here is an example of execution:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000001FC00000079F4909684.png" style="width:9.41cm;height:2.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001FC00000079F4909684.png" /></p>
 <p><a id="refheading58066676630786"></a></p>
 <h2 id="48-action-model-of-type-table-or-list">4.8. Action model of type Table or List</h2>
 <p><span style="color: #000000">Consider the following action [Action13]:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#008000">// Action13</span><span style="color:#008000"></span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action13(<span style="color:#0000ff">string</span>[] data)</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
+<span class="odt-code-line">// Action13</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action13(</span><span style="color:#0000ff">string</span><span style="color:#000000">[] data)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>strData = <span style="color:#a31515">&quot;&quot;</span>;</span>
-<span class="odt-code-line">      <span style="color:#0000ff">if </span>(data != <span style="color:#0000ff">null </span>&amp;&amp; data.Length != 0)</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> strData = </span><span style="color:#a31515">&quot;&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (data != </span><span style="color:#0000ff">null</span><span style="color:#000000"> &amp;&amp; data.Length != 0)</span></span>
 <span class="odt-code-line">      {</span>
-<span class="odt-code-line">        strData = <span style="color:#0000ff">string</span>.Join(<span style="color:#a31515">&quot;,&quot;</span>, data);</span>
+<span class="odt-code-line"><span style="color:#000000">        strData = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Join(</span><span style="color:#a31515">&quot;,&quot;</span><span style="color:#000000">, data);</span></span>
 <span class="odt-code-line">      }</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;data=[{0}]&quot;</span>, strData);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;data=[{0}]&quot;</span><span style="color:#000000">, strData);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">    }</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">Line 2: The action model consists of an array of [string]. It allows us to retrieve a parameter named [data], which may appear multiple times in the request parameters, such as in [?data=data1&amp;data=data2&amp;data=data3]. The various [data] parameters in the request will populate the [data] array in the action model. This scenario occurs with dropdown lists. The browser then sends the different values selected by the user, all with the same parameter name.</span>
+  <li><span style="color: #000000">Line 2: The action model consists of an array of [string]. It allows us to retrieve a parameter named [data], which may appear multiple times in the request parameters, such as in [?data=data1&amp;data=data2&amp;data=data3]. The various [data] parameters </span><span style="color: #000000">in the request will populate the [data] array in the action model. This scenario occurs with dropdown lists. The browser then sends the different values selected by the user, all with the same parameter name.</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Here is an example:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000002830000007DBA96483F.png" style="width:11.91cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002830000007DBA96483F.png" /></p>
 <p><span style="color: #000000">The model can also be a list:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
 <span class="odt-code-line">    <span style="color:#008000">// Action14</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action14(<span style="color:#2b91af">List</span>&lt;<span style="color:#0000ff">int</span>&gt; data)</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action14(</span><span style="color:#2b91af">List</span><span style="color:#000000">&lt;</span><span style="color:#0000ff">int</span><span style="color:#000000">&gt; data)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>strData = <span style="color:#a31515">&quot;&quot;</span>;</span>
-<span class="odt-code-line">      <span style="color:#0000ff">if </span>(data != <span style="color:#0000ff">null </span>&amp;&amp; data.Count != 0)</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> strData = </span><span style="color:#a31515">&quot;&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (data != </span><span style="color:#0000ff">null</span><span style="color:#000000"> &amp;&amp; data.Count != 0)</span></span>
 <span class="odt-code-line">      {</span>
-<span class="odt-code-line">        strData = <span style="color:#0000ff">string</span>.Join(<span style="color:#a31515">&quot;,&quot;</span>, data);</span>
+<span class="odt-code-line"><span style="color:#000000">        strData = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Join(</span><span style="color:#a31515">&quot;,&quot;</span><span style="color:#000000">, data);</span></span>
 <span class="odt-code-line">      }</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;data=[{0}], errors=[{1}]&quot;</span>, strData, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;data=[{0}], erreurs=[{1}]&quot;</span><span style="color:#000000">, strData, erreurs);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The model here is a list of integers (line 2). Here is the first run:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/100000000000022C0000007B7504D046.png" style="width:10.299cm;height:2.281cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022C0000007B7504D046.png" /></p>
 <p><span style="color: #000000">and a second one:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/100000000000023F00000089748B880F.png" style="width:10.719cm;height:2.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000023F00000089748B880F.png" /></p>
 <p><a id="refheading58068676630786"></a></p>
 <h2 id="49-filtering-an-action-model">4.9. Filtering an action model</h2>
 <p><span style="color: #000000">Sometimes we have a model but want only certain elements of the model to be initialized by the HTTP request. Consider the following action model [ActionModel06]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.ComponentModel.DataAnnotations;</span>
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.Web.Mvc;</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span> System.ComponentModel.DataAnnotations;</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  [<span style="color:#2b91af">Bind</span>(Exclude = <span style="color:#a31515">&quot;Info2&quot;</span>)]</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">ActionModel06</span></span>
+<span class="odt-code-line"><span style="color:#000000">  [</span><span style="color:#2b91af">Bind</span><span style="color:#000000">(Exclude = </span><span style="color:#a31515">&quot;Info2&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel06</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    [<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;The [info1] parameter is required&quot;</span>)]</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Info1 { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>Info2 { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
+<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">Required</span><span style="color:#000000">(ErrorMessage = </span><span style="color:#a31515">&quot;Le paramètre [info1] est requis&quot;</span><span style="color:#000000">)]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Info1 { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Info2 { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
@@ -1601,12 +1748,12 @@
 
 <p>The action will be as follows [Action15]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#008000">// Action15</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action15(<span style="color:#2b91af">ActionModel06 </span>model)</span>
+<span class="odt-code-line">    <span style="color:#000000">// Action15</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action15(</span><span style="color:#2b91af">ActionModel06</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;valid={0}, info1={1}, info2={2}, errors={3}&quot;</span>, ModelState.IsValid, model.Info1, model.Info2, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;valide={0}, info1={1}, info2={2}, erreurs={3}&quot;</span><span style="color:#000000">, ModelState.IsValid, modèle.Info1, modèle.Info2, erreurs);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
@@ -1656,31 +1803,37 @@
 </ul>
 
 <p><span style="color: #000000">Let’s look at a first example illustrating these different types of memory:</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">First, we modify the [Web.config] file of the [Example-02] project as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">appSettings</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add </span><span style="color:#0000ff">key=</span>&quot;<span style="color:#0000ff">webpages:Version</span>&quot; <span style="color:#0000ff">value=</span>&quot;<span style="color:#0000ff">2.0.0.0</span>&quot; <span style="color:#0000ff">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">    </span>...</span>
-<span class="odt-code-line"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add </span><span style="color:#0000ff">key=</span>&quot;<span style="color:#0000ff">appInfo1</span>&quot; <span style="color:#0000ff">value=</span>&quot;<span style="color:#0000ff">appInfo1</span>&quot;<span style="color:#0000ff">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#a31515">/appSettings</span><span style="color:#0000ff">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">key</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">webpages:Version</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">value</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">2.0.0.0</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">    </span><span style="color:#000000">...</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">key</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">infoAppli1</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">value</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">infoAppli1</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">appSettings</span><span style="color:#0000ff">&gt;</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We add line 4, which associates the value [infoAppli1] with the key [infoAppli1]. This will be our [Application] scope data: it will be accessible to all requests from all users.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Next, we modify the [Application_Start] method in the [Global.asax] file. This method runs once when the application starts. This is where we need to use the [Web.config] file:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#0000ff">protected void </span>Application_Start()</span>
+<span class="odt-code-line">    <span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> Application_Start()</span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#2b91af">AreaRegistration</span>.RegisterAllAreas();</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">      <span style="color:#2b91af">WebApiConfig</span>.Register(<span style="color:#2b91af">GlobalConfiguration</span>.Configuration);</span>
-<span class="odt-code-line">      <span style="color:#2b91af">FilterConfig</span>.RegisterGlobalFilters(<span style="color:#2b91af">GlobalFilters</span>.Filters);</span>
-<span class="odt-code-line">      <span style="color:#2b91af">RouteConfig</span>.RegisterRoutes(<span style="color:#2b91af">RouteTable</span>.Routes);</span>
-<span class="odt-code-line">      <span style="color:#2b91af">BundleConfig</span>.RegisterBundles(<span style="color:#2b91af">BundleTable</span>.Bundles);</span>
-<span class="odt-code-line">      <span style="color:#008000">// Initialize application</span></span>
-<span class="odt-code-line">      Application[<span style="color:#a31515">&quot;infoApp1&quot;</span>] = <span style="color:#2b91af">ConfigurationManager</span>.AppSettings[<span style="color:#a31515">&quot;infoApp1&quot;</span>];</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">AreaRegistration</span><span style="color:#000000">.RegisterAllAreas();</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">WebApiConfig</span><span style="color:#000000">.Register(</span><span style="color:#2b91af">GlobalConfiguration</span><span style="color:#000000">.Configuration);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">FilterConfig</span><span style="color:#000000">.RegisterGlobalFilters(</span><span style="color:#2b91af">GlobalFilters</span><span style="color:#000000">.Filters);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">RouteConfig</span><span style="color:#000000">.RegisterRoutes(</span><span style="color:#2b91af">RouteTable</span><span style="color:#000000">.Routes);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">BundleConfig</span><span style="color:#000000">.RegisterBundles(</span><span style="color:#2b91af">BundleTable</span><span style="color:#000000">.Bundles);</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// intialisation application</span></span>
+<span class="odt-code-line"><span style="color:#000000">      Application[</span><span style="color:#a31515">&quot;infoAppli1&quot;</span><span style="color:#000000">] = </span><span style="color:#2b91af">ConfigurationManager</span><span style="color:#000000">.AppSettings[</span><span style="color:#a31515">&quot;infoAppli1&quot;</span><span style="color:#000000">];</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We add line 10. It does two things:</span></p>
 <ul>
   <li><span style="color: #000000">it retrieves the value of the [infoAppli1] key from the [Web.config] file using the [</span><span style="color: #000000">System.Configuration.ConfigurationManager] </span><span style="color: #000000">class</span><span style="color: #000000">;</span>
@@ -1689,15 +1842,18 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In the same [Global.asax] file, we add the following [Session_Start] method:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#0000ff">protected void </span>Session_Start()</span>
+<span class="odt-code-line">    <span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> Session_Start()</span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#008000">// initialize counter</span></span>
-<span class="odt-code-line">      Session[<span style="color:#a31515">&quot;counter&quot;</span>] = 0;</span>
+<span class="odt-code-line">      <span style="color:#000000">// initialisation compteur</span></span>
+<span class="odt-code-line"><span style="color:#000000">      Session[</span><span style="color:#a31515">&quot;compteur&quot;</span><span style="color:#000000">] = 0;</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [Session_Start] method is executed for every new user. What is a new user? A user is &quot;tracked&quot; by a session token. This token is:</span></p>
 <ul>
   <li><span style="color: #000000">created by the web server and sent to the new user in the HTTP headers of the first response sent to them;</span>
@@ -1706,27 +1862,32 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The web server recognizes that it is dealing with a new user when the user does not send a session token. The server then creates one for them.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In line 4 above, we place a counter in the user’s session that will be incremented with each request from that user. This illustrates the memory associated with a user. The [Session] class is used like a dictionary (line 4).</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">With that done, we write the following [Action16] action:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// Action16</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action16()</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action16()</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#008000">// retrieve the HTTP request context</span></span>
-<span class="odt-code-line">      <span style="color:#2b91af">HttpContextBase </span>context = ControllerContext.HttpContext;</span>
-<span class="odt-code-line">      <span style="color:#008000">// retrieve the Application scope information</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>appInfo1 = context.Application[<span style="color:#a31515">&quot;appInfo1&quot;</span>] <span style="color:#0000ff">as string</span>;</span>
-<span class="odt-code-line">      <span style="color:#008000">// and those in the Session scope</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">int</span>? counter = context.Session[<span style="color:#a31515">&quot;counter&quot;</span>] <span style="color:#0000ff">as int</span>?;</span>
-<span class="odt-code-line">      counter++;</span>
-<span class="odt-code-line">      context.Session[<span style="color:#a31515">&quot;counter&quot;</span>] = counter;</span>
-<span class="odt-code-line">      <span style="color:#008000">// the response to the client</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;appInfo1={0}, counter={1}&quot;</span>, appInfo1, counter);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line">      <span style="color:#000000">// on récupère le contexte de la requête HTTP</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">HttpContextBase</span><span style="color:#000000"> contexte = ControllerContext.HttpContext;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// on récupère les infos de portée Application</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> infoAppli1 = contexte.Application[</span><span style="color:#a31515">&quot;infoAppli1&quot;</span><span style="color:#000000">] </span><span style="color:#0000ff">as</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// et celles de portée Session</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">int</span><span style="color:#000000">? compteur = contexte.Session[</span><span style="color:#a31515">&quot;compteur&quot;</span><span style="color:#000000">] </span><span style="color:#0000ff">as</span><span style="color:#000000"> </span><span style="color:#0000ff">int</span><span style="color:#000000">?;</span></span>
+<span class="odt-code-line">      compteur++;</span>
+<span class="odt-code-line"><span style="color:#000000">      contexte.Session[</span><span style="color:#a31515">&quot;compteur&quot;</span><span style="color:#000000">] = compteur;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// la réponse au client</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;infoAppli1={0}, compteur={1}&quot;</span><span style="color:#000000">, infoAppli1, compteur);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 5: we retrieve the context of the HTTP request currently being processed. This context will give us access to data in the [Application] and [Session] scopes;</span>
   </li>
@@ -1740,107 +1901,127 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Here are some examples of execution:</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">[Action16] is requested once [1], then the page is refreshed [F5] twice [2]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C4000000F6927C44F8.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.999cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C4000000F6927C44F8.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In [2], the client made a total of three requests. Each time, it was able to retrieve the counter updated by the previous request.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">To simulate a second user, we use a second browser to request the same URL:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028F000000FDC947C3D9.png" style="display:inline-block; margin:4px;width:8.666cm;height:3.348cm;" class="odt-zoomable" data-zoom-src="images/100000000000028F000000FDC947C3D9.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In [3], the second user successfully retrieves the same [Application] scope information but has their own [Session] scope counter.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s return to the code for action [Action16]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// Action16</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action16()</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action16()</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#008000">// retrieve the HTTP request context</span></span>
-<span class="odt-code-line">      <span style="color:#2b91af">HttpContextBase </span>context = ControllerContext.HttpContext;</span>
-<span class="odt-code-line">      <span style="color:#008000">// retrieve Application scope information</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>appInfo1 = context.Application[<span style="color:#a31515">&quot;appInfo1&quot;</span>] <span style="color:#0000ff">as string</span>;</span>
-<span class="odt-code-line">      <span style="color:#008000">// and Session-scope information</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">int</span>? counter = context.Session[<span style="color:#a31515">&quot;counter&quot;</span>] <span style="color:#0000ff">as int</span>?;</span>
-<span class="odt-code-line">      counter++;</span>
-<span class="odt-code-line">      context.Session[<span style="color:#a31515">&quot;counter&quot;</span>] = counter;</span>
-<span class="odt-code-line">      <span style="color:#008000">// the response to the client</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;appInfo1={0}, counter={1}&quot;</span>, appInfo1, counter);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line">      <span style="color:#000000">// on récupère le contexte de la requête HTTP</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">HttpContextBase</span><span style="color:#000000"> contexte = ControllerContext.HttpContext;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// on récupère les infos de portée Application</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> infoAppli1 = contexte.Application[</span><span style="color:#a31515">&quot;infoAppli1&quot;</span><span style="color:#000000">] </span><span style="color:#0000ff">as</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// et celles de portée Session</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">int</span><span style="color:#000000">? compteur = contexte.Session[</span><span style="color:#a31515">&quot;compteur&quot;</span><span style="color:#000000">] </span><span style="color:#0000ff">as</span><span style="color:#000000"> </span><span style="color:#0000ff">int</span><span style="color:#000000">?;</span></span>
+<span class="odt-code-line">      compteur++;</span>
+<span class="odt-code-line"><span style="color:#000000">      contexte.Session[</span><span style="color:#a31515">&quot;compteur&quot;</span><span style="color:#000000">] = compteur;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// la réponse au client</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;infoAppli1={0}, compteur={1}&quot;</span><span style="color:#000000">, infoAppli1, compteur);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">One of the goals of the ASP.NET MVC framework is to make controllers and actions testable in isolation without a web server. However, as seen in line 5, the HTTP request context is required to retrieve data from the [Application] and [Session] scopes. We propose creating a new action [Action17] that would receive [Application] and [Session] scope data as parameters:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#008000">// Action17</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action17(<span style="color:#2b91af">ApplicationModel </span>applicationData, <span style="color:#2b91af">SessionModel </span>sessionData)</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line">    // Action17</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action17(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> applicationData, </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> sessionData)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#008000">// Retrieve the Application scope information</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>appInfo1 = applicationData.InfoAppli1;</span>
-<span class="odt-code-line">      <span style="color:#008000">// and the Session scope information</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">int </span>counter = sessionData.Counter++;</span>
-<span class="odt-code-line">      <span style="color:#008000">// the response to the client</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;AppInfo1={0}, counter={1}&quot;</span>, AppInfo1, counter);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line">      <span style="color:#000000">// retrieve range info Application</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> infoAppli1 = applicationData.InfoAppli1;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// and Session range</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">int</span><span style="color:#000000"> compteur = sessionData.Compteur++;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// customer response</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;infoAppli1={0}, compteur={1}&quot;</span><span style="color:#000000">, infoAppli1, compteur);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The code no longer has any dependencies on the HTTP request. It can therefore be tested independently of a web server.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s see how to do this. First, we need to create the [ApplicationModel] and [SessionModel] classes, which will encapsulate the [Application] and [Session] scope data, respectively. They are as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001410000013948D0013A.png" style="display:inline-block; margin:4px;width:4.247cm;height:4.142cm;" class="odt-zoomable" data-zoom-src="images/10000000000001410000013948D0013A.png" /></td></tr></table>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class</span><a id="applicationmodel"></a><span style="color:#2b91af"> ApplicationModel</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><a id="applicationmodel"></a><span style="color:#2b91af">ApplicationModel</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public string </span>AppInfo1 { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> InfoAppli1 { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Models</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class</span><a id="sessionmodel"></a><span style="color:#2b91af"> SessionModel</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><a id="sessionmodel"></a><span style="color:#2b91af">SessionModel</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public int </span>Counter { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span>SessionModel()</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">int</span><span style="color:#000000"> Compteur { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> SessionModel()</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      Counter = 0;</span>
+<span class="odt-code-line">      Compteur = 0;</span>
 <span class="odt-code-line">    }</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Next, we need to modify the [Application_Start] and [Session_Start] methods in the [Global.asax] file:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">public class </span><span style="color:#2b91af">MvcApplication </span>: System.Web.<span style="color:#2b91af">HttpApplication</span></span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">MvcApplication</span> : System.Web.<span style="color:#2b91af">HttpApplication</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#0000ff">protected void </span>Application_Start()</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#2b91af">AreaRegistration</span>.RegisterAllAreas();</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">      <span style="color:#2b91af">WebApiConfig</span>.Register(<span style="color:#2b91af">GlobalConfiguration</span>.Configuration);</span>
-<span class="odt-code-line">      <span style="color:#2b91af">FilterConfig</span>.RegisterGlobalFilters(<span style="color:#2b91af">GlobalFilters</span>.Filters);</span>
-<span class="odt-code-line">      <span style="color:#2b91af">RouteConfig</span>.RegisterRoutes(<span style="color:#2b91af">RouteTable</span>.Routes);</span>
-<span class="odt-code-line">      <span style="color:#2b91af">BundleConfig</span>.RegisterBundles(<span style="color:#2b91af">BundleTable</span>.Bundles);</span>
-<span class="odt-code-line">      <span style="color:#008000">// Application initialization - Case 1</span></span>
-<span class="odt-code-line">      Application[<span style="color:#a31515">&quot;infoApp1&quot;</span>] = <span style="color:#2b91af">ConfigurationManager</span>.AppSettings[<span style="color:#a31515">&quot;infoApp1&quot;</span>];</span>
-<span class="odt-code-line">      <span style="color:#008000">// Application initialization - case 2</span></span>
-<span class="odt-code-line">      <span style="color:#2b91af">ApplicationModel </span>data = <span style="color:#0000ff">new </span><span style="color:#2b91af">ApplicationModel</span>();</span>
-<span class="odt-code-line">      data.InfoApp1 = <span style="color:#2b91af">ConfigurationManager</span>.AppSettings[<span style="color:#a31515">&quot;infoApp1&quot;</span>];</span>
-<span class="odt-code-line">      Application[<span style="color:#a31515">&quot;data&quot;</span>] = data;</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">AreaRegistration</span><span style="color:#000000">.RegisterAllAreas();</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">WebApiConfig</span><span style="color:#000000">.Register(</span><span style="color:#2b91af">GlobalConfiguration</span><span style="color:#000000">.Configuration);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">FilterConfig</span><span style="color:#000000">.RegisterGlobalFilters(</span><span style="color:#2b91af">GlobalFilters</span><span style="color:#000000">.Filters);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">RouteConfig</span><span style="color:#000000">.RegisterRoutes(</span><span style="color:#2b91af">RouteTable</span><span style="color:#000000">.Routes);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">BundleConfig</span><span style="color:#000000">.RegisterBundles(</span><span style="color:#2b91af">BundleTable</span><span style="color:#000000">.Bundles);</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// intialisation application - case 1</span></span>
+<span class="odt-code-line"><span style="color:#000000">      Application[</span><span style="color:#a31515">&quot;infoAppli1&quot;</span><span style="color:#000000">] = </span><span style="color:#2b91af">ConfigurationManager</span><span style="color:#000000">.AppSettings[</span><span style="color:#a31515">&quot;infoAppli1&quot;</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// intialisation application - case 2</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> data=</span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000">();</span></span>
+<span class="odt-code-line"><span style="color:#000000">      data.InfoAppli1=</span><span style="color:#2b91af">ConfigurationManager</span><span style="color:#000000">.AppSettings[</span><span style="color:#a31515">&quot;infoAppli1&quot;</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line"><span style="color:#000000">      Application[</span><span style="color:#a31515">&quot;data&quot;</span><span style="color:#000000">] = data;</span></span>
 <span class="odt-code-line">    }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">    <span style="color:#0000ff">protected void </span>Session_Start()</span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Session_Start()</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#008000">// initialize counter - case 1</span></span>
-<span class="odt-code-line">      Session[<span style="color:#a31515">&quot;counter&quot;</span>] = 0;</span>
-<span class="odt-code-line">      <span style="color:#008000">// initialize counter - case 2</span></span>
-<span class="odt-code-line">      Session[<span style="color:#a31515">&quot;data&quot;</span>] = <span style="color:#0000ff">new </span><span style="color:#2b91af">SessionModel</span>();</span>
+<span class="odt-code-line">      <span style="color:#000000">// counter initialization - case 1</span></span>
+<span class="odt-code-line"><span style="color:#000000">      Session[</span><span style="color:#a31515">&quot;compteur&quot;</span><span style="color:#000000">] = 0;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// counter initialization - case 2</span></span>
+<span class="odt-code-line"><span style="color:#000000">      Session[</span><span style="color:#a31515">&quot;data&quot;</span><span style="color:#000000">] = </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000">();</span></span>
 <span class="odt-code-line">    }</span>
 <span class="odt-code-line">  }</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 14: an instance of [ApplicationModel] is created;</span>
   </li>
@@ -1852,11 +2033,14 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Based on what we have seen so far, the signature</span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action17(<span style="color:#2b91af">ApplicationModel </span>applicationData, <span style="color:#2b91af">SessionModel </span>sessionData)</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line">    <span style="color:#0000ff">public</span> <span style="color:#2b91af">ContentResult</span> Action17(<span style="color:#2b91af">ApplicationModel</span> applicationData, <span style="color:#2b91af">SessionModel</span> sessionData)</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">means that the HTTP request processed by the action must include parameters named [applicationData] and [sessionData]. This will not be the case. We must create a new data binding model so that when an action receives a type as a parameter:</span></p>
 <ul>
   <li><span style="color: #000000">[ApplicationModel], the data with scope [Application] and key [data] is provided to it;</span>
@@ -1865,26 +2049,32 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">To do this, we need to create classes that implement the [IModelBinder] interface.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We start by creating an [Infrastructure] folder in the [Example-02] project:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000E40000005E1D40097B.png" style="width:4.219cm;height:1.739cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E40000005E1D40097B.png" /></p>
 <p><span style="color: #000000">In it, we create the following [ApplicationModelBinder] class:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.Web.Mvc;</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Infrastructure</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span> System.Web.Mvc;</span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Infrastructure</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class</span><a id="applicationmodelbinder"></a><span style="color:#2b91af"> ApplicationModelBinder</span> : <span style="color:#2b91af">IModelBinder</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><a id="applicationmodelbinder"></a><span style="color:#2b91af">ApplicationModelBinder</span><span style="color:#000000"> : </span><span style="color:#2b91af">IModelBinder</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public object </span>BindModel(<span style="color:#2b91af">ControllerContext </span>controllerContext, <span style="color:#2b91af">ModelBindingContext </span>bindingContext)</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">object</span><span style="color:#000000"> BindModel(</span><span style="color:#2b91af">ControllerContext</span><span style="color:#000000"> controllerContext, </span><span style="color:#2b91af">ModelBindingContext</span><span style="color:#000000"> bindingContext)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#008000">// retrieve the data from the [Application] scope</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>controllerContext.RequestContext.HttpContext.Application[<span style="color:#a31515">&quot;data&quot;</span>];</span>
+<span class="odt-code-line">      <span style="color:#000000">// render scope data [Application]</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> controllerContext.RequestContext.HttpContext.Application[</span><span style="color:#a31515">&quot;data&quot;</span><span style="color:#000000">];</span></span>
 <span class="odt-code-line">    }</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 5: the class implements the [IModelBinder] interface. To understand its code, you need to know that it will be called every time an action has a parameter of type [ApplicationModel]. This binding [ApplicationModel] --&gt; [ApplicationModelBinder] will be established when the application starts, in the [Application_Start] method of [Global.asax];</span>
   </li>
@@ -1900,38 +2090,43 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [</span><a id="sessionmodelbinder"></a><span style="color: #000000"> SessionModelBinder</span><span style="color: #000000"> ] class follows the same pattern:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using </span>System.Web.Mvc;</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace </span>Example_02.Infrastructure</span>
+<span class="odt-code-line"><span style="color:#0000ff">using</span> System.Web.Mvc;</span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Infrastructure</span></span>
 <span class="odt-code-line">{</span>
-<span class="odt-code-line">  <span style="color:#0000ff">public class </span><span style="color:#2b91af">SessionModelBinder </span>: <span style="color:#2b91af">IModelBinder</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">SessionModelBinder</span><span style="color:#000000"> : </span><span style="color:#2b91af">IModelBinder</span></span>
 <span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public object </span>BindModel(<span style="color:#2b91af">ControllerContext </span>controllerContext, <span style="color:#2b91af">ModelBindingContext </span>bindingContext)</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">object</span><span style="color:#000000"> BindModel(</span><span style="color:#2b91af">ControllerContext</span><span style="color:#000000"> controllerContext, </span><span style="color:#2b91af">ModelBindingContext</span><span style="color:#000000"> bindingContext)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#008000">// retrieve the data from the [Session] scope</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>controllerContext.HttpContext.Session[<span style="color:#a31515">&quot;data&quot;</span>];</span>
+<span class="odt-code-line">      <span style="color:#000000">// render scope data [Session]</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> controllerContext.HttpContext.Session[</span><span style="color:#a31515">&quot;data&quot;</span><span style="color:#000000">];</span></span>
 <span class="odt-code-line">    }</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">All that remains is to associate each [XModel] model with </span><em><span style="color: #000000">its </span></em><span style="color: #000000">[XModelBinder]. This is done in the [Application_Start] method of [Global.asax]:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#0000ff">protected void </span>Application_Start()</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line">    <span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> Application_Start()</span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line">....</span>
-<span class="odt-code-line">      <span style="color:#008000">// application initialization - case 2</span></span>
-<span class="odt-code-line">      <span style="color:#2b91af">ApplicationModel </span>data = <span style="color:#0000ff">new </span><span style="color:#2b91af">ApplicationModel</span>();</span>
-<span class="odt-code-line">      data.InfoApp1 = <span style="color:#2b91af">ConfigurationManager</span>.AppSettings[<span style="color:#a31515">&quot;infoApp1&quot;</span>];</span>
-<span class="odt-code-line">      Application[<span style="color:#a31515">&quot;data&quot;</span>] = data;</span>
-<span class="odt-code-line">      <span style="color:#008000">// model binders</span></span>
-<span class="odt-code-line">      <span style="color:#2b91af">ModelBinders</span>.Binders.Add(<span style="color:#0000ff">typeof</span>(<span style="color:#2b91af">ApplicationModel</span>), <span style="color:#0000ff">new </span><span style="color:#2b91af">ApplicationModelBinder</span>());</span>
-<span class="odt-code-line">      <span style="color:#2b91af">ModelBinders</span>.Binders.Add(<span style="color:#0000ff">typeof</span>(<span style="color:#2b91af">SessionModel</span>), <span style="color:#0000ff">new </span><span style="color:#2b91af">SessionModelBinder</span>());</span>
+<span class="odt-code-line">      <span style="color:#000000">// intialisation application - case 2</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> data=</span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000">();</span></span>
+<span class="odt-code-line"><span style="color:#000000">      data.InfoAppli1=</span><span style="color:#2b91af">ConfigurationManager</span><span style="color:#000000">.AppSettings[</span><span style="color:#a31515">&quot;infoAppli1&quot;</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line"><span style="color:#000000">      Application[</span><span style="color:#a31515">&quot;data&quot;</span><span style="color:#000000">] = data;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// model binders</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">ModelBinders</span><span style="color:#000000">.Binders.Add(</span><span style="color:#0000ff">typeof</span><span style="color:#000000">(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000">), </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">ApplicationModelBinder</span><span style="color:#000000">());</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">ModelBinders</span><span style="color:#000000">.Binders.Add(</span><span style="color:#0000ff">typeof</span><span style="color:#000000">(</span><span style="color:#2b91af">SessionModel</span><span style="color:#000000">), </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">SessionModelBinder</span><span style="color:#000000">());</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 9: when an action has a parameter of type [ApplicationModel], the [ApplicationModelBinder.Bind] method will be called. We know that it returns the data in the [Application] scope associated with the [data] key;</span>
   </li>
@@ -1939,22 +2134,25 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s return to our [Action17] action:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#008000">// Action17</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action17(<span style="color:#2b91af">ApplicationModel </span>applicationData, <span style="color:#2b91af">SessionModel </span>sessionData)</span>
+<p><span style="color: #000000"> </span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line">    // Action17</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action17(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> applicationData, </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> sessionData)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#008000">// retrieve the Application scope information</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>appInfo1 = applicationData.InfoAppli1;</span>
-<span class="odt-code-line">      <span style="color:#008000">// and the Session-scoped information</span></span>
-<span class="odt-code-line">      sessionData.Counter++;</span>
-<span class="odt-code-line">      <span style="color:#0000ff">int </span>counter = sessionData.Counter;</span>
-<span class="odt-code-line">      <span style="color:#008000">// Response to the client</span></span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;appInfo1={0}, counter={1}&quot;</span>, appInfo1, counter);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line">      <span style="color:#000000">// retrieve range info Application</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> infoAppli1 = applicationData.InfoAppli1;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// and Session range</span></span>
+<span class="odt-code-line">      sessionData.Compteur++;</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">int</span><span style="color:#000000"> compteur = sessionData.Compteur;</span></span>
+<span class="odt-code-line">      <span style="color:#000000">// customer response</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;infoAppli1={0}, compteur={1}&quot;</span><span style="color:#000000">, infoAppli1, compteur);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 2: When [Action17] is called, it will receive</span>
     <ul>
@@ -1966,22 +2164,28 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">These two data sets can be as complex as desired and can include, for one, all data from the [Application] scope and, for the other, all data from the [Session] scope.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Here is an example of the execution of action [Action17]:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/100000000000017F0000008B307028DC.png" style="width:7.091cm;height:2.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017F0000008B307028DC.png" /></p>
 <p><a id="refheading58070676630786"></a></p>
 <h2 id="411-late-binding-of-the-action-model">4.11. Late binding of the action model</h2>
 <p><span style="color: #000000">We have written the following [Action12]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// Action12</span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action12(<span style="color:#2b91af">ActionModel05 </span>model)</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action12(</span><span style="color:#2b91af">ActionModel05</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;rate={0}, errors={1}&quot;</span>, model.Rate, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;taux={0}, erreurs={1}&quot;</span><span style="color:#000000">, modèle.Taux, erreurs);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Behind the scenes, ASP.NET MVC:</span></p>
 <ul>
   <li><span style="color: #000000">creates an instance of type [ActionModel05] using its parameterless constructor;</span>
@@ -1990,19 +2194,22 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Sometimes this behavior is not what we want. This is particularly the case when we want to use a specific constructor of the action model. We can then proceed as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line">    <span style="color:#008000">// Action18</span></span>
-<span class="odt-code-line">    <span style="color:#0000ff">public </span><span style="color:#2b91af">ContentResult </span>Action18()</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action18()</span></span>
 <span class="odt-code-line">    {</span>
-<span class="odt-code-line">      <span style="color:#2b91af">ActionModel05 </span>model = <span style="color:#0000ff">new </span><span style="color:#2b91af">ActionModel05</span>();</span>
-<span class="odt-code-line">      TryUpdateModel(model);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>errors = getErrorMessagesFor(ModelState);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">string </span>text = <span style="color:#0000ff">string</span>.Format(<span style="color:#a31515">&quot;rate={0}, errors={1}&quot;</span>, model.Rate, errors);</span>
-<span class="odt-code-line">      <span style="color:#0000ff">return </span>Content(text, <span style="color:#a31515">&quot;text/plain&quot;</span>, <span style="color:#2b91af">Encoding</span>.UTF8);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">ActionModel05</span><span style="color:#000000"> modèle = </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel05</span><span style="color:#000000">();</span></span>
+<span class="odt-code-line">      TryUpdateModel(modèle);</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> erreurs = getErrorMessagesFor(ModelState);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;taux={0}, erreurs={1}&quot;</span><span style="color:#000000">, modèle.Taux, erreurs);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 2: The action no longer receives parameters. Therefore, there is no longer any automatic data binding;</span>
   </li>
@@ -2014,7 +2221,10 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Here is an example of execution:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000001C4000000880BFA7F6D.png" style="width:8.37cm;height:2.521cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C4000000880BFA7F6D.png" /></p>
 <p><a id="refheading58072676630786"></a></p>
 <h2 id="412-conclusion">4.12. Conclusion</h2>
@@ -2037,6 +2247,7 @@
 
 <p>In the MVC model, the action [4] is part of the C (controller), the view model [5] is the M, and the view [6] is the V.</p>
 <p><span style="color: #000000">This chapter has examined the mechanisms linking the information carried by the request—which is inherently strings—to the action’s model, which can be a class with properties of various types. We have also seen that it is possible to validate the model presented to the action. Finally, we have seen how to extend this model to include data from the [Session] and [Application] scopes.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We will now focus on the end of the request processing chain [1]: the creation of the view [6] and its model [5]. These two elements are produced by the action [4].</span></p>
 
 
