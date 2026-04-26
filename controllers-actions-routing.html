@@ -461,10 +461,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#35-action-with-a-result-of-type-contentresult-2" class="md-nav__link">
+  <a href="#35-action-with-a-contentresult-type-result-2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.5. Action with a result of type [ContentResult] - 2
+        3.5. Action with a [ContentResult] type result - 2
       
     </span>
   </a>
@@ -684,7 +684,7 @@
   <span class="md-ellipsis">
     
   
-    7. Ajaxifying an ASP.NET MVC application
+    7. Ajaxifying an ASP.NET MVC Application
   
 
     
@@ -826,15 +826,15 @@
 
 
 <p><a id="refheading58022676630786"></a></p>
-<h1 id="3-controllers-actions-routing">3. Controllers, Actions, Routing</h1>
+<h1 id="3-controllers-actions-routing">3. <span style="color: #365f91">Controllers, Actions, Routing</span></h1>
 <p>Let’s consider the architecture of an ASP.NET MVC application:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000535000001A54D09B830.png" width="667" height="211" style="display:inline-block; margin:4px;width:17.635cm;height:5.57cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000001A54D09B830.png" /></td></tr></table>
 
-<p>In this chapter, we examine the process that routes the request [1] to the controller and the action [2a] that will process it, a mechanism known as routing. We also present the various responses [3] that an action can return to the browser. This may be something other than a view <strong>V</strong> [4b].</p>
+<p>In this chapter, we examine the process that routes the request [1] to the controller and action [2a] that will process it, a mechanism known as routing. We also present the various responses [3] that an action can return to the browser. This may be something other than a view <strong>V</strong> [4b].</p>
 <p><a id="refheading10128914791633"></a></p>
-<h2 id="31-the-structure-of-an-aspnet-mvc-project">3.1. The Structure of an ASP.NET MVC Project</h2>
+<h2 id="31-the-structure-of-an-aspnet-mvc-project">3.1. <span style="color: #4f81bd">The Structure of an ASP.NET MVC Project</span></h2>
 <p>Let’s build our first ASP.NET MVC project using Visual Studio Express 2012. We’ll add it [1] to the solution used in the previous chapter:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005D80000021E8F8AD477.png" width="680" height="246" style="display:inline-block; margin:4px;width:17.999cm;height:6.519cm;" class="odt-zoomable" data-zoom-src="images/10000000000005D80000021E8F8AD477.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005D80000021E8F8AD477.png" width="680" height="246" style="display:inline-block; margin:4px;width:17.999cm;height:6.521cm;" class="odt-zoomable" data-zoom-src="images/10000000000005D80000021E8F8AD477.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000515000002D013AB9480.png" width="651" height="360" style="display:inline-block; margin:4px;width:17.212cm;height:9.525cm;" class="odt-zoomable" data-zoom-src="images/1000000000000515000002D013AB9480.png" /></td></tr></table>
 
@@ -845,27 +845,27 @@
   </li>
 </ul>
 
-<p>The resulting project is shown in [5]. We will make it [6] the<a id="projet-de-demarrage"></a> starter project of the solution:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000356000003396474F365.png" width="427" height="413" style="display:inline-block; margin:4px;width:11.298cm;height:10.915cm;" class="odt-zoomable" data-zoom-src="images/1000000000000356000003396474F365.png" /></td></tr></table>
+<p><a id="projet-de-demarrage"></a>The resulting project is shown in [5]. We will make it [6] the default startup project for the solution:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000356000003396474F365.png" width="427" height="412" style="display:inline-block; margin:4px;width:11.298cm;height:10.913cm;" class="odt-zoomable" data-zoom-src="images/1000000000000356000003396474F365.png" /></td></tr></table>
 
 <p>Note the following points in [5]:</p>
 <ul>
-  <li>the project architecture reflects its MVC model:
+  <li>the project architecture reflects its MVC model: 
   </li>
-  <li><b>C</b> controllers will be placed in the [Controllers] folder,
+  <li>the <b>C</b> controllers will be placed in the [Controllers] folder,
   </li>
-  <li><b>M</b> data models will be placed in the [Models] folder,
+  <li>the <b>M</b> data models will be placed in the [Models] folder,
   </li>
-  <li><b>V</b> views will be placed in the [Views] folder,
+  <li>the <b>V</b> views will be placed in the [Views] folder,
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A4000002293447BEB9.png" width="680" height="261" style="display:inline-block; margin:4px;width:17.999cm;height:6.893cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A4000002293447BEB9.png" /></td></tr></table>
 
 <ul>
-  <li>in [1], the [Site.css] file will be the application&#x27;s default CSS file;
+  <li>in [1], the [Site.css] file will be the application’s default CSS file;
   </li>
-  <li>in [2], a number of JavaScript libraries are available;
+  <li>in [2], a number of JavaScript libraries are made available to us;
   </li>
   <li>in [3], there are three specific views: <b>_ViewStart, _Layout, and Error</b>.
   </li>
@@ -873,12 +873,11 @@
 
 <p>The [_ViewStart] file is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">@{</span>
-<span class="odt-code-line"><span style="color:#000000">    Layout = </span><span style="color:#a31515">&quot;~/Views/Shared/_Layout.cshtml&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content">@{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Layout = </span><span style="color:#a31515">&quot;~/Views/Shared/_Layout.cshtml&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 1: The @ character marks the start of a C# block within the view. Indeed, C# code can be included in a view;</span>
   </li>
@@ -886,47 +885,42 @@
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p>The file [<a id="layout"></a> _Layout ] is as follows:</p>
-<p><span style="color: #000000"> </span></p>
+<p>The [<a id="layout"></a> _Layout] file is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
-<span class="odt-code-line"><span style="color:#0000ff">&lt;!</span><span style="color:#800000">DOCTYPE</span><span style="color:#000000"> </span><span style="color:#ff0000">html</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">charset</span><span style="color:#0000ff">=&quot;utf-8&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;viewport&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;width=device-width&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@ViewBag.Title</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    @</span><span style="color:#2b91af">Styles</span><span style="color:#000000">.Render(</span><span style="color:#a31515">&quot;~/Content/css&quot;</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line"><span style="color:#000000">    @</span><span style="color:#2b91af">Scripts</span><span style="color:#000000">.Render(</span><span style="color:#a31515">&quot;~/bundles/modernizr&quot;</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line">    @RenderBody()</span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#000000">    @</span><span style="color:#2b91af">Scripts</span><span style="color:#000000">.Render(</span><span style="color:#a31515">&quot;~/bundles/jquery&quot;</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line"><span style="color:#000000">    @RenderSection(</span><span style="color:#a31515">&quot;scripts&quot;</span><span style="color:#000000">, required: </span><span style="color:#0000ff">false</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;!</span><span style="color:#800000">DOCTYPE</span><span style="color:#000000"> </span><span style="color:#ff0000">html</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">charset</span><span style="color:#0000ff">=&quot;utf-8&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;viewport&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;width=device-width&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@ViewBag.Title</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    @</span><span style="color:#2b91af">Styles</span><span style="color:#000000">.Render(</span><span style="color:#a31515">&quot;~/Content/css&quot;</span><span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    @</span><span style="color:#2b91af">Scripts</span><span style="color:#000000">.Render(</span><span style="color:#a31515">&quot;~/bundles/modernizr&quot;</span><span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    @RenderBody()</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    @</span><span style="color:#2b91af">Scripts</span><span style="color:#000000">.Render(</span><span style="color:#a31515">&quot;~/bundles/jquery&quot;</span><span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    @RenderSection(</span><span style="color:#a31515">&quot;scripts&quot;</span><span style="color:#000000">, required: </span><span style="color:#0000ff">false</span><span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">When a view from the [Views] folder is rendered, its body will be rendered by line 11 above. This means that the view does not need to include the &lt;html&gt;, &lt;head&gt;, and &lt;body&gt; tags. These are provided by the file above. For now, this file is quite cryptic. Let’s simplify it:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">When a view from the [Views] folder is rendered, its body will be rendered by line 11 above. This means that the view does not need to include the &lt;html&gt;, &lt;head&gt;, and &lt;body&gt; tags. These are provided by the file above. For now, this file is quite obscure. Let’s simplify it:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
-<span class="odt-code-line"><span style="color:#0000ff">&lt;!</span><span style="color:#800000">DOCTYPE</span><span style="color:#000000"> </span><span style="color:#ff0000">html</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">charset</span><span style="color:#0000ff">=&quot;utf-8&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;viewport&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;width=device-width&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Tutoriel ASP.NET MVC</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Tutoriel ASP.NET MVC</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line">  @RenderBody()</span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;!</span><span style="color:#800000">DOCTYPE</span><span style="color:#000000"> </span><span style="color:#ff0000">html</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">charset</span><span style="color:#0000ff">=&quot;utf-8&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;viewport&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;width=device-width&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Tutoriel ASP.NET MVC</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Tutoriel ASP.NET MVC</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  @RenderBody()</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 6: the title common to all views;</span>
   </li>
@@ -936,137 +930,115 @@
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">   </span></p>
-<p><img src="images/10000000000000960000003AABB03712.png" width="150" height="58" style="width:3.971cm;height:1.529cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000960000003AABB03712.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000960000003AABB03712.png" width="150" height="58" style="display:inline-block; margin:4px;width:3.971cm;height:1.535cm;" class="odt-zoomable" data-zoom-src="images/10000000000000960000003AABB03712.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <ul>
   <li><span style="color: #000000">[Web.config] is the web application&#x27;s configuration file. It is complex. You will need to modify it when using the [Spring.net] framework in a multi-tier architecture.</span>
   </li>
   <li><span style="color: #000000">[Global.asax] contains the code executed when the application starts. Generally, this code utilizes the application’s various configuration files, including [Web.config].</span>
   </li>
 </ul>
-
 <p><a id="refheading58024676630786"></a></p>
-<h2 id="32-default-url-routing">3.2. Default URL routing</h2>
+<h2 id="32-default-url-routing">3.2. <span style="color: #4f81bd"><span style="color: #000000">Default URL routing</span></span></h2>
 <p><span style="color: #000000">The code in [Global.asax] is currently as follows:</span></p>
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Http;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Optimization;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Routing;</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01</span></span>
-<span class="odt-code-line">{</span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">MvcApplication</span><span style="color:#000000"> : System.Web.</span><span style="color:#2b91af">HttpApplication</span></span>
-<span class="odt-code-line">  {</span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line">   ...</span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Http;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Optimization;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Routing;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">MvcApplication</span><span style="color:#000000"> : System.Web.</span><span style="color:#2b91af">HttpApplication</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   ...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">Line 6: the class </span><i><span style="color: #000000">namespace</span></i><span style="color: #000000">. It is derived directly from the project name and is listed in the project properties:</span>
+  <li><span style="color: #000000">Line 6: the class </span><i><span style="color: #000000">namespace</span></i><span style="color: #000000">. It is derived directly from the project name and can be found in the project properties:</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000"> </span></p>
-<p><img src="images/100000000000021E0000026DA93E2986.png" width="379" height="435" style="width:10.04cm;height:11.501cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000021E0000026DA93E2986.png" /></p>
-<p><span style="color: #000000"> </span></p>
+<p><img src="images/100000000000021E0000026DA93E2986.png" width="379" height="435" style="width:10.04cm;height:11.502cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000021E0000026DA93E2986.png" /></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004210000006F383712A7.png" width="529" height="56" style="display:inline-block; margin:4px;width:13.984cm;height:1.469cm;" class="odt-zoomable" data-zoom-src="images/10000000000004210000006F383712A7.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We set [1] as the default namespace. It is then used by default for all classes that will be created in the project.</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Let’s return to the code in [Global.asax]:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Let’s go back to the code in [Global.asax]:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Http;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Optimization;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Routing;</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01</span></span>
-<span class="odt-code-line">{</span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">MvcApplication</span><span style="color:#000000"> : System.Web.</span><span style="color:#2b91af">HttpApplication</span></span>
-<span class="odt-code-line">  {</span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line">   ...</span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Http;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Optimization;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Routing;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">MvcApplication</span><span style="color:#000000"> : System.Web.</span><span style="color:#2b91af">HttpApplication</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   ...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 9: the [MvcApplication] class derives from the [HttpApplication] class. The name [MvcApplication] can be changed;</span>
   </li>
-  <li><span style="color: #000000">line 11: The [Application_Start] method is the method executed when the web application starts. It is executed only once. This is where the application is initialized.</span>
+  <li><span style="color: #000000">line 11: the [Application_Start] method is the method executed when the web application starts. It is executed only once. This is where the application is initialized.</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The code for [Application_Start] is currently as follows:</span></p>
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">AreaRegistration</span><span style="color:#000000">.RegisterAllAreas();</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">WebApiConfig</span><span style="color:#000000">.Register(</span><span style="color:#2b91af">GlobalConfiguration</span><span style="color:#000000">.Configuration);</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">FilterConfig</span><span style="color:#000000">.RegisterGlobalFilters(</span><span style="color:#2b91af">GlobalFilters</span><span style="color:#000000">.Filters);</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">RouteConfig</span><span style="color:#000000">.RegisterRoutes(</span><span style="color:#2b91af">RouteTable</span><span style="color:#000000">.Routes);</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">BundleConfig</span><span style="color:#000000">.RegisterBundles(</span><span style="color:#2b91af">BundleTable</span><span style="color:#000000">.Bundles);</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#2b91af">AreaRegistration</span><span style="color:#000000">.RegisterAllAreas();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#2b91af">WebApiConfig</span><span style="color:#000000">.Register(</span><span style="color:#2b91af">GlobalConfiguration</span><span style="color:#000000">.Configuration);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#2b91af">FilterConfig</span><span style="color:#000000">.RegisterGlobalFilters(</span><span style="color:#2b91af">GlobalFilters</span><span style="color:#000000">.Filters);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#2b91af">RouteConfig</span><span style="color:#000000">.RegisterRoutes(</span><span style="color:#2b91af">RouteTable</span><span style="color:#000000">.Routes);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#2b91af">BundleConfig</span><span style="color:#000000">.RegisterBundles(</span><span style="color:#2b91af">BundleTable</span><span style="color:#000000">.Bundles);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">For now, you don’t need to understand all of this code. Lines 5–8 define the routes accepted by the web application. Let’s return to the architecture of an ASP.NET MVC application:</span></p>
-<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000546000001A892AB2DCF.png" width="675" height="212" style="display:inline-block; margin:4px;width:17.859cm;height:5.609cm;" class="odt-zoomable" data-zoom-src="images/1000000000000546000001A892AB2DCF.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We explained that the [Front Controller] must route a URL to the action responsible for handling it. A route is used to link a URL pattern to an action. These routes are defined in the project’s [App_Start] folder by the [WebApiConfig, FilterConfig, RouteConfig, BundleConfig] classes:</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">  </span></p>
-<p><img src="images/10000000000000A90000005B0B6C09C4.png" width="118" height="63" style="width:3.129cm;height:1.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000A90000005B0B6C09C4.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A90000005B0B6C09C4.png" width="118" height="64" style="display:inline-block; margin:4px;width:3.129cm;height:1.685cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A90000005B0B6C09C4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p><span style="color: #000000">For now, we are only interested in the [RouteConfig] class:</span></p>
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Routing;</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01</span></span>
-<span class="odt-code-line">{</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">RouteConfig</span></span>
-<span class="odt-code-line">  {</span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">static</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> RegisterRoutes(</span><span style="color:#2b91af">RouteCollection</span><span style="color:#000000"> routes)</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      routes.IgnoreRoute(</span><span style="color:#a31515">&quot;{resource}.axd/{*pathInfo}&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line">      routes.MapRoute(</span>
-<span class="odt-code-line"><span style="color:#000000">          name: </span><span style="color:#a31515">&quot;Default&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">          url: </span><span style="color:#a31515">&quot;{controller}/{action}/{id}&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">          defaults: </span><span style="color:#0000ff">new</span><span style="color:#000000"> { controller = </span><span style="color:#a31515">&quot;Home&quot;</span><span style="color:#000000">, action = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">, id = </span><span style="color:#2b91af">UrlParameter</span><span style="color:#000000">.Optional }</span></span>
-<span class="odt-code-line">      );</span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Routing;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">RouteConfig</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">static</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> RegisterRoutes(</span><span style="color:#2b91af">RouteCollection</span><span style="color:#000000"> routes)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      routes.IgnoreRoute(</span><span style="color:#a31515">&quot;{resource}.axd/{*pathInfo}&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      routes.MapRoute(</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          name: </span><span style="color:#a31515">&quot;Default&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          url: </span><span style="color:#a31515">&quot;{controller}/{action}/{id}&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          defaults: </span><span style="color:#0000ff">new</span><span style="color:#000000"> { controller = </span><span style="color:#a31515">&quot;Home&quot;</span><span style="color:#000000">, action = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">, id = </span><span style="color:#2b91af">UrlParameter</span><span style="color:#000000">.Optional }</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      );</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Lines 12–16 define the format of the URLs accepted by the application. This is called a </span><strong><span style="color: #000000">route</span></strong><span style="color: #000000">. There can be multiple possible routes (= multiple possible URL patterns). They are distinguished from one another by their name (line 13). The format of the route’s URLs is defined on line 14. Here, the URL will have three components:</span></p>
-<p><span style="color: #000000"> </span></p>
 <ul>
   <li><b><span style="color: #000000">{controller}</span></b><span style="color: #000000">: the name of a class derived from [Controller]. It will be searched for in the project’s [Controllers] folder. By convention, if the URL is /X/Y/Z, the controller responsible for handling this URL will be the </span><b><span style="color: #000000">XController</span></b><span style="color: #000000"> class. The suffix </span><b><span style="color: #000000">Controller </span></b><span style="color: #000000">is added to the name of the controller present in the URL;</span>
   </li>
@@ -1104,14 +1076,14 @@
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Line 15 defines default values when the URL does not have the expected format </span><span style="color: #a31515">/{controller}/{action}/{id}</span><span style="color: #a31515">. </span>It also indicates that the <strong>{id}</strong> parameter in the URL is optional. Here is a list of incomplete URLs and the URL completed with the default values:</p>
+<p><span style="color: #000000">Line 15 defines default values when the URL does not have the expected format </span><span style="color: #a31515">/{controller}/{action}/{id}. </span>It also indicates that the <strong>{id}</strong> parameter in the URL is optional. Here is a list of incomplete URLs and the URL completed with the default values:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Original URL</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Completed URL</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/Home/Index</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/Do</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/Do/Index</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/Do/Something</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/Do/Something</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/Do/Something/4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/Do/Something/4</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/Do/Something/x/y/z</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Unrouted URL</div></td></tr></table>
 
 <p><a id="refheading58026676630786"></a></p>
-<h2 id="33-creating-a-controller-and-a-first-action">3.3. Creating a controller and a first action</h2>
+<h2 id="33-creating-a-controller-and-a-first-action">3.3. <span style="color: #4f81bd">Creating a controller and a first action</span></h2>
 <p>Let&#x27;s create a first controller:</p>
-<p><img src="images/1000000000000359000000A19E6EE445.png" width="544" height="102" style="width:14.392cm;height:2.704cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000359000000A19E6EE445.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000359000000A19E6EE445.png" width="544" height="102" style="display:inline-block; margin:4px;width:14.392cm;height:2.704cm;" class="odt-zoomable" data-zoom-src="images/1000000000000359000000A19E6EE445.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000368000001382C98CD67.png" width="436" height="156" style="display:inline-block; margin:4px;width:11.536cm;height:4.128cm;" class="odt-zoomable" data-zoom-src="images/1000000000000368000001382C98CD67.png" /></td></tr></table>
 
 <ul>
@@ -1125,26 +1097,26 @@
 
 <p>The code for [FirstController] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Collections.Generic;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Linq;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span>
-<span class="odt-code-line">{</span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">FirstController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line">        <span style="color:#000000">//</span></span>
-<span class="odt-code-line">        <span style="color:#000000">// GET: /First/</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionResult</span><span style="color:#000000"> Index()</span></span>
-<span class="odt-code-line">        {</span>
-<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#0000ff">return</span><span style="color:#000000"> View();</span></span>
-<span class="odt-code-line">        }</span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Collections.Generic;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Linq;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">FirstController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">//</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// GET: /First/</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionResult</span><span style="color:#000000"> Index()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#0000ff">return</span><span style="color:#000000"> View();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
@@ -1174,15 +1146,15 @@
 
 <p>The code generated for the [Index] view is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
-<span class="odt-code-line">@{</span>
-<span class="odt-code-line"><span style="color:#000000">    ViewBag.Title = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Index</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">@{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    ViewBag.Title = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Index</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>Lines 1–3: C# code that defines a variable;
+  <li>lines 1-3: C# code that defines a variable;
   </li>
   <li>line 5: an HTML tag.
   </li>
@@ -1190,7 +1162,7 @@
 
 <p>Replace all the previous code with this:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Vue [Index]...</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Vue [Index]...</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
 <p>To summarize:</p>
@@ -1212,30 +1184,30 @@
 </ul>
 
 <p>Let’s run the application (CTRL-F5). We get the following page:</p>
-<p><img src="images/10000000000001EB00000112B2039E6A.png" width="344" height="192" style="width:9.089cm;height:5.069cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB00000112B2039E6A.png" /></p>
+<p><img src="images/10000000000001EB00000112B2039E6A.png" width="344" height="192" style="width:9.089cm;height:5.071cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB00000112B2039E6A.png" /></p>
 <p>In [1], the requested URL was <strong>http://localhost:49302</strong>. There is no path. We know that our router expects URLs in the form <strong>/{controller}/{action}/{id}.</strong> Since these elements are missing, the default values are used. The URL becomes <strong>http://localhost:49302/Home/Index</strong>. The [Home] controller does not exist. Therefore, the URL is rejected.</p>
 <p>Now let’s try the URL <strong>http://localhost:49302/First/Index</strong> by typing it directly into the browser:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028400000136A17562B6.png" width="322" height="155" style="display:inline-block; margin:4px;width:8.52cm;height:4.101cm;" class="odt-zoomable" data-zoom-src="images/100000000000028400000136A17562B6.png" /></td></tr></table>
 
 <p>The page above was generated by the [Index] action of the [First] controller. The page generated by this action is the [Index] view, whose code was as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Vue [Index]...</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Vue [Index]...</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
 <p>It generates part [1]. Part [2], on the other hand, comes from the master page [_Layout] that we defined earlier:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
-<span class="odt-code-line"><span style="color:#0000ff">&lt;!</span><span style="color:#800000">DOCTYPE</span><span style="color:#000000"> </span><span style="color:#ff0000">html</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">charset</span><span style="color:#0000ff">=&quot;utf-8&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;viewport&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;width=device-width&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Tutoriel ASP.NET MVC</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Tutoriel ASP.NET MVC</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line">  @RenderBody()</span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;!</span><span style="color:#800000">DOCTYPE</span><span style="color:#000000"> </span><span style="color:#ff0000">html</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">charset</span><span style="color:#0000ff">=&quot;utf-8&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;viewport&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;width=device-width&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Tutoriel ASP.NET MVC</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Tutoriel ASP.NET MVC</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h2</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  @RenderBody()</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
 <p>Line 9 generated section [2] of the page. The [Index] view, however, only appears on line 10.</p>
@@ -1265,47 +1237,49 @@
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>Now let&#x27;s try the URL [/First]:</p>
-<p><img src="images/10000000000001270000009D2838ADF6.png" width="206" height="110" style="width:5.459cm;height:2.91cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001270000009D2838ADF6.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001270000009D2838ADF6.png" width="206" height="110" style="display:inline-block; margin:4px;width:5.459cm;height:2.905cm;" class="odt-zoomable" data-zoom-src="images/10000000000001270000009D2838ADF6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p>The URL [/First] was incomplete. It was completed with the route&#x27;s default values and became [/First/Index]. We therefore get the same result as before.</p>
 <p><a id="refheading58028676630786"></a></p>
-<h2 id="34-action-with-a-contentresult-type-result-1">3.4. Action with a [ContentResult] type result - 1</h2>
+<h2 id="34-action-with-a-contentresult-type-result-1">3.4. <span style="color: #4f81bd">Action with a [ContentResult] type result - 1</span></h2>
 <p>Let’s create a new action in the [First] controller:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Text;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span>
-<span class="odt-code-line">{</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">FirstController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span>
-<span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#000000">// Index</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> View();</span></span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line">    <span style="color:#000000">// Action01</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#a31515">&quot;&lt;h1&gt;Action [Action01]&lt;/h1&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Text;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">FirstController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Index</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> View();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Action01</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#a31515">&quot;&lt;h1&gt;Action [Action01]&lt;/h1&gt;&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>The new action is defined in lines 14–18. It simply returns a string using the [Content] method (line 16) of the [Controller] class (line 6). The method’s parameters are:</p>
 <ol>
   <li>the response string;
   </li>
-  <li>an indicator of the type of text being sent: &quot;text/plain&quot;, &quot;text/html&quot;, &quot;text/xml&quot;, etc. This indicator is called the MIME type (<a href="http://fr.wikipedia.org/wiki/Type_MIME">http://fr.wikipedia.org/wiki/Type_MIME</a>);
+  <li>an indicator of the type of text being sent: &quot;text/plain&quot;, &quot;text/html&quot;, &quot;text/xml&quot;, etc. This indicator is called the MIME type (<a href="http://fr.wikipedia.org/wiki/Type_MIME"><u><span style="color: #0563c1">http://fr.wikipedia.org/wiki/Type_MIME</span></u></a>);
   </li>
   <li>the third parameter specifies the encoding type used for the text.
   </li>
 </ol>
 
-<p>Rather than using the abstract type [ActionResult], our methods specify the actual return type (lines 9 and 14).</p>
+<p>Rather than using the abstract type [ActionResult], our methods specify the actual return type (lines 9 and 14). </p>
 <p>Let’s request the URL [/First/Action01]. We get the following page:</p>
-<p><img src="images/10000000000001680000007B99162A37.png" width="252" height="86" style="width:6.669cm;height:2.281cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001680000007B99162A37.png" /></p>
-<p>Let’s look at the source code of the page received:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001680000007B99162A37.png" width="252" height="86" style="display:inline-block; margin:4px;width:6.669cm;height:2.279cm;" class="odt-zoomable" data-zoom-src="images/10000000000001680000007B99162A37.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<p>Let&#x27;s take a look at the source code of the page we received:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&lt;h1&gt;Action [Action01]&lt;/h1&gt;
 </code></pre></div></td></tr></table></div>
 <p>The browser received only the text sent by the action and nothing else. This mode is useful when you want to request raw data from the web server without the surrounding HTML markup. Note above that the browser did not interpret the HTML tag &lt;h1&gt;. To understand why, let’s look at the HTTP exchanges in Chrome:</p>
@@ -1352,41 +1326,41 @@
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a>Content-Length: 141
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>Line 3: sets the document type. We see the attributes set in the [Action01] method. It is because the browser was told that the document was of type &quot;text/plain&quot; and not &quot;text/html&quot; that it did not interpret the &lt;h1&gt; tag that was in the received document.
+  <li>Line 3: sets the document type. The attributes set in the [Action01] method are present here. Because the browser was told that the document was of type &quot;text/plain&quot; and not &quot;text/html,&quot; it did not interpret the &lt;h1&gt; tag that was in the received document.
   </li>
 </ul>
-
 <p><a id="refheading58030676630786"></a></p>
-<h2 id="35-action-with-a-result-of-type-contentresult-2">3.5. Action with a result of type [ContentResult] - 2</h2>
-<p>Let&#x27;s consider the following third action:</p>
+<h2 id="35-action-with-a-contentresult-type-result-2">3.5. <span style="color: #4f81bd">Action with a [ContentResult] type result - 2</span></h2>
+<p>Consider the following third action:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Text;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span>
-<span class="odt-code-line">{</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">FirstController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span>
-<span class="odt-code-line">  {</span>
-<span class="odt-code-line">   ...</span>
-<span class="odt-code-line">    <span style="color:#000000">// Action02</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action02()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> data = </span><span style="color:#a31515">&quot;&lt;action&gt;&lt;name&gt;Action02&lt;/name&gt;&lt;description&gt;renvoie un texte XML&lt;/description&gt;&lt;/action&gt;&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(data, </span><span style="color:#a31515">&quot;text/xml&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Text;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">FirstController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   ...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Action02</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action02()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> data = </span><span style="color:#a31515">&quot;&lt;action&gt;&lt;name&gt;Action02&lt;/name&gt;&lt;description&gt;renvoie un texte XML&lt;/description&gt;&lt;/action&gt;&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(data, </span><span style="color:#a31515">&quot;text/xml&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
-  <li>line 12: we define an XML text;
+  <li>Line 12: We define an XML text;
   </li>
   <li>line 13: we send it to the browser, specifying that it is XML with the MIME type &quot;text/xml&quot;.
   </li>
 </ul>
 
 <p>In the browser, we get the following page:</p>
-<p><img src="images/10000000000002BE000000B7B494D346.png" width="491" height="128" style="width:13cm;height:3.39cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002BE000000B7B494D346.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002BE000000B7B494D346.png" width="491" height="128" style="display:inline-block; margin:4px;width:13cm;height:3.388cm;" class="odt-zoomable" data-zoom-src="images/10000000000002BE000000B7B494D346.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p>Let’s look at the server’s HTTP response in Chrome:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
@@ -1415,24 +1389,25 @@
 <ul>
   <li>Line 3: specifies the document type. The attributes set in the [Action02] method are included here;
   </li>
-  <li>Line 12: The size in bytes of the document sent by the server.
+  <li>line 12: the size in bytes of the document sent by the server.
   </li>
 </ul>
 
 <p>The document sent by the server is this one (Chrome screenshot):</p>
-<p><img src="images/10000000000002760000005B81C3C0C6.png" width="520" height="75" style="width:13.771cm;height:1.988cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002760000005B81C3C0C6.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002760000005B81C3C0C6.png" width="520" height="75" style="display:inline-block; margin:4px;width:13.771cm;height:1.99cm;" class="odt-zoomable" data-zoom-src="images/10000000000002760000005B81C3C0C6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p><a id="refheading58032676630786"></a></p>
-<h2 id="36-action-with-a-jsonresult-type-result">3.6. Action with a [JsonResult] type result</h2>
+<h2 id="36-action-with-a-jsonresult-type-result">3.6. <span style="color: #4f81bd">Action with a [JsonResult] type result</span></h2>
 <p>Let’s add the following action to the [First] controller:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#000000">// Action03</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">JsonResult</span><span style="color:#000000"> Action03()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">dynamic</span><span style="color:#000000"> personne = </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">ExpandoObject</span><span style="color:#000000">();</span></span>
-<span class="odt-code-line"><span style="color:#000000">      personne.nom = </span><span style="color:#a31515">&quot;someone&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">      personne.age = 20;</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Json(personne,</span><span style="color:#2b91af">JsonRequestBehavior</span><span style="color:#000000">.AllowGet);</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Action03</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">JsonResult</span><span style="color:#000000"> Action03()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">dynamic</span><span style="color:#000000"> personne = </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">ExpandoObject</span><span style="color:#000000">();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      personne.nom = </span><span style="color:#a31515">&quot;someone&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      personne.age = 20;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Json(personne,</span><span style="color:#2b91af">JsonRequestBehavior</span><span style="color:#000000">.AllowGet);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
@@ -1447,7 +1422,8 @@
 </ul>
 
 <p>When you request the URL [/First/Action03], the browser displays the following:</p>
-<p><img src="images/10000000000001DA000000766AC21245.png" width="332" height="83" style="width:8.781cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DA000000766AC21245.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001DA000000766AC21245.png" width="332" height="83" style="display:inline-block; margin:4px;width:8.781cm;height:2.185cm;" class="odt-zoomable" data-zoom-src="images/10000000000001DA000000766AC21245.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p>The server’s HTTP response is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
@@ -1485,20 +1461,20 @@
   <li>has two keys, &quot;Key&quot; and &quot;Value.&quot; &quot;Key&quot; has the field name as its associated value, and &quot;Value&quot; has the field&#x27;s value.
   </li>
 </ul>
-
 <p><a id="refheading58034676630786"></a></p>
-<h2 id="37-action-with-a-string-result">3.7. Action with a [string] result</h2>
+<h2 id="37-action-with-a-string-result">3.7. <span style="color: #4f81bd">Action with a [string] result</span></h2>
 <p>Let&#x27;s add the following action to the [First] controller:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#000000">// Action04</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Action04()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;&lt;h3&gt;Contrôleur=First, Action=Action04&lt;/h3&gt;&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Action04</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Action04()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;&lt;h3&gt;Contrôleur=First, Action=Action04&lt;/h3&gt;&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>When we request the URL [/First/Action04] in Chrome, we get the following response:</p>
-<p><img src="images/100000000000016D000000769909198B.png" width="255" height="83" style="width:6.759cm;height:2.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016D000000769909198B.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016D000000769909198B.png" width="255" height="83" style="display:inline-block; margin:4px;width:6.759cm;height:2.185cm;" class="odt-zoomable" data-zoom-src="images/100000000000016D000000769909198B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p>We can see that the &lt;h3&gt; tag has been interpreted. Let’s look at the server’s HTTP response:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
@@ -1529,14 +1505,14 @@
 </code></pre></div>
 <p>As seen on line 3, the server indicated that it was sending text in HTML format. This is why the browser interpreted the &lt;h3&gt; tag. When you want to send plain text, it is therefore preferable to return a [ContentResult] rather than a [string]. The [ContentResult] allows us to specify a MIME type of &quot;text/plain&quot; to indicate that we are sending unformatted text, which the browser will not attempt to interpret.</p>
 <p><a id="refheading58036676630786"></a></p>
-<h2 id="38-action-with-an-emptyresult-type">3.8. Action with an [EmptyResult] type</h2>
+<h2 id="38-action-with-an-emptyresult-type">3.8. <span style="color: #4f81bd">Action with an [EmptyResult] type</span></h2>
 <p>Consider the following new action:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#000000">// Action05</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">EmptyResult</span><span style="color:#000000"> Action05()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">EmptyResult</span><span style="color:#000000">();</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Action05</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">EmptyResult</span><span style="color:#000000"> Action05()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">EmptyResult</span><span style="color:#000000">();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>The action simply returns an [EmptyResult] type. In this case, the server sends an empty response to the client, as shown in its HTTP response:</p>
@@ -1562,24 +1538,25 @@
   <li>Line 9: The server informs its client that it is sending an empty document.
   </li>
 </ul>
-
 <p><a id="refheading58038676630786"></a></p>
-<h2 id="39-action-with-a-result-of-type-redirectresult-1">3.9. Action with a result of type [RedirectResult] - 1</h2>
+<h2 id="39-action-with-a-result-of-type-redirectresult-1">3.9. <span style="color: #4f81bd">Action with a result of type [RedirectResult] - 1</span></h2>
 <p>Consider the following new action:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#000000">// Action06</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectResult</span><span style="color:#000000"> Action06()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectResult</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;/First/Action05&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Action06</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectResult</span><span style="color:#000000"> Action06()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectResult</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;/First/Action05&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>The action returns a [RedirectResult] type. This type allows sending a redirection request to the client to the URL specified in the constructor (line 4). The client will then send a new GET request to [/First/Action05]. The client therefore makes two requests in total.</p>
+<p>The action returns a [RedirectResult] type. This type allows sending a redirection request to the client to the URL specified in the constructor (line 4). The client will then send a new GET request to [/First/Action05]. The client therefore makes two requests in total. </p>
 <p>The browser displays the result of the second request:</p>
-<p><img src="images/100000000000016E0000007EE49A70A7.png" width="256" height="88" style="width:6.78cm;height:2.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016E0000007EE49A70A7.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016E0000007EE49A70A7.png" width="256" height="88" style="display:inline-block; margin:4px;width:6.78cm;height:2.334cm;" class="odt-zoomable" data-zoom-src="images/100000000000016E0000007EE49A70A7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p>Let’s examine the server’s HTTP response in Chrome:</p>
-<p><img src="images/10000000000000A1000000C0DD2AF862.png" width="113" height="135" style="width:2.979cm;height:3.56cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000A1000000C0DD2AF862.png" /></p>
-<p>Above, we see the browser’s two requests. Let’s examine the first request [Action06]. The server’s HTTP response is as follows:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A1000000C0DD2AF862.png" width="113" height="134" style="display:inline-block; margin:4px;width:2.979cm;height:3.552cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A1000000C0DD2AF862.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<p>As shown above, these are the two requests from the browser. Let’s examine the first request [Action06]. The server’s HTTP response is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -1625,14 +1602,14 @@
 <a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">fr</span><span class="o">-</span><span class="n">FR</span><span class="p">,</span><span class="n">fr</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">en</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.4</span>
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading58040676630786"></a></p>
-<h2 id="310-action-with-a-result-of-type-redirectresult-2">3.10. Action with a result of type [RedirectResult] - 2</h2>
+<h2 id="310-action-with-a-result-of-type-redirectresult-2">3.10. <span style="color: #4f81bd">Action with a result of type [RedirectResult] - 2</span></h2>
 <p>Consider the following new action:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#000000">// Action07</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectResult</span><span style="color:#000000"> Action07()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectResult</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;/First/Action05&quot;</span><span style="color:#000000">,</span><span style="color:#0000ff">true</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Action07</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectResult</span><span style="color:#000000"> Action07()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectResult</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;/First/Action05&quot;</span><span style="color:#000000">,</span><span style="color:#0000ff">true</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>In line 4, we added a second parameter to the [RedirectResult] constructor. It is a boolean that defaults to <em>false</em>. When set to <em>true</em>, it modifies the HTTP response sent to the client. It becomes:</p>
@@ -1640,14 +1617,14 @@
 </code></pre></div>
 <p>Thus, the response code sent to the client is now <em>301 Moved Permanently</em>. The redirection occurs as before, but we indicate that this redirection is permanent. This allows search engines to replace the old URL with the new one in their results.</p>
 <p><a id="refheading58042676630786"></a></p>
-<h2 id="311-action-with-a-result-of-type-redirecttorouteresult">3.11. Action with a result of type [RedirectToRouteResult]</h2>
+<h2 id="311-action-with-a-result-of-type-redirecttorouteresult">3.11. <span style="color: #4f81bd">Action with a result of type [RedirectToRouteResult]</span></h2>
 <p>Consider the following new action:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#000000">// Action08</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectToRouteResult</span><span style="color:#000000"> Action08()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectToRouteResult</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;Default&quot;</span><span style="color:#000000">,</span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">RouteValueDictionary</span><span style="color:#000000">(</span><span style="color:#0000ff">new</span><span style="color:#000000"> {controller=</span><span style="color:#a31515">&quot;First&quot;</span><span style="color:#000000">,action=</span><span style="color:#a31515">&quot;Action05&quot;</span><span style="color:#000000">}));</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Action08</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectToRouteResult</span><span style="color:#000000"> Action08()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectToRouteResult</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;Default&quot;</span><span style="color:#000000">,</span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">RouteValueDictionary</span><span style="color:#000000">(</span><span style="color:#0000ff">new</span><span style="color:#000000"> {controller=</span><span style="color:#a31515">&quot;First&quot;</span><span style="color:#000000">,action=</span><span style="color:#a31515">&quot;Action05&quot;</span><span style="color:#000000">}));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
@@ -1657,11 +1634,11 @@
 
 <p>Routes are defined in [App_Start/RouteConfig]. There is currently only one:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">      routes.MapRoute(</span>
-<span class="odt-code-line"><span style="color:#000000">          name: </span><span style="color:#a31515">&quot;Default&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">          url: </span><span style="color:#a31515">&quot;{controller}/{action}/{id}&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">          defaults: </span><span style="color:#0000ff">new</span><span style="color:#000000"> { controller = </span><span style="color:#a31515">&quot;Home&quot;</span><span style="color:#000000">, action = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">, id = </span><span style="color:#2b91af">UrlParameter</span><span style="color:#000000">.Optional }</span></span>
-<span class="odt-code-line">);</span>
+<span class="odt-code-line"><span class="odt-code-line-content">      routes.MapRoute(</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          name: </span><span style="color:#a31515">&quot;Default&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          url: </span><span style="color:#a31515">&quot;{controller}/{action}/{id}&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          defaults: </span><span style="color:#0000ff">new</span><span style="color:#000000"> { controller = </span><span style="color:#a31515">&quot;Home&quot;</span><span style="color:#000000">, action = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">, id = </span><span style="color:#2b91af">UrlParameter</span><span style="color:#000000">.Optional }</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">);</span></span>
 </code></pre></div>
 
 <ul>
@@ -1697,18 +1674,17 @@
   <li>line 4: the redirect URL generated by the URL routing system.
   </li>
 </ul>
-
 <p><a id="refheading58044676630786"></a></p>
-<h2 id="312-action-with-a-void-return-type">3.12. Action with a [void] return type</h2>
+<h2 id="312-action-with-a-void-return-type">3.12. <span style="color: #4f81bd">Action with a [void] return type</span></h2>
 <p>Consider the following new action:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#000000">// Action09</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Action09()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> nom = Request.QueryString[</span><span style="color:#a31515">&quot;nom&quot;</span><span style="color:#000000">] ?? </span><span style="color:#a31515">&quot;inconnu&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      Response.AddHeader(</span><span style="color:#a31515">&quot;Content-Type&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">      Response.Write(</span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;&lt;h3&gt;Action09&lt;/h3&gt;nom={0}&quot;</span><span style="color:#000000">, nom));</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Action09</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Action09()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> nom = Request.QueryString[</span><span style="color:#a31515">&quot;nom&quot;</span><span style="color:#000000">] ?? </span><span style="color:#a31515">&quot;inconnu&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      Response.AddHeader(</span><span style="color:#a31515">&quot;Content-Type&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      Response.Write(</span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;&lt;h3&gt;Action09&lt;/h3&gt;nom={0}&quot;</span><span style="color:#000000">, nom));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
@@ -1726,14 +1702,14 @@
 <ul>
   <li>line 5: the response sent to the client is accessible via the [<b>Response</b>] property of the [Controller] class from which the [First] controller inherits;
   </li>
-  <li>line 5: we set the [Content-Type] HTTP header, which indicates the nature of the document the server is about to send to the client. Here, &quot;text/plain&quot; indicates that the document is plain text that should not be interpreted by the browser;
+  <li>Line 5: We set the HTTP header [Content-Type], which specifies the type of document the server is about to send to the client. Here, &quot;text/plain&quot; indicates that the document is plain text that should not be interpreted by the browser;
   </li>
-  <li>line 6: we write a string of characters into the response body. We have included HTML tags that should not be interpreted by the browser, since the browser will have previously received the HTTP header [Content-Type: text/plain]. This is what we want to verify.
+  <li>Line 6: We write a string of characters into the response body. We have included HTML tags that should not be interpreted by the browser, since the browser will have previously received the HTTP header [Content-Type: text/plain]. This is what we want to verify.
   </li>
 </ul>
 
 <p>Let’s compile the project and request the URL [/First/Action09?name=someone ][1] and then the URL [/First/Action09 ] [2]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FC000000F0C6E72D5F.png" width="680" height="107" style="display:inline-block; margin:4px;width:17.999cm;height:2.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FC000000F0C6E72D5F.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FC000000F0C6E72D5F.png" width="680" height="107" style="display:inline-block; margin:4px;width:17.999cm;height:2.82cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FC000000F0C6E72D5F.png" /></td></tr></table>
 
 <p>Now let’s look at the server’s HTTP response in Chrome:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
@@ -1747,53 +1723,54 @@
 <a id="__codelineno-15-5" name="__codelineno-15-5"></a>Content-Length: 144
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>line 3: we see the HTTP header that we set ourselves in the action code.
+  <li>Line 3: Here we see the HTTP header that we set ourselves in the action code.
   </li>
 </ul>
-
 <p><a id="refheading58046676630786"></a></p>
-<h2 id="313-a-second-controller">3.13. A second controller</h2>
-<p>Let’s create a second controller in the project. We’ll follow the method described in section 3.1, on page<a href="#refheading10128914791633">36</a> . We’ll call it [Second].</p>
-<p><img src="images/10000000000000C50000006F78BB882F.png" width="138" height="77" style="width:3.649cm;height:2.05cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C50000006F78BB882F.png" /></p>
+<h2 id="313-a-second-controller">3.13. <span style="color: #4f81bd">A second controller</span></h2>
+<p>Let’s create a second controller in the project. We’ll follow the method described in section<a href="#refheading10128914791633"><u><span style="color: #0563c1"> 3.1</span></u></a>, page<a href="#refheading10128914791633"><u><span style="color: #0563c1"> 40</span></u></a>. We’ll call it [Second].</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C50000006F78BB882F.png" width="138" height="78" style="display:inline-block; margin:4px;width:3.649cm;height:2.057cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C50000006F78BB882F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p>Its generated code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span>
-<span class="odt-code-line">{</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">SecondController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span>
-<span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#000000">//</span></span>
-<span class="odt-code-line">    <span style="color:#000000">// GET: /Second/</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionResult</span><span style="color:#000000"> Index()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> View();</span></span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">SecondController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">//</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// GET: /Second/</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionResult</span><span style="color:#000000"> Index()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> View();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>Let&#x27;s modify it as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Text;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span>
-<span class="odt-code-line">{</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">SecondController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span>
-<span class="odt-code-line">  {</span>
-<span class="odt-code-line">    <span style="color:#000000">// /Second/Action01</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#a31515">&quot;Contrôleur=Second, Action=Action01&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Text;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">SecondController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// /Second/Action01</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#a31515">&quot;Contrôleur=Second, Action=Action01&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>Then let&#x27;s request the URL [/Second/Action01] using a browser. We get the following response:</p>
-<p><img src="images/10000000000001840000007C98FE446F.png" width="271" height="87" style="width:7.181cm;height:2.3cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001840000007C98FE446F.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001840000007C98FE446F.png" width="271" height="87" style="display:inline-block; margin:4px;width:7.181cm;height:2.295cm;" class="odt-zoomable" data-zoom-src="images/10000000000001840000007C98FE446F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p>This URL was requested using an HTTP GET request, as shown in the HTTP logs for the request in Chrome:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>GET /Second/Action01 HTTP/1.1
 </code></pre></div>
@@ -1834,7 +1811,7 @@
 <a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">fr</span><span class="o">-</span><span class="n">FR</span><span class="p">,</span><span class="n">fr</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">en</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.4</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>line 1: the URL is indeed requested with a POST;
+  <li>Line 1: The URL is indeed requested with a POST;
   </li>
   <li>Line 4: The size in bytes of the posted elements. There are none here.
   </li>
@@ -1873,25 +1850,27 @@
 </ul>
 
 <p>The document sent is as follows:</p>
-<p><img src="images/10000000000001170000006643970F20.png" width="195" height="71" style="width:5.159cm;height:1.891cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001170000006643970F20.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001170000006643970F20.png" width="195" height="71" style="display:inline-block; margin:4px;width:5.159cm;height:1.886cm;" class="odt-zoomable" data-zoom-src="images/10000000000001170000006643970F20.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p>We get the same document as with the GET request.</p>
 <p><a id="refheading58048676630786"></a></p>
-<h2 id="314-action-filtered-by-an-attribute">3.14. Action filtered by an attribute</h2>
-<p>Let&#x27;s create the following new action:</p>
+<h2 id="314-action-filtered-by-an-attribute">3.14. <span style="color: #4f81bd">Action filtered by an attribute</span></h2>
+<p>Let’s create the following new action:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line">    <span style="color:#000000">// /Second/Action02</span></span>
-<span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action02()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#a31515">&quot;Contrôleur=Second, Action=Action02&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// /Second/Action02</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action02()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#a31515">&quot;Contrôleur=Second, Action=Action02&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>The [Action02] action is similar to the [Action01] action, but it specifies that it is accessible only via an HTTP POST request (line 2). Other attributes can be used:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpGet</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">serves only the GET request</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpHead</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">serves only the HEAD request</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpOptions</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">supports only the OPTIONS command</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpPut</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">only supports the PUT command</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpDelete</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">is used only for the DELETE command</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpGet</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">serves only the GET request</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpHead</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">serves only the HEAD request</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpOptions</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">supports only the OPTIONS command</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpPut</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">is used only for the PUT command</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>HttpDelete</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">is used only for the DELETE command</div></td></tr></table>
 
 <p>Let’s request the URL [/Second/Action02] directly in the browser. It is then requested via a GET. The browser then displays the following response:</p>
-<p><img src="images/100000000000026900000132851B890B.png" width="432" height="214" style="width:11.419cm;height:5.669cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026900000132851B890B.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000026900000132851B890B.png" width="432" height="214" style="display:inline-block; margin:4px;width:11.419cm;height:5.664cm;" class="odt-zoomable" data-zoom-src="images/100000000000026900000132851B890B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p>The server&#x27;s HTTP response was as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
 <span class="normal"><a href="#__codelineno-19-2">2</a></span>
@@ -1906,39 +1885,41 @@
   </li>
 </ul>
 
-<p><img src="images/10000000000001AD000001572D04E269.png" width="300" height="240" style="width:7.939cm;height:6.35cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AD000001572D04E269.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AD000001572D04E269.png" width="300" height="240" style="display:inline-block; margin:4px;width:7.939cm;height:6.348cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AD000001572D04E269.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p><a id="refheading58050676630786"></a></p>
-<h2 id="315-retrieving-elements-from-a-route">3.15. Retrieving elements from a route</h2>
+<h2 id="315-retrieving-elements-from-a-route">3.15. <span style="color: #4f81bd">Retrieving elements from a route</span></h2>
 <p>In the two actions described above, we wrote something like:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action02()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#a31515">&quot;Contrôleur=Second, Action=Action02&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action02()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#a31515">&quot;Contrôleur=Second, Action=Action02&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>The names of the controller and action were hard-coded into the code. If we change these names, the code is no longer correct. We can access the controller and action as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">    <span style="color:#000000">// /Second/Action03</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action03()</span></span>
-<span class="odt-code-line">    {</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur={0}, Action={1}&quot;</span><span style="color:#000000">, RouteData.Values[</span><span style="color:#a31515">&quot;controller&quot;</span><span style="color:#000000">], RouteData.Values[</span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000">]);</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// /Second/Action03</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action03()</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">string</span><span style="color:#000000"> texte = </span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur={0}, Action={1}&quot;</span><span style="color:#000000">, RouteData.Values[</span><span style="color:#a31515">&quot;controller&quot;</span><span style="color:#000000">], RouteData.Values[</span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000">]);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(texte, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>The route defined in [App_Start/RouteConfig] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">      routes.MapRoute(</span>
-<span class="odt-code-line"><span style="color:#000000">          name: </span><span style="color:#a31515">&quot;Default&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">          url: </span><span style="color:#a31515">&quot;{controller}/{action}/{id}&quot;</span><span style="color:#000000">,</span></span>
-<span class="odt-code-line"><span style="color:#000000">          defaults: </span><span style="color:#0000ff">new</span><span style="color:#000000"> { controller = </span><span style="color:#a31515">&quot;Home&quot;</span><span style="color:#000000">, action = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">, id = </span><span style="color:#2b91af">UrlParameter</span><span style="color:#000000">.Optional }</span></span>
-<span class="odt-code-line">);</span>
+<span class="odt-code-line"><span class="odt-code-line-content">      routes.MapRoute(</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          name: </span><span style="color:#a31515">&quot;Default&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          url: </span><span style="color:#a31515">&quot;{controller}/{action}/{id}&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          defaults: </span><span style="color:#0000ff">new</span><span style="color:#000000"> { controller = </span><span style="color:#a31515">&quot;Home&quot;</span><span style="color:#000000">, action = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">, id = </span><span style="color:#2b91af">UrlParameter</span><span style="color:#000000">.Optional }</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">);</span></span>
 </code></pre></div>
 
 <p>Line 3: The three route elements can be retrieved using <strong>RouteData.Values[&quot;element&quot;],</strong> where <strong>element</strong> is one of [controller, action, id].</p>
 <p>Let&#x27;s request the URL [http://localhost:49302/Second/Action03]:</p>
-<p><img src="images/100000000000018100000072F6504BF3.png" width="269" height="80" style="width:7.13cm;height:2.11cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000018100000072F6504BF3.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018100000072F6504BF3.png" width="269" height="80" style="display:inline-block; margin:4px;width:7.13cm;height:2.111cm;" class="odt-zoomable" data-zoom-src="images/100000000000018100000072F6504BF3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <p>We have successfully retrieved both the controller name and the action name.</p>
 
 

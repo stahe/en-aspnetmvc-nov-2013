@@ -563,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    7. Ajaxifying an ASP.NET MVC application
+    7. Ajaxifying an ASP.NET MVC Application
   
 
     
@@ -705,47 +705,47 @@
 
 
 <p><a id="refheading1882601168461456"></a></p>
-<h1 id="1-introduction">1. Introduction</h1>
-<p>The PDF of this document is available |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQCyQDvU-yOyRKxNhbufKL4kAUD12Tf_3R-x-aY2bYz0Of4?e=lgSf2j">HERE</a>|.</p>
-<p>The examples in this document are available |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCKNeWRQFCfSqwnA6RDUJ7yAd9qZkIe89vFgFNJvCBIS6o?e=bxYSux">HERE</a>|.</p>
-<p>Here, we aim to introduce, through examples, the key concepts of ASP.NET MVC, a .NET web framework that provides a framework for developing web applications according to the MVC (Model–View–Controller) pattern.</p>
-<p>Understanding the examples in this document requires few prerequisites. Only basic knowledge of the C# language is necessary. This can be found in the document <strong>Introduction to the C# Language</strong> at the URL [<a href="http://tahe.developpez.com/dotnet/csharp">http://tahe.developpez.com/dotnet/csharp</a>]. A case study is provided to put the knowledge gained about ASP.NET MVC into practice. It uses the Entity Framework ORM (Object-Relational Mapper). This ORM is presented in the document <strong>Introduction to Entity Framework 5 Code First</strong>, available at [<a href="http://tahe.developpez.com/dotnet/ef5cf">http://tahe.developpez.com/dotnet/ef5cf</a>].</p>
-<p>The various examples in this document are available at the URL [<a href="http://tahe.developpez.com/dotnet/aspnet-mvc">http://tahe.developpez.com/dotnet/aspnetmvc</a>] as a downloadable <em>ZIP</em> file.</p>
+<h1 id="1-introduction">1. <span style="color: #365f91">Introduction</span></h1>
+<p>The PDF of this document is available |HERE|.</p>
+<p>The examples in this document are available |HERE|.</p>
+<p>Here, we aim to introduce, through examples, the key concepts of ASP.NET MVC, a .NET web framework that provides a structure for developing web applications based on the MVC (Model–View–Controller) pattern.</p>
+<p>Understanding the examples in this document requires few prerequisites. Only basic knowledge of the C# language is necessary. This can be found in the document <strong>Introduction to the C# Language</strong> at the URL [<a href="http://tahe.developpez.com/dotnet/csharp"><u><span style="color: #0563c1">http://tahe.developpez.com/dotnet/csharp</span></u></a>]. A case study is provided to put the knowledge gained about ASP.NET MVC into practice. It uses the Entity Framework ORM (Object-Relational Mapper). This ORM is presented in the document <strong>Introduction to Entity Framework 5 Code First</strong>, available at [<a href="http://tahe.developpez.com/dotnet/ef5cf"><u><span style="color: #0563c1">http://tahe.developpez.com/dotnet/ef5cf</span></u></a>].</p>
+<p>The various examples in this document are available at the URL [<a href="http://tahe.developpez.com/dotnet/aspnet-mvc"><u><span style="color: #0563c1">http://tahe.developpez.com/dotnet/aspnetmvc</span></u></a>] as a downloadable <em>ZIP</em> file.</p>
 <p>This document is incomplete in many respects. To learn more about ASP.NET MVC, you can use the following references:</p>
 <ul>
-<li><strong>[ref1]</strong>: the book &quot;<strong>Pro</strong> <strong><span style="color: #000000">ASP.NET MVC 4</span></strong>&quot; written by <strong>Adam Freeman</strong> and published by <strong>Apress</strong>. It is an excellent book. If it were available online for free and in French, this document would be unnecessary. I recommend that anyone who can do so learn ASP.NET MVC using this book. The source code for the book’s examples is available for free at [<a href="http://www.apress.com/9781430242369">http://www.apress.com/9781430242369</a>];</li>
-<li><strong>[ref2]</strong>: the framework’s website [<a href="http://www.asp.net/mvc">http://www.asp.net/mvc</a>]. There you will find all the materials needed for self-study. A French version is available at the URL [<a href="http://dotnet.developpez.com/mvc/">http://dotnet.developpez.com/mvc/</a>];</li>
-<li>the [developpez.com] website dedicated to ASP.NET [<a href="http://dotnet.developpez.com/aspnet/">http://dotnet.developpez.com/aspnet/</a> ].</li>
+<li><strong>[ref1]</strong>: the book &quot;<strong>Pro</strong> <strong><span style="color: #000000">ASP.NET MVC 4</span></strong>&quot; written by <strong>Adam Freeman</strong> and published by <strong>Apress</strong>. It is an excellent book. If it were available online for free and in French, this document would be unnecessary. I recommend that anyone who can do so learn ASP.NET MVC using this book. The source code for the book’s examples is available for free at [<a href="http://www.apress.com/9781430242369"><u><span style="color: #0563c1">http://www.apress.com/9781430242369</span></u></a>];</li>
+<li><strong>[ref2]</strong>: the framework’s website [<a href="http://www.asp.net/mvc"><u><span style="color: #0563c1">http://www.asp.net/mvc</span></u></a>]. There you will find all the materials needed for self-study. A French version is available at the URL [<a href="http://dotnet.developpez.com/mvc/"><u><span style="color: #0563c1">http://dotnet.developpez.com/mvc/</span></u></a>];</li>
+<li>the [developpez.com] website dedicated to ASP.NET [<a href="http://dotnet.developpez.com/aspnet/"><u><span style="color: #0563c1">http://dotnet.developpez.com/aspnet/</span></u></a> ].</li>
 </ul>
 <p>This document has been written so that it can be read without a computer at hand. Therefore, many screenshots are included.</p>
 <p><a id="refheading99511454977699"></a></p>
-<h2 id="11-the-role-of-aspnet-mvc-in-a-web-application">1.1. The Role of ASP.NET MVC in a Web Application</h2>
+<h2 id="11-the-role-of-aspnet-mvc-in-a-web-application">1.1. <span style="color: #4f81bd">The Role of ASP.NET MVC in a Web Application</span></h2>
 <p>First, let’s situate ASP.NET MVC within the development of a web application. Most often, it will be built on a multi-layer architecture such as the following:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D8000001C76DFA2B2A.png" width="680" height="154" style="display:inline-block; margin:4px;width:17.999cm;height:4.078cm;" class="odt-zoomable" data-zoom-src="images/10000000000007D8000001C76DFA2B2A.png" /></td></tr></table>
 
 <ul>
-<li>the [<strong>Web</strong>] layer is the layer in contact with the web application user. The user interacts with the web application through web pages displayed by a browser. <strong>It is in this layer that ASP.NET MVC resides, and only in this layer;</strong></li>
+<li>the [<strong>Web</strong>] layer is the layer in contact with the web application user. The user interacts with the web application through web pages viewed in a browser. <strong>It is in this layer that ASP.NET MVC resides, and only in this layer;</strong></li>
 <li>the [<strong>business</strong>] layer implements the application’s business logic, such as calculating a salary or an invoice. This layer uses data from the user via the [Web] layer and from the DBMS via the [DAO] layer;</li>
-<li>The [<strong>DAO</strong>] (Data Access Objects) layer, the [<strong>ORM</strong>] (Object Relational Mapper) layer, and the ADO.NET connector manage access to data in the DBMS. The [<strong>ORM</strong>] layer acts as a bridge between the objects handled by the [DAO] layer and the rows and columns of tables in a relational database. Two ORMs are commonly used in the .NET world: <strong>NHibernate</strong> (<a href="http://sourceforge.net/projects/nhibernate/">http://sourceforge.net/projects/nhibernate/</a>) and <strong>Entity Framework</strong> (<a href="http://msdn.microsoft.com/en-us/data/ef.aspx">http://msdn.microsoft.com/en-us/data/ef.aspx</a>);</li>
-<li>the integration of these layers can be achieved using a dependency injection container such as Spring (<a href="http://www.springframework.net/">http://www.springframework.net/</a>);</li>
+<li>The [<strong>DAO</strong>] (Data Access Objects) layer, the [<strong>ORM</strong>] (Object Relational Mapper) layer, and the ADO.NET connector manage access to data in the DBMS. The [<strong>ORM</strong>] layer acts as a bridge between the objects handled by the [DAO] layer and the rows and columns of tables in a relational database. Two ORMs are commonly used in the .NET world: <strong>NHibernate</strong> (<a href="http://sourceforge.net/projects/nhibernate/"><u><span style="color: #0563c1">http://sourceforge.net/projects/nhibernate/</span></u></a>) and <strong>Entity Framework</strong> (<a href="http://msdn.microsoft.com/en-us/data/ef.aspx"><u><span style="color: #0563c1">http://msdn.microsoft.com/en-us/data/ef.aspx</span></u></a>);</li>
+<li>the integration of these layers can be achieved using a dependency injection container such as Spring (<a href="http://www.springframework.net/"><u><span style="color: #0563c1">http://www.springframework.net/</span></u></a>);</li>
 </ul>
 <p>Most of the examples provided below will use only a single layer, the [Web] layer:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002CB000001344402A749.png" width="250" height="108" style="display:inline-block; margin:4px;width:6.62cm;height:2.85cm;" class="odt-zoomable" data-zoom-src="images/10000000000002CB000001344402A749.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002CB000001344402A749.png" width="250" height="108" style="display:inline-block; margin:4px;width:6.62cm;height:2.852cm;" class="odt-zoomable" data-zoom-src="images/10000000000002CB000001344402A749.png" /></td></tr></table>
 
 <p>However, this document will conclude with the construction of a multi-layer web application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007E50000018DC284155D.png" width="680" height="134" style="display:inline-block; margin:4px;width:17.999cm;height:3.535cm;" class="odt-zoomable" data-zoom-src="images/10000000000007E50000018DC284155D.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007E50000018DC284155D.png" width="680" height="134" style="display:inline-block; margin:4px;width:17.999cm;height:3.537cm;" class="odt-zoomable" data-zoom-src="images/10000000000007E50000018DC284155D.png" /></td></tr></table>
 
 <p><a id="refheading99531454977699"></a></p>
-<h2 id="12-the-aspnet-mvc-development-model">1.2. The ASP.NET MVC Development Model</h2>
+<h2 id="12-the-aspnet-mvc-development-model">1.2. <span style="color: #4f81bd">The ASP.NET MVC Development Model</span></h2>
 <p>ASP.NET MVC implements the MVC (Model–View–Controller) architectural pattern as follows:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000718000002334AE9A6E1.png" width="680" height="211" style="display:inline-block; margin:4px;width:17.999cm;height:5.579cm;" class="odt-zoomable" data-zoom-src="images/1000000000000718000002334AE9A6E1.png" /></td></tr></table>
 
 <p>The processing of a client request proceeds as follows:</p>
 <ol>
-<li><strong>request</strong> - the requested URLs are in the form <em>http://machine:port/contexte/Controlleur/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;...</em> The [Front Controller] uses a configuration file to &quot;route&quot; the request to the correct controller and the correct action within that controller. To do this, it uses the [<em>Controller/Action</em>] path from the URL. The rest of the URL [<em>/param1/param2/...</em>] consists of optional parameters that will be passed to the action. The <strong>&quot;C&quot;</strong> in MVC here refers to the [Front Controller, Controller, Action] chain. If the [<em>Controller/Action</em>] path does not lead to an existing controller or action, the web server will respond that the requested URL was not found.</li>
+<li><strong>request</strong> - the requested URLs are in the form <em>http://machine:port/contexte/Controlleur/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;...</em> The [Front Controller] uses a configuration file to &quot;route&quot; the request to the correct controller and the correct action within that controller. To do this, it uses the [<em>Controller/Action</em>] path from the URL. The rest of the URL [<em>/param1/param2/...</em>] consists of optional parameters that will be passed to the action. The <strong>C</strong> in MVC here refers to the [Front Controller, Controller, Action] chain. If the [<em>Controller/Action</em>] path does not lead to an existing controller or action, the web server will respond that the requested URL was not found.</li>
 </ol>
 <ol start="2">
-  <li>processing
+  <li><b>processing </b>
   </li>
 </ol>
 <ul>
@@ -767,7 +767,7 @@
   </li>
 </ul>
 <ol>
-  <li><b>response</b>—the selected view <b>V </b>uses the model <b>M </b>constructed by the action to initialize the dynamic parts of the HTML response it must send to the client, then sends this response.
+  <li><b>response </b>- the selected view <b>V </b>uses the model <b>M </b>constructed by the action to initialize the dynamic parts of the HTML response it must send to the client, then sends this response.
   </li>
 </ol>
 
@@ -793,50 +793,51 @@
 
 <p>Hereinafter, the term &quot;M model&quot; will refer exclusively to the <strong>model of a</strong> V <strong>view</strong>.</p>
 <p><a id="refheading99551454977699"></a></p>
-<h2 id="13-tools-used">1.3. Tools Used</h2>
+<h2 id="13-tools-used">1.3. <span style="color: #4f81bd">Tools Used</span></h2>
 <p>Moving forward, we are using (as of September 2013) the Express versions of Visual Studio 2012:</p>
 <ul>
-  <li>[<a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop">http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop</a>  ] for desktop applications;
+  <li>[<a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop"><u><span style="color: #0563c1">http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop</span></u></a> ] for desktop applications;
   </li>
-  <li>[<a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-web">http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-Web</a> ] for web applications.
+  <li>[<a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-web"><u><span style="color: #0563c1">http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-Web</span></u></a> ] for web applications.
   </li>
 </ul>
 
-<p>To install the latest versions of these products, you can use Microsoft’s [Web Platform Installer] (<a href="http://www.microsoft.com/web/downloads/platform.aspx">http://www.microsoft.com/Web/downloads/platform.aspx</a>).</p>
-<p>Additionally, use Google’s <strong>Chrome</strong> browser (<a href="http://www.google.fr/intl/fr/chrome/browser/">http://www.google.fr/intl/fr/chrome/browser/</a>). Install the [<a id="advanced-rest-client"></a> Advanced Rest Client] extension ( ). Here’s how to do it:</p>
+<p>To install the latest versions of these products, you can use Microsoft’s [Web Platform Installer] (<a href="http://www.microsoft.com/web/downloads/platform.aspx"><u><span style="color: #0563c1">http://www.microsoft.com/Web/downloads/platform.aspx</span></u></a>).</p>
+<p>Additionally, use Google’s <strong>Chrome</strong> browser (<a href="http://www.google.fr/intl/fr/chrome/browser/"><u><span style="color: #0563c1">http://www.google.fr/intl/fr/chrome/browser/</span></u></a>). Install the [<a id="advanced-rest-client"></a> Advanced Rest Client] extension. To do so:</p>
 <ul>
-  <li>Go to the [Google Web Store] (<a href="https://chrome.google.com/webstore">https://chrome.google.com/webstore</a>) using the Chrome browser;
+  <li>Go to the [Google Web Store] (<a href="https://chrome.google.com/webstore"><u><span style="color: #0563c1">https://chrome.google.com/webstore</span></u></a>) using the Chrome browser;
   </li>
   <li>search for the [Advanced Rest Client] app:
   </li>
 </ul>
 
-<p><img src="images/10000000000001B0000000D21DA44C58.png" width="302" height="147" style="width:7.999cm;height:3.889cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B0000000D21DA44C58.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B0000000D21DA44C58.png" width="302" height="147" style="display:inline-block; margin:4px;width:7.999cm;height:3.888cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B0000000D21DA44C58.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
 <ul>
   <li>the app is then available for download:
   </li>
 </ul>
 
-<p><img src="images/10000000000003BB000000AE1112526C.png" width="661" height="120" style="width:17.48cm;height:3.184cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003BB000000AE1112526C.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BB000000AE1112526C.png" width="661" height="120" style="display:inline-block; margin:4px;width:17.48cm;height:3.186cm;" class="odt-zoomable" data-zoom-src="images/10000000000003BB000000AE1112526C.png" /></td></tr></table>
+
 <ul>
   <li>to get it, you’ll need to create a Google account. The [Google Web Store] will then ask for confirmation [1]:
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000083800000381099DA849.png" width="680" height="290" style="display:inline-block; margin:4px;width:17.999cm;height:7.673cm;" class="odt-zoomable" data-zoom-src="images/100000000000083800000381099DA849.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000083800000381099DA849.png" width="680" height="290" style="display:inline-block; margin:4px;width:17.999cm;height:7.675cm;" class="odt-zoomable" data-zoom-src="images/100000000000083800000381099DA849.png" /></td></tr></table>
 
 <ul>
-  <li>In [2], the added extension is available under the [Applications] option [3]. This option appears on every new tab you create (CTRL-T) in the browser.
+  <li>in [2], the added extension is available in the [Apps] option [3]. This option appears on every new tab you create (CTRL-T) in the browser.
   </li>
 </ul>
-
 <p><a id="refheading99631454977699"></a></p>
-<h2 id="14-examples">1.4. Examples</h2>
-<p>Most of the learning examples will be limited to the web layer alone:</p>
+<h2 id="14-examples">1.4. <span style="color: #4f81bd">Examples</span></h2>
+<p>Most of the learning examples will be limited to the web layer:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006370000023DEEFC5AC7.png" width="680" height="245" style="display:inline-block; margin:4px;width:17.999cm;height:6.482cm;" class="odt-zoomable" data-zoom-src="images/10000000000006370000023DEEFC5AC7.png" /></td></tr></table>
 
 <p>Once this tutorial is complete, we will present a multi-layer web application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000071F000002349B70ADB8.png" width="680" height="210" style="display:inline-block; margin:4px;width:17.999cm;height:5.567cm;" class="odt-zoomable" data-zoom-src="images/100000000000071F000002349B70ADB8.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000071F000002349B70ADB8.png" width="680" height="210" style="display:inline-block; margin:4px;width:17.999cm;height:5.569cm;" class="odt-zoomable" data-zoom-src="images/100000000000071F000002349B70ADB8.png" /></td></tr></table>
 
 
 
