@@ -520,10 +520,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#63-internationalizing-the-viewmodel14-view-model" class="md-nav__link">
+  <a href="#63-internationalizing-the-view-model-viewmodel14" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3. Internationalizing the [ViewModel14] view model
+        6.3. Internationalizing the view model [ViewModel14]
       
     </span>
   </a>
@@ -531,10 +531,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#64-internationalize-the-view-action14getcshtml" class="md-nav__link">
+  <a href="#64-internationalizing-the-view-action14getcshtml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.4. Internationalize the view [Action14Get.cshtml]
+        6.4. Internationalizing the view [Action14Get.cshtml]
       
     </span>
   </a>
@@ -596,7 +596,7 @@
   <span class="md-ellipsis">
     
   
-    7. Ajaxifying an ASP.NET MVC Application
+    7. Ajaxifying an ASP.NET MVC application
   
 
     
@@ -738,23 +738,32 @@
 
 
 <p><a id="refheading58144676630786"></a></p>
-<h1 id="6-view-internationalization">6. <span style="color: #365f91">View Internationalization</span></h1>
-<p><span style="color: #000000">Here we will address the issue of view internationalization. This is a complex issue that is well described in the following article by Scott Hanselman:</span></p>
-<p><span style="color: #000000">[</span><a href="http://www.hanselman.com/blog/GlobalizationInternationalizationAndLocalizationInASPNETMVC3JavaScriptAndJQueryPart1.aspx"><u><span style="color: #0563c1">http://www.hanselman.com/blog/GlobalizationInternationalizationAndLocalizationInASPNETMVC3JavaScriptAndJQueryPart1.aspx</span></u></a>]</p>
+<h1 id="6-view-internationalization">6. View Internationalization</h1>
+<p><span style="color: #000000">Here we will address the issue of view internationalization. This is a complex issue, and a good description of it can be found in the following article by Scott Hanselman:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">[</span><a href="http://www.hanselman.com/blog/GlobalizationInternationalizationAndLocalizationInASPNETMVC3JavaScriptAndJQueryPart1.aspx">http://www.hanselman.com/blog/GlobalizationInternationalizationAndLocalizationInASPNETMVC3JavaScriptAndJQueryPart1.aspx</a>]</p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">First, let’s review his definitions of the various terms related to view internationalization:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Internationalization (i18n)</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">making the application support different languages and locales</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Localization (l10n)</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">making the application support a specific language/locale pair</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Globalization</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the combination of <i>Internationalization </i>and <i>Localization</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Language</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">spoken language – designated by an ISO code (fr: French, es: Spanish, en: English, ...)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Locale</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">a variant of the language – also designated by an ISO code (en_GB: British English, en_US: American English, ...)</div></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s tackle the problem with a first example.</span></p>
 <p><a id="refheading543032071525573"></a></p>
-<h2 id="61-localization-of-real-numbers">6.1. <span style="color: #4f81bd">Localization of real numbers</span></h2>
+<h2 id="61-localization-of-real-numbers">6.1. Localization of real numbers</h2>
 <p><span style="color: #000000">You may notice an anomaly in the previous input form:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002B50000005CCBD6DD49.png" width="485" height="64" style="display:inline-block; margin:4px;width:12.831cm;height:1.702cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B50000005CCBD6DD49.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
+<p><img src="images/10000000000002B50000005CCBD6DD49.png" width="485" height="64" style="width:12.831cm;height:1.7cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002B50000005CCBD6DD49.png" /></p>
 <p><span style="color: #000000">For the real number, we typed [0,3] and it was not accepted. You must type [0.3]:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B400000060BFC6E1DC.png" width="305" height="67" style="display:inline-block; margin:4px;width:8.07cm;height:1.776cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B400000060BFC6E1DC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
+<p><img src="images/10000000000001B400000060BFC6E1DC.png" width="305" height="67" style="width:8.07cm;height:1.78cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B400000060BFC6E1DC.png" /></p>
 <p><span style="color: #000000">The expected format is therefore the Anglo-Saxon format, not the French format. A quick search online reveals some solutions. Here is one.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [GET] and [POST] actions become the following:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">    // Action13-GET</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span></span>
@@ -764,6 +773,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Action13-POST</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span></span>
@@ -773,7 +783,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [Action13Get.cshtml] view is identical to the [Action12Get.cshtml] view except for the JavaScript scripts:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;viewport&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;width=device-width&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
@@ -790,11 +802,11 @@
 
 <p><strong>Note</strong>: Line 5, adjust the jQuery version to match your version of Visual Studio.</p>
 <ul>
-  <li>Line 9: We have added a script [<a id="myscripts-js"></a> myscripts.js]. It is as follows:
+  <li>line 9, we have added a script [<a id="myscripts-js"></a> myscripts.js ]. It is as follows:
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001CD00000248A32E1E58.png" width="231" height="292" style="display:inline-block; margin:4px;width:6.1cm;height:7.728cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CD00000248A32E1E58.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001CD00000248A32E1E58.png" width="231" height="292" style="display:inline-block; margin:4px;width:6.1cm;height:7.726cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CD00000248A32E1E58.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">// http://blog.instance-factory.com/?p=268</span></span>
@@ -824,8 +836,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 </code></pre></div>
 
-<p>I indicated on line 1 where this script was found. I won’t try to explain it because I don’t understand it. JavaScript can sometimes be a bit cryptic. On lines 4, 9, and 15, a [Globalize] object is used. This is provided by the jQuery Globalization library (<a id="jquery-globalization"></a> ), which can be obtained via [NuGet]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E3000002BDB68F72ED.png" width="370" height="351" style="display:inline-block; margin:4px;width:9.781cm;height:9.278cm;" class="odt-zoomable" data-zoom-src="images/10000000000002E3000002BDB68F72ED.png" /></td></tr></table>
+<p><a id="jquery-globalization"></a>I indicated on line 1 where this script was found. I won’t try to explain it because I don’t understand it. JavaScript can sometimes be a bit cryptic. On lines 4, 9, and 15, a [Globalize] object is used. This is provided by the jQuery Globalization library , which can be obtained via [NuGet]:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E3000002BDB68F72ED.png" width="370" height="350" style="display:inline-block; margin:4px;width:9.781cm;height:9.269cm;" class="odt-zoomable" data-zoom-src="images/10000000000002E3000002BDB68F72ED.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059D0000013BBF15C1D3.png" width="680" height="149" style="display:inline-block; margin:4px;width:17.999cm;height:3.946cm;" class="odt-zoomable" data-zoom-src="images/100000000000059D0000013BBF15C1D3.png" /></td></tr></table>
 
@@ -864,6 +876,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li>line 5: the [globalize] script;
   </li>
@@ -890,37 +903,38 @@
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 </code></pre></div>
 
-<p>Lines 10–13 set the client-side locale to [fr-FR]:</p>
+<p>Lines 10–13 set the client-side culture to [fr-FR]:</p>
 <ul>
   <li>line 10: the jQuery [ready] function is executed when the document containing the script has been fully loaded by the browser;
   </li>
-  <li>Lines 11–12: The client-side culture is set to [fr-FR]. To do this, the file [globalize.culture.fr-FR.js] must be included in the list of JavaScript scripts associated with the document.
+  <li>lines 11–12: the client-side culture is set to [fr-FR]. For this to work, the file [globalize.culture.fr-FR.js] must be included in the list of JavaScript scripts associated with the document.
   </li>
 </ul>
 
 <p>Now we can test the new application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A70000005CF277001E.png" width="296" height="64" style="display:inline-block; margin:4px;width:7.83cm;height:1.702cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A70000005CF277001E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><img src="images/10000000000001A70000005CF277001E.png" width="296" height="64" style="width:7.83cm;height:1.7cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A70000005CF277001E.png" /></p>
 <p>We can now enter [0.3] for the real number, which we couldn’t do before. However, we encounter another issue:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B000000026D182258D.png" width="302" height="27" style="display:inline-block; margin:4px;width:7.999cm;height:0.704cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B000000026D182258D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><img src="images/10000000000001B000000026D182258D.png" width="302" height="26" style="width:7.999cm;height:0.7cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B000000026D182258D.png" /></p>
 <p>Above, the client-side validation allows us to enter [11.2] using the Anglo-Saxon notation. This value is not accepted on the server side when we submit the form:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000039500000024D39E39F5.png" width="642" height="25" style="display:inline-block; margin:4px;width:16.979cm;height:0.667cm;" class="odt-zoomable" data-zoom-src="images/100000000000039500000024D39E39F5.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><img src="images/100000000000039500000024D39E39F5.png" width="642" height="25" style="width:16.979cm;height:0.67cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000039500000024D39E39F5.png" /></p>
 <p>We must type [11,2], and then it works on both the client and server sides. On the client side, the Anglo-Saxon notation should not be accepted. That must be possible...</p>
 <p>Let’s now address the internationalization of views. We’ll continue with the example of the previous form by offering it in two languages: French and English.</p>
 <p><a id="refheading58146676630786"></a></p>
-<h2 id="62-managing-a-culture">6.2. <span style="color: #4f81bd">Managing a culture</span></h2>
+<h2 id="62-managing-a-culture">6.2. Managing a culture</h2>
 <p>The language of the views is controlled by the [<span style="color: #000000">Thread.CurrentThread.CurrentUICulture] </span>object<span style="color: #000000">. To display pages in the [fr-FR] culture, we write:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Thread.CurrentThread.CurrentUICulture=new CultureInfo(&quot;fr-FR&quot;);
 </code></pre></div>
 <p>Localization (dates, numbers, currencies, times, etc.) is controlled by the [Thread.CurrentThread.CurrentCulture] object. Similar to what was written previously, we write:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Thread.CurrentThread.CurrentCulture=new CultureInfo(&quot;fr-FR&quot;);
 </code></pre></div>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">These two statements could be placed in the constructor of each controller in the application. However, we might also want to factor out this code that is common to all controllers. We will take this approach.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We create two new controllers:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C20000004D3A845F11.png" width="136" height="54" style="display:inline-block; margin:4px;width:3.59cm;height:1.425cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C20000004D3A845F11.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">   </span></p>
+<p><img src="images/10000000000000C20000004D3A845F11.png" width="136" height="54" style="width:3.59cm;height:1.431cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C20000004D3A845F11.png" /></p>
 <ul>
   <li><span style="color: #000000">[I18NController] will be the base class for all controllers using internationalization;</span>
   </li>
@@ -928,7 +942,9 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The code for the [I18NController] controller is as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Threading;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web;</span></span></span>
@@ -975,6 +991,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 7: [I18NController] derives from the [Controller] class;</span>
   </li>
@@ -1004,7 +1021,9 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [SecondController] controller will be as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> Exemple_03.Models;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> Exemples.Controllers;</span></span></span>
@@ -1031,20 +1050,25 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">line 7: [SecondController] derives from [I18NController]. This ensures that the culture of the view to be displayed has been initialized;</span>
+  <li><span style="color: #000000">Line 7: [SecondController] extends [I18NController]. This ensures that the locale for the view to be displayed has been initialized;</span>
   </li>
-  <li><span style="color: #000000">line 13: we use the view model [ViewModel14], which we will introduce;</span>
+  <li><span style="color: #000000">Line 13: We use the view model [ViewModel14], which we will introduce shortly;</span>
   </li>
-  <li><span style="color: #000000">lines 13 and 20: the view [Action14Get.cshtml] handles the display of the form.</span>
+  <li><span style="color: #000000">Lines 13 and 20: The view [Action14Get.cshtml] displays the form.</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><a id="refheading58148676630786"></a></p>
-<h2 id="63-internationalizing-the-viewmodel14-view-model">6.3. <span style="color: #4f81bd">Internationalizing the [ViewModel14] view model</span></h2>
+<h2 id="63-internationalizing-the-view-model-viewmodel14">6.3. Internationalizing the view model [ViewModel14]</h2>
 <p><span style="color: #000000">The view model [ViewModel14] is as follows:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000181000001C669F9A7B6.png" width="193" height="227" style="display:inline-block; margin:4px;width:5.094cm;height:6.008cm;" class="odt-zoomable" data-zoom-src="images/1000000000000181000001C669F9A7B6.png" /></td></tr></table>
+<p><span style="color: #000000"> </span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000181000001C669F9A7B6.png" width="193" height="227" style="display:inline-block; margin:4px;width:5.094cm;height:6.006cm;" class="odt-zoomable" data-zoom-src="images/1000000000000181000001C669F9A7B6.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> Exemple_03.Resources;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System;</span></span></span>
@@ -1145,23 +1169,30 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">This model is the internationalized version of the previous model [ViewModel11]. We will describe the internationalization mechanism for the first attribute of the first property. The other attributes follow the same mechanism.</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    [<span style="color:#2b91af">Required</span>(ErrorMessageResourceType = <span style="color:#0000ff">typeof</span>(<span style="color:#2b91af">MyResources</span>), ErrorMessageResourceName = <span style="color:#a31515">&quot;infoRequise&quot;</span>)]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Chaine1 { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In the previous model [ViewModel11], these lines were as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">[<span style="color:#2b91af">Required</span>(ErrorMessage = <span style="color:#a31515">&quot;Information requise&quot;</span>)]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Chaine1 { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span></span>
 </code></pre></div>
 
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">In the internationalized version, line 1, the text to be displayed is placed in a resource file. Here, this file is named [MyResources.resx] (</span><em>typeof</em><span style="color: #000000">) and has been placed in the project root. It is called a resource file.</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018A00000265B06EB6F3.png" width="197" height="306" style="display:inline-block; margin:4px;width:5.212cm;height:8.109cm;" class="odt-zoomable" data-zoom-src="images/100000000000018A00000265B06EB6F3.png" /></td></tr></table>
+<p><span style="color: #000000">In the internationalized version, line 1, the text to be displayed is placed in a resource file. Here, this file is named [MyResources.resx] (</span><em><span style="color: #000000">typeof</span></em><span style="color: #000000">) and has been placed in the project root. It is called a resource file.</span></p>
+<p><span style="color: #000000"> </span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018A00000265B06EB6F3.png" width="197" height="307" style="display:inline-block; margin:4px;width:5.212cm;height:8.11cm;" class="odt-zoomable" data-zoom-src="images/100000000000018A00000265B06EB6F3.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We have created three resource files here:</span></p>
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">[MyResources]: default resource when there is no resource for the current locale;</span>
   </li>
@@ -1171,47 +1202,67 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">To create a resource file, follow these steps [1, 2, 3]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AE00000383A258F38F.png" width="680" height="421" style="display:inline-block; margin:4px;width:17.999cm;height:11.128cm;" class="odt-zoomable" data-zoom-src="images/10000000000005AE00000383A258F38F.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000522000002312847CC19.png" width="657" height="281" style="display:inline-block; margin:4px;width:17.383cm;height:7.422cm;" class="odt-zoomable" data-zoom-src="images/1000000000000522000002312847CC19.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">This creates the resource file [MyResources2.resx]. When you double-click it, you see the following page:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048F000000E80A658FAB.png" width="584" height="116" style="display:inline-block; margin:4px;width:15.439cm;height:3.069cm;" class="odt-zoomable" data-zoom-src="images/100000000000048F000000E80A658FAB.png" /></td></tr></table>
 
-<p><span style="color: #000000">A resource file is a dictionary containing keys and values associated with those keys. Enter the key in [1], the value in [2], and the resource scope in [3]. For these resources to be readable, they must have the [</span><strong>Public</strong><span style="color: #000000">] scope. Let’s return to the line:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">A resource file is a dictionary containing keys and values associated with those keys. Enter the key in [1], the value in [2], and the resource scope in [3]. For these resources to be readable, they must have the [</span><strong><span style="color: #000000">Public</span></strong><span style="color: #000000">] scope. Let’s return to the line:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    [<span style="color:#2b91af">Required</span>(ErrorMessageResourceType = <span style="color:#0000ff">typeof</span>(<span style="color:#2b91af">MyResources</span>), ErrorMessageResourceName = <span style="color:#a31515">&quot;infoRequise&quot;</span>)]</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">[</span>ErrorMessageResourceType<span style="color: #000000">]: refers to the resource file. The [typeof] parameter is the file name. This is converted into a class during the compilation process, and its binary is included in the project assembly. So ultimately, [MyResources] is the name of the resource class;</span>
+  <li><span style="color: #000000">[</span><span style="color: #000000">ErrorMessageResourceType</span><span style="color: #000000">]: refers to the resource file. The [typeof] parameter is the file name. This is converted into a class during the compilation process, and its binary is included in the project assembly. So ultimately, [MyResources] is the name of the resource class;</span>
   </li>
-  <li><span style="color: #000000">[</span>ErrorMessageResourceName = <span style="color: #a31515">&quot;infoRequise&quot;</span><span style="color: #000000">]: refers to a key in the resource file. Ultimately, the line means that the error message to be displayed is the value in the [MyResources] file associated with the [</span><span style="color: #a31515">infoRequise</span><span style="color: #000000">] key.</span>
+  <li><span style="color: #000000">[</span><span style="color: #000000">ErrorMessageResourceName = </span><span style="color: #a31515">&quot;infoRequise&quot;</span><span style="color: #000000">]: refers to a key in the resource file. Ultimately, the line means that the error message to be displayed is the value in the [MyResources] file associated with the [</span><span style="color: #a31515">infoRequise</span><span style="color: #000000">] key.</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">To create the [</span><span style="color: #a31515">infoRequise</span><span style="color: #000000">] key and its associated value in the [MyResources] file, proceed as follows:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045E000001151F627ABE.png" width="559" height="138" style="display:inline-block; margin:4px;width:14.79cm;height:3.664cm;" class="odt-zoomable" data-zoom-src="images/100000000000045E000001151F627ABE.png" /></td></tr></table>
+<p><span style="color: #000000"> </span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045E000001151F627ABE.png" width="559" height="139" style="display:inline-block; margin:4px;width:14.79cm;height:3.665cm;" class="odt-zoomable" data-zoom-src="images/100000000000045E000001151F627ABE.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Enter the key in [1], the value in [2], and the resource scope in [3].</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">There is one last point to clarify: the namespace of the [MyResources] class. This is defined in the properties of the [MyResources.resx] file:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002BA0000017F29395012.png" width="349" height="192" style="display:inline-block; margin:4px;width:9.234cm;height:5.068cm;" class="odt-zoomable" data-zoom-src="images/10000000000002BA0000017F29395012.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In [1], we define the namespace of the [MyResources] class that will be created from the [MyResources.resx] resource file. Let’s return to the internationalized line we examined:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2b91af">[Required</span>(ErrorMessageResourceType = <span style="color:#0000ff">typeof</span>(<span style="color:#2b91af">MyResources</span>), ErrorMessageResourceName = <span style="color:#a31515">&quot;infoRequise&quot;</span>)]</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">The </span><em>typeof</em><span style="color: #000000"> operator expects a class, in this case the [MyResources] class. For this class to be found, its namespace must be imported into the [ViewModel14] class:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">The </span><em><span style="color: #000000">typeof</span></em><span style="color: #000000"> operator expects a class, in this case the [MyResources] class. For this class to be found, its namespace must be imported into the [ViewModel14] class:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> Exemple_03.Resources;</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">For the [MyResources] class to be visible, the project must have been built at least once since the [MyResources] resource file was created. The code for this class is visible in the [MyResources.Designer.cs] file:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D10000002B6FFBA015.png" width="146" height="30" style="display:inline-block; margin:4px;width:3.87cm;height:0.796cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D10000002B6FFBA015.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">   </span></p>
+<p><img src="images/10000000000000D10000002B6FFBA015.png" width="146" height="30" style="width:3.87cm;height:0.801cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D10000002B6FFBA015.png" /></p>
 <p><span style="color: #000000">When you double-click this file, you access the code for the [MyResources] class:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Exemple_03.Resources {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">using</span><span style="color:#000000"> System;</span></span></span>
@@ -1232,25 +1283,33 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 1: the class namespace;</span>
   </li>
-  <li><span style="color: #000000">line 11: the [</span>infoRequise<span style="color: #000000">] key has become a static property of the [MyResources] class. It is accessible via the notation [MyResources.infoRequise]. Additionally, note that this property has a [public] scope. Without this, it would not be accessible. It’s important to remember this because, unfortunately, the default scope is [internal], and this can cause errors that are difficult to understand if you forget to change the scope.</span>
+  <li><span style="color: #000000">line 11: the [</span><span style="color: #000000">infoRequise</span><span style="color: #000000">] key has become a static property of the [MyResources] class. It is accessible via the notation [MyResources.infoRequise]. Additionally, note that this property has a [public] scope. Without this, it would not be accessible. It’s important to remember this because, unfortunately, the default scope is [internal], and this can cause errors that are difficult to understand if you forget to change the scope.</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Why are there now three resource files?</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BA0000003919A6C624.png" width="130" height="40" style="display:inline-block; margin:4px;width:3.44cm;height:1.055cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BA0000003919A6C624.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">   </span></p>
+<p><img src="images/10000000000000BA0000003919A6C624.png" width="130" height="40" style="width:3.44cm;height:1.05cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000BA0000003919A6C624.png" /></p>
 <p><span style="color: #000000">We created [MyResources.resx]. This is the root resource. Next, we create as many [MyResources.locale.resx] resource files as there are locales (languages) to manage. Here we are handling French [fr-FR] and American English [en-US]. When the current locale is neither [fr-FR] nor [en-US], the root resource [MyResources.resx] is used.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The final content of [MyResources.resx] is as follows:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025B0000017836C24371.png" width="422" height="263" style="display:inline-block; margin:4px;width:11.171cm;height:6.966cm;" class="odt-zoomable" data-zoom-src="images/100000000000025B0000017836C24371.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
+<p><img src="images/100000000000025B0000017836C24371.png" width="422" height="263" style="width:11.171cm;height:6.96cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025B0000017836C24371.png" /></p>
 <p><span style="color: #000000">Messages will be in French when the locale is not recognized. The final content of [MyResources.fr-FR.resx] is identical and obtained by simply copying the file.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The final content of [MyResources.en-US.resx] is also obtained by copying the file and then modified as follows:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024C000001736336DEC1.png" width="412" height="260" style="display:inline-block; margin:4px;width:10.89cm;height:6.87cm;" class="odt-zoomable" data-zoom-src="images/100000000000024C000001736336DEC1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">  </span></p>
+<p><img src="images/100000000000024C000001736336DEC1.png" width="412" height="260" style="width:10.89cm;height:6.87cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024C000001736336DEC1.png" /></p>
 <p><span style="color: #000000">Let’s return to the [ViewModel14] view and its [Validate] method:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008000">// validation</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">IEnumerable</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">ValidationResult</span><span style="color:#000000">&gt; Validate(</span><span style="color:#2b91af">ValidationContext</span><span style="color:#000000"> validationContext)</span></span></span>
@@ -1271,20 +1330,24 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Line 7 shows how to retrieve a message from the [MyResources] resource file. Here, we want to retrieve the message associated with the key [infoIncorrecte] in the current culture:</span></p>
+<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><b>MyResources.ResourceManager.GetObject(&quot;infoIncorrecte&quot;, new CultureInfo(&quot;en-US&quot;)) </b><span style="color: #000000">: retrieves the object associated with the key [infoIncorrecte] from the resource file [MyResources.en-US.resx];</span>
+  <li><b><span style="color: #000000">MyResources.ResourceManager.GetObject(&quot;infoIncorrecte&quot;, new CultureInfo(&quot;en-US&quot;)) </span></b><span style="color: #000000">: retrieves the object associated with the key [infoIncorrecte] from the resource file [MyResources.en-US.resx];</span>
   </li>
-  <li><span style="color: #000000">we saw that the [I18NController] controller sets the current culture in the session associated with the [lang] key. The current culture can therefore be retrieved using </span><b>System.Web.HttpContext.Current.Session[&quot;lang&quot;] as string</b><span style="color: #000000">;</span>
+  <li><span style="color: #000000">we saw that the [I18NController] controller sets the current culture in the session associated with the [lang] key. The current culture can therefore be retrieved using </span><b><span style="color: #000000">System.Web.HttpContext.Current.Session[&quot;lang&quot;] as string</span></b><span style="color: #000000">;</span>
   </li>
-  <li><span style="color: #000000">the resource is retrieved as type [object]. To get the error message, we apply the [ToString] method to it.</span>
+  <li><span style="color: #000000">The resource is retrieved as an [object]. To get the error message, we apply the [ToString] method to it.</span>
   </li>
 </ul>
-<p><a id="refheading58150676630786"></a></p>
-<h2 id="64-internationalize-the-view-action14getcshtml">6.4. <span style="color: #4f81bd">Internationalize the view [Action14Get.cshtml]</span></h2>
-<p><span style="color: #000000">We are updating the form view as follows:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C40000004AE3DCAE23.png" width="137" height="52" style="display:inline-block; margin:4px;width:3.63cm;height:1.371cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C40000004AE3DCAE23.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
+<p><a id="refheading58150676630786"></a></p>
+<h2 id="64-internationalizing-the-view-action14getcshtml">6.4. Internationalizing the view [Action14Get.cshtml]</h2>
+<p><span style="color: #000000">We update the form display view as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">   </span></p>
+<p><img src="images/10000000000000C40000004AE3DCAE23.png" width="137" height="52" style="width:3.63cm;height:1.371cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C40000004AE3DCAE23.png" /></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">@model Exemple_03.Models.<span style="color:#2b91af">ViewModel14</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">@</span><span style="color:#0000ff">using</span><span style="color:#000000"> Exemple_03.Resources</span></span></span>
@@ -1353,9 +1416,13 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><strong>Note</strong><span style="color: #000000">: Line 14—make sure to match the jQuery version with your version of Visual Studio.</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><strong><span style="color: #000000">Note</span></strong><span style="color: #000000">: Line 14—make sure to match the jQuery version with your version of Visual Studio.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let’s start with the simplest part, lines 36–38. They use the static properties of the [MyResources] class we just described. To access the [MyResources] class, you must import its namespace (line 2).</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In internationalized messages, you must also include those displayed by the client-side validation framework. To do this, use the jQuery libraries in lines 17–19. We use the jQuery files for the two locales we support: [fr-FR] and [en-US]. Additionally, you may recall that the [Action13Get] view used the following JavaScript script [myscripts.js]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">// document loading</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">$(document).ready(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
@@ -1364,12 +1431,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">Now, the culture is no longer just [fr-FR]; it varies. Therefore, these lines are now generated by the [Action14Get] view itself on lines 21–26. These six lines will be included in the HTML page sent to the client. </span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Now, the culture is no longer just [fr-FR]; it varies. Therefore, these lines are now generated by the [Action14Get] view itself on lines 21–26. These six lines will be included in the HTML page sent to the client.</span></p>
+<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">line 23: the JavaScript variable [culture] is initialized with the current culture of the thread handling the request. You may recall that this was initialized by the constructor of the [I18NController] class:</span>
+  <li><span style="color: #000000">Line 23: The JavaScript variable [culture] is initialized with the current culture of the thread handling the request. You may recall that this was initialized by the constructor of the [I18NController] class:</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#008000">// on met la langue en session</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      httpContext.Session[</span><span style="color:#a31515">&quot;lang&quot;</span><span style="color:#000000">] = langue;</span></span></span>
@@ -1378,7 +1448,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2b91af">Thread</span><span style="color:#000000">.CurrentThread.CurrentUICulture = </span><span style="color:#2b91af">Thread</span><span style="color:#000000">.CurrentThread.CurrentCulture;</span></span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">If the current culture is [en-US], the JavaScript script embedded in the HTML page becomes:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    $(document).ready(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
@@ -1388,10 +1460,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p>We have already mentioned that the [$(document).ready] function is executed once the browser has finished loading the page. Its execution will set the culture of the client-side validation framework. With the [en-US] culture, the framework’s error messages will be in English and will come from the [MyResources.en-US.resx] resource file. We’ll see how.</p>
 <p>Now let’s examine lines 57–65:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- choice of language --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- language selection --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">@</span><span style="color:#0000ff">using</span><span style="color:#000000"> (Html.BeginForm(</span><span style="color:#a31515">&quot;Lang&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Second&quot;</span><span style="color:#000000">))</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">table</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1459,6 +1532,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p>Lines 22–40 are the same as those already present in the [myscripts.js] script used in the previous example. We won’t revisit them here. The [postForm] function, which is executed when the language links are clicked, is on lines 1–20:</p>
 <ul>
   <li>line 1: the function takes two parameters, [lang], which is the culture selected by the user, and [url], which is the URL to which the client browser should be redirected once the culture change has been made. These two parameters are specified in the call:
@@ -1473,7 +1547,7 @@
 <ul>
   <li>line 3: we retrieve a reference to the second form in the document;
   </li>
-  <li>lines 5-8: programmatically create the tag 
+  <li>lines 5-8: we programmatically create the tag
   </li>
 </ul>
 
@@ -1481,15 +1555,15 @@
 </code></pre></div>
 <p>where [xx-XX] is the value of the [lang] parameter of the function;</p>
 <ul>
-  <li>line 10: still programmatically, we add this tag to the second form. Ultimately, it behaves as if this tag had been present in the second form from the start. Its value will therefore be submitted. This is what we wanted;
+  <li>Line 10: Again, using code, we add this field to the second form. Ultimately, it behaves as if this field had been present in the second form from the start. Its value will therefore be submitted. That’s exactly what we wanted;
   </li>
-  <li>lines 11–17: we repeat the same process for a tag 
+  <li>Lines 11–17: We repeat the same process for a tag
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;url&quot;</span><span class="p">/&gt;</span>
 </code></pre></div>
-<p>where [url] is the value of the function’s [url] parameter;</p>
+<p>where [url] is the value of the [url] parameter of the function;</p>
 <ul>
   <li>line 19: the second form is now posted. To which URL?
   </li>
@@ -1716,25 +1790,32 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">This ensures that the validation framework will use US formats (date, currency, numbers, etc.). For the same reason, the messages in lines 30–32 will be retrieved from the resource file [MyResources.en-US.resx] and will therefore be in English.</span></p>
 <p><a id="refheading58152676630786"></a></p>
-<h2 id="65-examples-of-execution">6.5. <span style="color: #4f81bd">Examples of execution</span></h2>
-<p><span style="color: #000000">Here are some examples of the output:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000625000003765AA02931.png" width="680" height="383" style="display:inline-block; margin:4px;width:17.999cm;height:10.139cm;" class="odt-zoomable" data-zoom-src="images/1000000000000625000003765AA02931.png" /></td></tr></table>
+<h2 id="65-examples-of-execution">6.5. Examples of execution</h2>
+<p><span style="color: #000000">Here are some examples of execution:</span></p>
+<p><span style="color: #000000"> </span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000625000003765AA02931.png" width="680" height="383" style="display:inline-block; margin:4px;width:17.999cm;height:10.137cm;" class="odt-zoomable" data-zoom-src="images/1000000000000625000003765AA02931.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">in [1], the form in French; in [2], the form in English.</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051200000093F1A7932A.png" width="649" height="74" style="display:inline-block; margin:4px;width:17.171cm;height:1.946cm;" class="odt-zoomable" data-zoom-src="images/100000000000051200000093F1A7932A.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">In [3], on the client side, the error messages are now in English.</span>
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">If we look at the page’s source code, we can see that these error messages have been embedded in the page, meaning they are generated by the ASP.NET view [Action14Get] and its view model [ViewModel14]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">label</span> <span style="color:#7f007f">for</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Reel1&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">Real number</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">label</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span></span>
@@ -1749,11 +1830,13 @@
 </code></pre></div>
 
 <p><a id="refheading58154676630786"></a></p>
-<h2 id="66-date-internationalization">6.6. <span style="color: #4f81bd">Date Internationalization</span></h2>
+<h2 id="66-date-internationalization">6.6. Date Internationalization</h2>
 <p><span style="color: #000000">Internationalization is a complex issue. Let’s look at the [Date1] property and its calendar:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FC00000108819F607A.png" width="356" height="185" style="display:inline-block; margin:4px;width:9.41cm;height:4.89cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FC00000108819F607A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
-
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">   </span></p>
+<p><img src="images/10000000000001FC00000108819F607A.png" width="356" height="185" style="width:9.41cm;height:4.89cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001FC00000108819F607A.png" /></p>
 <p><span style="color: #000000">We can see that the calendar is a French calendar, even though the page&#x27;s culture is [en-US]. In HTML5, there is a [lang] attribute that allows you to set the language of the page or a page component. We can then write the following code in the [Action14Get.cshtml] view:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">@model Exemple_03.Models.<span style="color:#2b91af">ViewModel14</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">@</span><span style="color:#0000ff">using</span><span style="color:#000000"> Exemple_03.Resources</span></span></span>
@@ -1770,6 +1853,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 6: retrieve the locale from the session;</span>
   </li>
@@ -1777,19 +1861,29 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Tests show that the calendar remains in French even when the page is otherwise displayed in English. There is also an issue with the other date field in the form:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034A000001B65CBFA548.png" width="421" height="219" style="display:inline-block; margin:4px;width:11.139cm;height:5.794cm;" class="odt-zoomable" data-zoom-src="images/100000000000034A000001B65CBFA548.png" /></td></tr></table>
 
-<p><span style="color: #000000">In [1], the date is still requested in the French format </span><strong>dd/mm/yyyy</strong> <span style="color: #000000">(20/11/2013), whereas the American format is </span><strong>mm/dd/yyyy</strong> <span style="color: #000000">(10/21/2013). We will try to resolve these two issues with a new view and a new view model.</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">In [1], the date is still requested in the French format </span><strong><span style="color: #000000">dd/mm/yyyy </span></strong><span style="color: #000000">(20/11/2013), whereas the American format is </span><strong><span style="color: #000000">mm/dd/yyyy </span></strong><span style="color: #000000">(10/21/2013). We will try to resolve these two issues with a new view and a new view model.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">jQuery UI is a project derived from the jQuery project and offers form components, including a calendar. This calendar can be localized. That is what we will demonstrate.</span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">To begin, let’s add [jQuery UI] to our project.</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000036E000002C84CC5FEB9.png" width="439" height="356" style="display:inline-block; margin:4px;width:11.615cm;height:9.419cm;" class="odt-zoomable" data-zoom-src="images/100000000000036E000002C84CC5FEB9.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B70000014BF0AEC049.png" width="604" height="166" style="display:inline-block; margin:4px;width:15.968cm;height:4.38cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B70000014BF0AEC049.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Once jQuery UI is installed, new elements appear in the project:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E10000014BD096A7F2.png" width="497" height="166" style="display:inline-block; margin:4px;width:13.137cm;height:4.38cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E10000014BD096A7F2.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">in [1], the [JQuery UI] library in both normal and minified versions;</span>
   </li>
@@ -1797,15 +1891,24 @@
   </li>
 </ul>
 
-<p><span style="color: #000000">The jQuery UI calendar is in English by default. To internationalize it, you need to add scripts found at the URL [</span><a href="https://github.com/jquery/jquery-ui/tree/master/ui/i18n"><u><span style="color: #0563c1">https://github.com/jquery/jquery-ui/tree/master/ui/i18n</span></u></a><span style="color: #000000">]:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000607000000B0116E25BF.png" width="680" height="78" style="display:inline-block; margin:4px;width:17.999cm;height:2.053cm;" class="odt-zoomable" data-zoom-src="images/1000000000000607000000B0116E25BF.png" /></td></tr></table>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">The jQuery UI calendar is in English by default. To internationalize it, you need to add scripts found at the URL [</span><a href="https://github.com/jquery/jquery-ui/tree/master/ui/i18n">https://github.com/jquery/jquery-ui/tree/master/ui/i18n</a><span style="color: #000000">]:</span></p>
+<p><span style="color: #000000"> </span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000607000000B0116E25BF.png" width="680" height="78" style="display:inline-block; margin:4px;width:17.999cm;height:2.051cm;" class="odt-zoomable" data-zoom-src="images/1000000000000607000000B0116E25BF.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">To have the jQuery UI calendar in French, copy the contents of the [jquery.ui.datepicker-fr.js] file above into the project’s [Scripts] folder.</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019B00000147534A1B0D.png" width="206" height="164" style="display:inline-block; margin:4px;width:5.438cm;height:4.327cm;" class="odt-zoomable" data-zoom-src="images/100000000000019B00000147534A1B0D.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The code for the new view [Action15.cshtml] is obtained by copying the previous view [Action14.cshtml] and then modifying it. We will only show the changes:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015A000000AD293D7287.png" width="173" height="87" style="display:inline-block; margin:4px;width:4.577cm;height:2.29cm;" class="odt-zoomable" data-zoom-src="images/100000000000015A000000AD293D7287.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">@model Exemple_03.Models.<span style="color:#2b91af">ViewModel15</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">@</span><span style="color:#0000ff">using</span><span style="color:#000000"> Exemple_03.Resources</span></span></span>
@@ -1849,7 +1952,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">input</span><span style="color:#000000"> </span><span style="color:#ff0000">type</span><span style="color:#0000ff">=&quot;submit&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">value</span><span style="color:#0000ff">=&quot;Valider&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">p</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- choice of language --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- language selection --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  @</span><span style="color:#0000ff">using</span><span style="color:#000000"> (Html.BeginForm(</span><span style="color:#a31515">&quot;Lang&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Second&quot;</span><span style="color:#000000">))</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">table</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1863,7 +1966,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>Note</strong><span style="color: #000000">: Line 16, adjust the jQuery UI version to match the one you downloaded.</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><strong><span style="color: #000000">Note</span></strong><span style="color: #000000">: Line 16, adjust the jQuery UI version to match the one you downloaded.</span></p>
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 15: Reference the jQuery UI stylesheet;</span>
   </li>
@@ -1873,7 +1978,7 @@
   </li>
   <li><span style="color: #000000">line 34: the [Html.TextBox] method will generate an [input] tag here, of type [text], with id [Date1] and name [Date1];</span>
   </li>
-  <li><span style="color: #000000">line 19: when the page has finished loading, the jQuery UI [datepicker] function will be applied to the element </span><b>with id </b><span style="color: #000000">[Date1], i.e., the element on line 34. This function ensures that when the user focuses on the [Date1] input field, a calendar will appear allowing them to select a date. The [datepicker] function accepts a parameter that specifies the calendar’s language. The variable [@Model.Regionale] must be set to:</span>
+  <li><span style="color: #000000">line 19: when the page has finished loading, the jQuery UI [datepicker] function will be applied to the element </span><b><span style="color: #000000">with id </span></b><span style="color: #000000">[Date1], i.e., the element on line 34. This function ensures that when the user focuses on the [Date1] input field, a calendar will appear allowing them to select a date. The [datepicker] function accepts a parameter that specifies the calendar’s language. The variable [@Model.Regionale] must be set to:</span>
   </li>
   <li><span style="color: #000000">&#x27;fr&#x27; for a French calendar,</span>
   </li>
@@ -1881,10 +1986,14 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The model for the previous view [Action15.cshtml] will be the following [ViewModel15] model:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000149000001E31DFED8CA.png" width="165" height="242" style="display:inline-block; margin:4px;width:4.353cm;height:6.391cm;" class="odt-zoomable" data-zoom-src="images/1000000000000149000001E31DFED8CA.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Its code is that of the [ViewModel14] model, slightly modified. We are only showing the changes:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> Exemple_03.Resources;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
@@ -1956,7 +2065,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Compared to the previous model [ViewModel14], we have four additional properties:</span></p>
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 60: the view&#x27;s locale, &#x27;fr-FR&#x27; or &#x27;en-US&#x27;. This locale is initialized in the constructor on line 26;</span>
   </li>
@@ -1970,10 +2081,14 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The values of the [Regionale] and [FormatDate] properties are found in the [MyResources] resource files. The French resource files [MyResources] [MyResources.fr-FR] [1] and the English resource file [2] change as follows:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062F00000078EB3A38F2.png" width="680" height="52" style="display:inline-block; margin:4px;width:17.999cm;height:1.363cm;" class="odt-zoomable" data-zoom-src="images/100000000000062F00000078EB3A38F2.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">We are almost ready. We add an action [Action15] to the controller [SecondController]:</span></p>
+<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">      // Action15</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action15(</span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> formData)</span></span></span>
@@ -1996,6 +2111,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Line 2: The [Action15] method handles both [GET] and [POST] requests. In the latter case, the posted values are retrieved in the [formData] parameter;</span>
   </li>
@@ -2017,9 +2133,12 @@
   </li>
 </ul>
 
+<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Let&#x27;s run some tests:</span></p>
+<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000634000001D3059F9786.png" width="680" height="200" style="display:inline-block; margin:4px;width:17.999cm;height:5.293cm;" class="odt-zoomable" data-zoom-src="images/1000000000000634000001D3059F9786.png" /></td></tr></table>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">in [1], a French calendar when the page is in French;</span>
   </li>
@@ -2030,8 +2149,9 @@
   <li><span style="color: #000000">in [4], the same date in English format when the page is in English;</span>
   </li>
 </ul>
+
 <p><a id="refheading58156676630786"></a></p>
-<h2 id="67-conclusion">6.7. <span style="color: #4f81bd">Conclusion</span></h2>
+<h2 id="67-conclusion">6.7. Conclusion</h2>
 <p><span style="color: #000000">As we can see, the topic of application internationalization is a complex one...</span></p>
 
 
