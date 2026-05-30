@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-view-and-its-model.html" class="md-nav__link">
+      <a href="the-view-and-its-template.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. The view and its model
+    5. The view and its template
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="view-internationalization.html" class="md-nav__link">
+      <a href="internationalization-of-views.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. View Internationalization
+    6. Internationalization of Views
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ajaxifying-an-aspnet-mvc-application.html" class="md-nav__link">
+      <a href="ajaxification-of-an-application-aspnet-mvc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Ajaxifying an ASP.NET MVC application
+    7. Ajaxification of an application ASP.NET MVC
   
 
     
@@ -623,10 +625,9 @@
   
 
 
-<p><a id="refheading1242412030931382"></a></p>
-<h1 id="10-conclusion">10. Conclusion</h1>
+<p><span id="refheading1242412030931382" name="refheading1242412030931382" class="odt-bookmark-anchor"></span></p>
+<h1 id="10-conclusion">10. <span style="color: #365f91">Conclusion</span></h1>
 <p><span style="color: #000000">Let’s review what we’ve covered in this document:</span></p>
-<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Chapters 1 through 8 introduced us to the fundamentals of the ASP.NET MVC framework;</span>
   </li>
@@ -634,34 +635,24 @@
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003EC00000168C00EE3B7.png" width="502" height="180" style="display:inline-block; margin:4px;width:13.282cm;height:4.763cm;" class="odt-zoomable" data-zoom-src="images/10000000000003EC00000168C00EE3B7.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003EC00000168C00EE3B7.png" width="502" height="180" style="display:inline-block; margin:4px;width:13.282cm;height:4.763cm;" class="odt-zoomable" data-zoom-src="images/10000000000003EC00000168C00EE3B7.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">This simplified architecture allowed us to focus solely on the [web] layer and also made testing easier. Then we used the following more complex architecture:</span></p>
-<p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046900000180D87846F9.png" width="565" height="192" style="display:inline-block; margin:4px;width:14.937cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/100000000000046900000180D87846F9.png" /></td></tr></table>
+<p><span style="color: #000000">This simplified architecture allowed us to focus solely on the [web] layer and also facilitated testing. Then we used the following more complex architecture:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000046900000180D87846F9.png" width="565" height="192" style="display:inline-block; margin:4px;width:14.937cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/100000000000046900000180D87846F9.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">We observed that the [business], [DAO], and [EF5] layers introduced significant complexity to the entire application, which, in hindsight, justified the use of a simplified architecture for developing the [web] layer.</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Readers who have completed this case study should have gained a solid understanding of ASP.NET MVC and the Single-Page Application (SPA) concept.</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">There is certainly one thing missing from this document: </span><strong><span style="color: #000000">unit tests</span></strong><span style="color: #000000">. These should have been performed in various places:</span></p>
+<p><span style="color: #000000">We observed that the layers [métier], [DAO], and [EF5] introduced significant complexity to the entire application, which, in hindsight, justified the use of a simplified architecture to develop the [web] layer.</span></p>
+<p><span style="color: #000000">Readers who have completed this case study should have gained a solid understanding of ASP.NET, MVC, and the concept of APU, Single-Page Application.</span></p>
+<p><span style="color: #000000">One thing is certainly missing from this document: </span><strong>unit tests</strong><span style="color: #000000">. These should have been performed in various places:</span></p>
 <ul>
   <li><span style="color: #000000">tests of the [DAO] layer;</span>
   </li>
-  <li><span style="color: #000000">tests of the actual [business] layer;</span>
+  <li><span style="color: #000000">tests of the actual [métier] layer;</span>
   </li>
-  <li><span style="color: #000000">tests of the [web] layer actions.</span>
+  <li><span style="color: #000000">tests of the actions in the [web] layer.</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p><strong><span style="color: #000000">Adam Freeman, </span></strong><span style="color: #000000">in his book &quot;</span><strong><span style="color: #000000">Pro </span></strong><strong><span style="color: #000000">ASP.NET MVC 4</span></strong><span style="color: #000000">&quot; published by </span><strong><span style="color: #000000">Apress, </span></strong><span style="color: #000000">rightly emphasizes the importance of these tests. There are many examples of them in his book.</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000"> </span></p>
+<p><strong>Adam Freeman,</strong> <span style="color: #000000">in his book &quot;</span><strong>Pro ASP.NET MVC 4</strong><span style="color: #000000">&quot; published by </span><strong>Apress,</strong> rightly emphasizes the importance of these tests. There are many examples of them in his book.</p>
 <p><span style="color: #000000">Serge Tahé, November 2013</span></p>
 
 

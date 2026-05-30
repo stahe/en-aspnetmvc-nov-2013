@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/en-aspnetmvc-nov-2013/interim-conclusion.html">
       
       
-        <link rel="prev" href="ajaxifying-an-aspnet-mvc-application.html">
+        <link rel="prev" href="ajaxification-of-an-application-aspnet-mvc.html">
       
       
         <link rel="next" href="case-study.html">
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-view-and-its-model.html" class="md-nav__link">
+      <a href="the-view-and-its-template.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. The view and its model
+    5. The view and its template
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="view-internationalization.html" class="md-nav__link">
+      <a href="internationalization-of-views.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. View Internationalization
+    6. Internationalization of Views
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ajaxifying-an-aspnet-mvc-application.html" class="md-nav__link">
+      <a href="ajaxification-of-an-application-aspnet-mvc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Ajaxifying an ASP.NET MVC application
+    7. Ajaxification of an application ASP.NET MVC
   
 
     
@@ -623,136 +625,23 @@
   
 
 
-<p><a id="refheading1240912030931382"></a></p>
-<h1 id="8-interim-conclusion">8. Interim conclusion</h1>
-<p>This concludes the overview of the ASP.NET MVC framework. We will continue with a case study illustrating the use of this framework in a layered architecture:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E30000013CE2749EC1.png" width="680" height="143" style="display:inline-block; margin:4px;width:17.999cm;height:3.773cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E30000013CE2749EC1.png" /></td></tr></table>
+<p><span id="refheading1240912030931382" name="refheading1240912030931382" class="odt-bookmark-anchor"></span></p>
+<h1 id="8-interim-conclusion">8. <span style="color: #365f91">Interim conclusion</span></h1>
+<p>This concludes the presentation of the ASP.NET MVC framework. We will continue with a case study illustrating the use of this framework in a layered architecture:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005E30000013CE2749EC1.png" width="680" height="143" style="display:inline-block; margin:4px;width:17.999cm;height:3.775cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E30000013CE2749EC1.png" /></td></tr></table>
 
 <ul>
-  <li>The [<b>Web</b>] layer is the layer in contact with the web application user. The user interacts with the web application through web pages displayed by a browser. <b>ASP.NET MVC resides in this layer and only in this layer</b>.
+  <li>The [Web] layer is the layer in contact with the web application user. The user interacts with the web application through web pages viewed in a browser. <b>It is in this layer that ASP.NET MVC is located, and only in this layer</b>.
   </li>
-  <li>The [<b>business</b>] layer implements the application’s business logic, such as calculating a salary or an invoice. This layer uses data from the user via the [Web] layer and from the DBMS via the [DAO] layer.
+  <li>The [métier] layer implements the application&#x27;s business rules, such as calculating a salary or an invoice. This layer uses data from the user via the [Web] layer and from SGBD via the [DAO] layer.
   </li>
-  <li>The [<b>DAO</b>] (Data Access Objects) layer, the [<b>ORM</b>] (Object Relational Mapper) layer, and the ADO.NET connector manage access to data in the DBMS. The [<b>ORM</b>] layer acts as a bridge between the objects handled by the [DAO] layer and the rows and columns of tables in a relational database. We will use the <b>Entity Framework </b>ORM (<a href="http://msdn.microsoft.com/en-us/data/ef.aspx">http://msdn.microsoft.com/en-us/data/ef.aspx</a>).
+  <li>The [DAO] layer (Data Access Objects), the [ORM] layer (Object Relational Mapper), and the ADO connector.NET manages access to the data in SGBD. The [ORM] layer bridges the objects handled by the [DAO] layer and the rows and columns of tables in a relational database. We will use the ORM <b>Entity Framework </b>(<a href="http://msdn.microsoft.com/en-us/data/ef.aspx"><u><span style="color: #0563c1">http://msdn.microsoft.com/en-us/data/ef.aspx</span></u></a> ).
   </li>
-  <li>The integration of the layers can be achieved using a dependency injection container. We will use <b>Spring.net </b>(<a href="http://www.springframework.net/">http://www.springframework.net/</a>).
+  <li>Layer integration can be achieved using a dependency injection container. We will use <b>Spring.net </b>(<a href="http://www.springframework.net/"><u><span style="color: #0563c1">http://www.springframework.net/</span></u></a> ).
   </li>
 </ul>
 
-<p>Although this document is already quite extensive, it is incomplete. Readers can supplement their learning with the book &quot;<strong>Pro</strong> <strong><span style="color: #000000">ASP.NET MVC 4</span></strong>&quot; by <strong>Adam Freeman</strong>, published by <strong>Apress</strong>. It is an excellent book. Its 800 pages will satisfy even the most demanding readers.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C8000000E930F662D2.png" width="100" height="117" style="display:inline-block; margin:4px;width:2.646cm;height:3.083cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C8000000E930F662D2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C8000000E90F858128.png" width="100" height="117" style="display:inline-block; margin:4px;width:2.646cm;height:3.083cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C8000000E90F858128.png" /></td></tr></table>
-
-<p>Introduction to ASP.NET MVC Through Examples</p>
-<p><strong>Serge Tahé</strong>, November 2013</p>
-<hr style="border:0; border-top:0.26pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p><a href="https://stahe.github.io/word-odt-vers-html-janv-2026/">This site was created using the [Word or ODT → HTML] converter developed by the AI systems Gemini 3 and ChatGPT 5.2 in January 2026</a>.</p>
-<hr style="border:0; border-top:0.26pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p>Using the Gemini/ChatGPT converter, several websites have been generated from LibreOffice ODT documents and Word documents:</p>
-<p><u><strong>Java</strong></u></p>
-<ul>
-  <li>[<a href="https://stahe.github.io/java-sept-1998/">Introduction to the Java Language (1998)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/servlets-java-juin-2002/">Introduction to Web Programming in Java with Servlets and JSP Pages (2002)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/struts1x-dec-2003/">Introduction to Struts 1.x through Examples (2003)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/java-web-mvc-mai-2006/">The Basics of MVC Web Development in Java Through Examples (2006)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/jpa-juin-2007/">Java 5 Persistence Through Practice (2007)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/webservice-netbeans-glassfish-fev-2009/">Building a Java EE Web Service with the NetBeans 6.5 IDE and the GlassFish Java EE Server (2009)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/struts2-janv-2012/">Introduction to Struts 2 with Examples (2012)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/jsf2-pf-pfm-juin-2012/">Introduction to Java Server Faces, PrimeFaces, and PrimeFaces Mobile with Examples (2012)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/javaee-juin-2012/">Introduction to Java EE with the NetBeans IDE and the GlassFish Application Server (2012)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/spring-angular1.x-juillet-2014/">A Client/Server Example - AngularJS 1.x / Spring 4 (2014)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/java-spring-dec-2015/">Introduction to the Java Language and the Spring Ecosystem Through a Case Study (2015)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/springmvc-thymeleaf-janv-2015/">Introduction to Spring MVC and Thymeleaf through examples (2015)</a>]
-  </li>
-  <li>[<a href="https://stahe.github.io/spring-database-juin-2015/">Working with a relational database using the Spring ecosystem (2015)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/rxjava-mai-2016/">Introduction to RxJava. Application to Swing and Android environments (2016)</a>];
-  </li>
-</ul>
-
-<p><u><strong>Android</strong></u></p>
-<ul>
-  <li>[<a href="https://stahe.github.io/android-aout-2016/">Introduction to Android Tablet Programming with Android Studio (2016)</a>];
-  </li>
-</ul>
-
-<p><u><strong>.NET</strong></u></p>
-<ul>
-  <li>[<a href="https://stahe.github.io/vbnet-mars-2004/">Introduction to VB.NET through Examples (2004)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/aspnet1.1-avril-2004/">Web Development with ASP.NET 1.1 (2004)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/springioc-dotnet-avril-2005/">Spring IoC for .NET (2005)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/web3tier-dotnet-avril-2005/">Creating a Three-Tier Web Application with Spring.NET and VB.NET (2005)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/csharp-mai-2008/">Learning C# Version 3.0 with the .NET Framework 3.5 (2008)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/pam-aspnet-juin-2010/">Building a Three-Tier Web Application with ASP.NET 2.0, C#, Spring.NET, and NHibernate (2010)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/nhibernate-dotnet-dec-2011/">Introduction to the NHibernate Framework for the .NET Platform (2011)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/ef5cf-oct-2012/">Introduction to Entity Framework 5 Code First Through Examples (2012)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/aspnetmvc-nov-2013/">Introduction to the ASP.NET MVC Framework through Examples (2013)</a>];
-  </li>
-</ul>
-
-<p><u><strong>JavaScript</strong></u></p>
-<ul>
-  <li>[<a href="https://stahe.github.io/spring-angular1.x-juillet-2014/">A Client/Server Example - AngularJS 1.x / Spring 4 (2014)</a> ];
-  </li>
-  <li>[<a href="https://stahe.github.io/ecmascript6-oct-2019/">Introduction to the ECMAScript 6 language through examples (2019)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/vuejs-oct-2019/">Introduction to the VUE.JS framework through examples (2019)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/nuxtjs-dec-2019/">Introduction to the NUXT.JS framework through examples (2019)</a>];
-  </li>
-</ul>
-
-<p><u><strong>PHP</strong></u></p>
-<ul>
-  <li>[<a href="https://stahe.github.io/php4mvc-janvier-2004/">MVC Development Methodology for a PHP4 Web Application (2004)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/php5-juillet-2011/">Introduction to the PHP5 language through examples (2011)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/php7-juillet-2019/">Introduction to the PHP7 language through examples (2019)</a>];
-  </li>
-</ul>
-
-<p><u><strong>Python</strong></u></p>
-<ul>
-  <li>[<a href="https://stahe.github.io/python2.7-mars-2012/">Introduction to Python 2.7 through Examples (2012)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/python-flask-sept-2020/">Introduction to the Python Language and the Flask Web Framework Through Examples (2020)</a>];
-  </li>
-  <li>[<a href="https://stahe.github.io/python-ia-sept-2025/">Generate a Python script using AI tools (2025)</a>];
-  </li>
-</ul>
-
-<p><u><strong>VBScript</strong></u></p>
-<ul>
-  <li>[<a href="https://stahe.github.io/vbscript-janv-2002/">Introduction to VBScript (2002)</a>];
-  </li>
-</ul>
-
-<p><u><strong>SQL</strong></u></p>
-<ul>
-  <li>[<a href="https://stahe.github.io/sql-firebird-janv-2006/">Introduction to the SQL language with the Firebird DBMS (2006)</a>];
-  </li>
-</ul>
-
-<p>These are all old courses consisting of several hundred pages. The size of the ODT or DOCX document does not matter to the Gemini/ChatGPT converter. What matters to it are the structures found within them (see chapter:  <a href="https://stahe.github.io/word-odt-vers-html-janv-2026/les-exemples-de-ce-document.html">Examples in this document</a>).</p>
+<p>Although this document is already quite extensive, it is incomplete. Readers can supplement their learning with the book &quot;<strong>Pro</strong> <strong><span style="color: #000000">ASP.NET MVC 4</span></strong>&quot; written by <strong>Adam Freeman</strong> and published by <strong>Apress</strong>. It is an excellent book. Its 800 pages will satisfy even the most demanding readers.</p>
 
 
 

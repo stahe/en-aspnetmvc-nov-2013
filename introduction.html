@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -366,7 +368,7 @@
   <a href="#11-the-role-of-aspnet-mvc-in-a-web-application" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. The Role of ASP.NET MVC in a Web Application
+        1.1. The role of ASP.NET MVC in a web application
       
     </span>
   </a>
@@ -374,10 +376,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#12-the-aspnet-mvc-development-model" class="md-nav__link">
+  <a href="#12-the-aspnet-mvc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. The ASP.NET MVC Development Model
+        1.2. The ASP.NET MVC
       
     </span>
   </a>
@@ -385,10 +387,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#13-tools-used" class="md-nav__link">
+  <a href="#13-the-tools-used" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3. Tools Used
+        1.3. The tools used
       
     </span>
   </a>
@@ -502,14 +504,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-view-and-its-model.html" class="md-nav__link">
+      <a href="the-view-and-its-template.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. The view and its model
+    5. The view and its template
   
 
     
@@ -529,14 +531,14 @@
   
   
     <li class="md-nav__item">
-      <a href="view-internationalization.html" class="md-nav__link">
+      <a href="internationalization-of-views.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. View Internationalization
+    6. Internationalization of Views
   
 
     
@@ -556,14 +558,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ajaxifying-an-aspnet-mvc-application.html" class="md-nav__link">
+      <a href="ajaxification-of-an-application-aspnet-mvc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Ajaxifying an ASP.NET MVC application
+    7. Ajaxification of an application ASP.NET MVC
   
 
     
@@ -704,86 +706,96 @@
   
 
 
-<p><a id="refheading1882601168461456"></a></p>
-<h1 id="1-introduction">1. Introduction</h1>
-<p>The PDF of this document is available |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQCyQDvU-yOyRKxNhbufKL4kAUD12Tf_3R-x-aY2bYz0Of4?e=lgSf2j">HERE</a>|.</p>
-<p>The examples in this document are available |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCKNeWRQFCfSqwnA6RDUJ7yAd9qZkIe89vFgFNJvCBIS6o?e=bxYSux">HERE</a>|.</p>
-<p>Here, we aim to introduce, through examples, the key concepts of ASP.NET MVC, a .NET web framework that provides a framework for developing web applications according to the MVC (Model–View–Controller) pattern.</p>
-<p>Understanding the examples in this document requires few prerequisites. Only basic knowledge of the C# language is necessary. This can be found in the document <strong>Introduction to the C# Language</strong> at the URL [<a href="http://tahe.developpez.com/dotnet/csharp">http://tahe.developpez.com/dotnet/csharp</a>]. A case study is provided to put the knowledge gained about ASP.NET MVC into practice. It uses the Entity Framework ORM (Object-Relational Mapper). This ORM is presented in the document <strong>Introduction to Entity Framework 5 Code First</strong>, available at [<a href="http://tahe.developpez.com/dotnet/ef5cf">http://tahe.developpez.com/dotnet/ef5cf</a>].</p>
-<p>The various examples in this document are available at the URL [<a href="http://tahe.developpez.com/dotnet/aspnet-mvc">http://tahe.developpez.com/dotnet/aspnetmvc</a>] as a downloadable <em>ZIP</em> file.</p>
-<p>This document is incomplete in many respects. To learn more about ASP.NET MVC, you can use the following references:</p>
+<p><span id="refheading1882601168461456" name="refheading1882601168461456" class="odt-bookmark-anchor"></span></p>
+<h1 id="1-introduction">1. <span style="color: #365f91">Introduction</span></h1>
+<p>The PDF for this document is available |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQCyQDvU-yOyRKxNhbufKL4kAUD12Tf_3R-x-aY2bYz0Of4?e=Dwa68q">HERE</a>|.</p>
+<p>The examples in this document are available |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCKNeWRQFCfSqwnA6RDUJ7yAd9qZkIe89vFgFNJvCBIS6o?e=07xb0p">HERE</a>|.</p>
+<p>Here, we aim to introduce, using examples, the key concepts of ASP.NET MVC, a web framework.NET, which provides a framework for developing web applications based on the MVC (Model–View–Controller) pattern.</p>
+<p>Understanding the examples in this document requires few prerequisites. Only basic knowledge of the C# language is necessary. This can be found in the document <strong>Introduction to the C# Language</strong> at URL [http://tahe.developpez.com/dotnet/csharp]<a href="http://tahe.developpez.com/dotnet/csharp">. A case study is provided to put the knowledge gained into practice on ASP.NET MVC. It uses the ORM (Object Relational Mapper) Entity Framework. This ORM is presented in the document</a> <strong>Introduction to Entity Framework 5 Code First</strong> available at URL [http://tahe.developpez.com/dotnet/ef5cf]<a href="http://tahe.developpez.com/dotnet/ef5cf">.</a></p>
+<p>The various examples in this document are available at URL and [http://tahe.developpez.com/dotnet/aspnetmvc] <a href="http://tahe.developpez.com/dotnet/aspnet-mvc">as a</a> downloadable <em>ZIP</em><a href="http://tahe.developpez.com/dotnet/aspnet-mvc"> file</a>.</p>
+<p>This document is incomplete in many respects. For further information on ASP.NET MVC, the following references may be consulted:</p>
 <ul>
-<li><strong>[ref1]</strong>: the book &quot;<strong>Pro</strong> <strong><span style="color: #000000">ASP.NET MVC 4</span></strong>&quot; written by <strong>Adam Freeman</strong> and published by <strong>Apress</strong>. It is an excellent book. If it were available online for free and in French, this document would be unnecessary. I recommend that anyone who can do so learn ASP.NET MVC using this book. The source code for the book’s examples is available for free at [<a href="http://www.apress.com/9781430242369">http://www.apress.com/9781430242369</a>];</li>
-<li><strong>[ref2]</strong>: the framework’s website [<a href="http://www.asp.net/mvc">http://www.asp.net/mvc</a>]. There you will find all the materials needed for self-study. A French version is available at the URL [<a href="http://dotnet.developpez.com/mvc/">http://dotnet.developpez.com/mvc/</a>];</li>
-<li>the [developpez.com] website dedicated to ASP.NET [<a href="http://dotnet.developpez.com/aspnet/">http://dotnet.developpez.com/aspnet/</a> ].</li>
+  <li><b>[ref1]</b>: the book &quot;<b>Pro </b><b><span style="color: #000000">ASP.NET MVC 4</span></b>&quot; written by <b>Adam Freeman </b>and published by <b>Apress</b>. It is an excellent book. If it were available online for free and in French, this document would be unnecessary. I recommend that anyone who can do so learn ASP.NET MVC using this book. The source code for the book’s examples is available for free at URL [http://www.apress.com/9781430242369]<a href="http://www.apress.com/9781430242369">;</a>
+  </li>
+  <li><b>[ref2]</b>: the [http://www.asp.net/mvc] framework website<a href="http://www.asp.net/mvc">. There you will find all the materials needed for self-study. A French version is available at URL [http://dotnet.developpez.com/mvc/ ]</a><a href="http://dotnet.developpez.com/mvc/">;</a>
+  </li>
+  <li>the [developpez.com] website dedicated to ASP.NET and [http://dotnet.developpez.com/aspnet/ ]<a href="http://dotnet.developpez.com/aspnet/">.</a>
+  </li>
 </ul>
-<p>This document has been written so that it can be read without a computer at hand. Therefore, many screenshots are included.</p>
-<p><a id="refheading99511454977699"></a></p>
-<h2 id="11-the-role-of-aspnet-mvc-in-a-web-application">1.1. The Role of ASP.NET MVC in a Web Application</h2>
-<p>First, let’s situate ASP.NET MVC within the development of a web application. Most often, it will be built on a multi-layer architecture such as the following:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D8000001C76DFA2B2A.png" width="680" height="154" style="display:inline-block; margin:4px;width:17.999cm;height:4.078cm;" class="odt-zoomable" data-zoom-src="images/10000000000007D8000001C76DFA2B2A.png" /></td></tr></table>
+
+<p>The document has been written so that it can be read without a computer at hand. Therefore, many screenshots are provided.</p>
+<p><span id="refheading99511454977699" name="refheading99511454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="11-the-role-of-aspnet-mvc-in-a-web-application">1.1. <span style="color: #4f81bd">The role of ASP.NET MVC in a web application</span></h2>
+<p>First, let’s situate ASP.NET MVC within the development of a web application. Most often, this will be built on a multi-layer architecture such as the following:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000007D8000001C76DFA2B2A.png" width="680" height="154" style="display:inline-block; margin:4px;width:17.999cm;height:4.078cm;" class="odt-zoomable" data-zoom-src="images/10000000000007D8000001C76DFA2B2A.png" /></td></tr></table>
 
 <ul>
-<li>the [<strong>Web</strong>] layer is the layer in contact with the web application user. The user interacts with the web application through web pages displayed by a browser. <strong>It is in this layer that ASP.NET MVC resides, and only in this layer;</strong></li>
-<li>the [<strong>business</strong>] layer implements the application’s business logic, such as calculating a salary or an invoice. This layer uses data from the user via the [Web] layer and from the DBMS via the [DAO] layer;</li>
-<li>The [<strong>DAO</strong>] (Data Access Objects) layer, the [<strong>ORM</strong>] (Object Relational Mapper) layer, and the ADO.NET connector manage access to data in the DBMS. The [<strong>ORM</strong>] layer acts as a bridge between the objects handled by the [DAO] layer and the rows and columns of tables in a relational database. Two ORMs are commonly used in the .NET world: <strong>NHibernate</strong> (<a href="http://sourceforge.net/projects/nhibernate/">http://sourceforge.net/projects/nhibernate/</a>) and <strong>Entity Framework</strong> (<a href="http://msdn.microsoft.com/en-us/data/ef.aspx">http://msdn.microsoft.com/en-us/data/ef.aspx</a>);</li>
-<li>the integration of these layers can be achieved using a dependency injection container such as Spring (<a href="http://www.springframework.net/">http://www.springframework.net/</a>);</li>
+  <li>The [Web] layer is the layer that interacts with the web application user. The user interacts with the web application through web pages displayed in a browser. <b>It is in this layer that ASP.NET and MVC are located, and only in this layer;</b>
+  </li>
+  <li>The [métier] layer implements the application&#x27;s business rules, such as calculating a salary or an invoice. This layer uses data from the user via the [Web] layer and from SGBD via the [DAO] layer;
+  </li>
+  <li>the [DAO] layer (Data Access Objects), the [ORM] layer (Object Relational Mapper), and the ADO connector.NET manages access to the data in SGBD. The [ORM] layer bridges the objects handled by the [DAO] layer and the rows and columns of tables in a relational database. Two ORM are commonly used in the .NET, <b>NHibernate </b>(<a href="http://sourceforge.net/projects/nhibernate/"><u><span style="color: #0563c1">http://sourceforge.net/projects/nhibernate/</span></u></a> ) and <b>Entity Framework </b>(<a href="http://msdn.microsoft.com/en-us/data/ef.aspx"><u><span style="color: #0563c1">http://msdn.microsoft.com/en-us/data/ef.aspx</span></u></a>);
+  </li>
+  <li>the integration of the layers can be achieved using a dependency injection container such as Spring (<a href="http://www.springframework.net/"><u><span style="color: #0563c1">http://www.springframework.net/</span></u></a>);
+  </li>
 </ul>
+
 <p>Most of the examples provided below will use only a single layer, the [Web] layer:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002CB000001344402A749.png" width="250" height="108" style="display:inline-block; margin:4px;width:6.62cm;height:2.85cm;" class="odt-zoomable" data-zoom-src="images/10000000000002CB000001344402A749.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002CB000001344402A749.png" width="250" height="108" style="display:inline-block; margin:4px;width:6.62cm;height:2.852cm;" class="odt-zoomable" data-zoom-src="images/10000000000002CB000001344402A749.png" /></td></tr></table>
 
 <p>However, this document will conclude with the construction of a multi-layer web application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007E50000018DC284155D.png" width="680" height="134" style="display:inline-block; margin:4px;width:17.999cm;height:3.535cm;" class="odt-zoomable" data-zoom-src="images/10000000000007E50000018DC284155D.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000007E50000018DC284155D.png" width="680" height="134" style="display:inline-block; margin:4px;width:17.999cm;height:3.537cm;" class="odt-zoomable" data-zoom-src="images/10000000000007E50000018DC284155D.png" /></td></tr></table>
 
-<p><a id="refheading99531454977699"></a></p>
-<h2 id="12-the-aspnet-mvc-development-model">1.2. The ASP.NET MVC Development Model</h2>
-<p>ASP.NET MVC implements the MVC (Model–View–Controller) architectural pattern as follows:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000718000002334AE9A6E1.png" width="680" height="211" style="display:inline-block; margin:4px;width:17.999cm;height:5.579cm;" class="odt-zoomable" data-zoom-src="images/1000000000000718000002334AE9A6E1.png" /></td></tr></table>
+<p><span id="refheading99531454977699" name="refheading99531454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="12-the-aspnet-mvc">1.2. <span style="color: #4f81bd">The ASP.NET MVC</span></h2>
+<p>ASP.NET MVC implements the so-called MVC architecture model (Model–View–Controller) as follows:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000718000002334AE9A6E1.png" width="680" height="211" style="display:inline-block; margin:4px;width:17.999cm;height:5.579cm;" class="odt-zoomable" data-zoom-src="images/1000000000000718000002334AE9A6E1.png" /></td></tr></table>
 
 <p>The processing of a client request proceeds as follows:</p>
 <ol>
-<li><strong>request</strong> - the requested URLs are in the form <em>http://machine:port/contexte/Controlleur/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;...</em> The [Front Controller] uses a configuration file to &quot;route&quot; the request to the correct controller and the correct action within that controller. To do this, it uses the [<em>Controller/Action</em>] path from the URL. The rest of the URL [<em>/param1/param2/...</em>] consists of optional parameters that will be passed to the action. The <strong>&quot;C&quot;</strong> in MVC here refers to the [Front Controller, Controller, Action] chain. If the [<em>Controller/Action</em>] path does not lead to an existing controller or action, the web server will respond that the requested URL was not found.</li>
-</ol>
-<ol start="2">
-  <li>processing
+  <li><b>request </b>- The requested URL requests are in the format <i>http://machine:port/context/Controller/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;... </i>The [Front Controller] uses a configuration file to &quot;route&quot; the request to the correct controller and the correct action within that controller. To do this, it uses the [Controlleur/Action] path from the URL. The remaining parameters in URL and [/param1/param2/...] are optional parameters that will be passed to the action. The <b>C </b>in MVC is the string [Front Controller, Contrôleur, Action]. If the path [Controlleur/Action] does not lead to an existing controller or an existing action, the web server will respond that the requested URL was not found.
+  </li>
+  <li>processing 
   </li>
 </ol>
 <ul>
-  <li>The selected action can use the parameters that the [Front Controller] passed to it. These can come from several sources:
+  <li>The selected action can use the <i>parami</i> parameters that [Front Controller] passed to it. These can come from several sources:
+    <ul>
+      <li>the [/param1/param2/...] path of the URL,
+      </li>
+      <li>the [p1=v1&amp;p2=v2] parameters from the URL<i>,</i>
+      </li>
+      <li>from parameters posted by the browser with its request;
+      </li>
+    </ul>
   </li>
-  <li>the [<i>/param1/param2/...</i>] path of the URL,
-  </li>
-  <li>the [<i>p1=v1&amp;p2=v2</i>] parameters of the URL<i>,</i>
-  </li>
-  <li>parameters posted by the browser with its request;
-  </li>
-  <li>when processing the user&#x27;s request, the action may need the [business] layer [2b]. Once the client&#x27;s request has been processed, it may trigger various responses. A classic example is:
+  <li>during the processing of the user&#x27;s request, the action may require the [métier] and [2b] layers. Once the client&#x27;s request has been processed, it may trigger various responses. A classic example is:
   </li>
   <li>an error page if the request could not be processed correctly
   </li>
   <li>a confirmation page otherwise
   </li>
-  <li>the action instructs a specific view to be displayed [3]. This view will display data known as the <b>view model</b>. This is the <b>M </b>in MVC. The action will create this M model [2c] and instruct a <b>V</b> view to be displayed [3];
+  <li>the action instructs a specific view to be displayed [3]. This view will display data known as the <b>view model</b>. This is the <b>M </b>in MVC. The action will create this model M [2c] and request that a view <b>V </b>be displayed [3];
   </li>
 </ul>
 <ol>
-  <li><b>response</b>—the selected view <b>V </b>uses the model <b>M </b>constructed by the action to initialize the dynamic parts of the HTML response it must send to the client, then sends this response.
+  <li><b>response</b>—the selected view <b>V </b>uses the model <b>M </b>constructed by the action to initialize the dynamic parts of the response HTML that it must send to the client, then sends this response.
   </li>
 </ol>
 
-<p>Now, let’s clarify the relationship between MVC web architecture and layered architecture. Depending on how we define the <strong>model</strong>, these two concepts may or may not be related. Consider a single-layer ASP.NET MVC web application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062E00000242EE335F0F.png" width="680" height="249" style="display:inline-block; margin:4px;width:17.999cm;height:6.576cm;" class="odt-zoomable" data-zoom-src="images/100000000000062E00000242EE335F0F.png" /></td></tr></table>
+<p>Now, let’s clarify the relationship between web architecture MVC and layered architecture. Depending on how the <strong>model</strong> is defined, these two concepts may or may not be related. Let’s consider a single-layer web application ASP.NET MVC:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000062E00000242EE335F0F.png" width="680" height="249" style="display:inline-block; margin:4px;width:17.999cm;height:6.576cm;" class="odt-zoomable" data-zoom-src="images/100000000000062E00000242EE335F0F.png" /></td></tr></table>
 
-<p>If we implement the [Web] layer with ASP.NET MVC, we will indeed have an MVC web architecture but not a multi-layer architecture. Here, the [Web] layer will handle everything: presentation, business logic, and data access. It is the actions that will perform this work.</p>
+<p>If we implement the [Web] layer with ASP.NET and MVC, we will indeed have a MVC web architecture but not a multi-layer architecture. Here, the [Web] layer will handle everything: presentation, business logic, and data access. These are the actions that will perform this work.</p>
 <p>Now, let’s consider a multi-layer web architecture:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007260000018CC3D6C76D.png" width="680" height="147" style="display:inline-block; margin:4px;width:17.999cm;height:3.895cm;" class="odt-zoomable" data-zoom-src="images/10000000000007260000018CC3D6C76D.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000007260000018CC3D6C76D.png" width="680" height="147" style="display:inline-block; margin:4px;width:17.999cm;height:3.895cm;" class="odt-zoomable" data-zoom-src="images/10000000000007260000018CC3D6C76D.png" /></td></tr></table>
 
-<p>The [Web] layer can be implemented without a framework and without following the MVC model. We then have a multi-layer architecture, but the Web layer does not implement the MVC model.</p>
-<p>Thus, the [Web] layer above can be implemented with ASP.NET MVC, resulting in a layered architecture with an MVC-style [Web] layer. Once this is done, we can replace this ASP.NET MVC layer with a classic ASP.NET layer (WebForms) while keeping the rest (business logic, DAO, ORM) <strong>unchanged</strong>.  We then have a layered architecture with a [Web] layer that is no longer MVC-based.</p>
-<p>In MVC, we said that the M model was that of the V view, i.e., the set of data displayed by the V view. Another definition of the M model in MVC is given:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076E0000019EAC026A07.png" width="680" height="148" style="display:inline-block; margin:4px;width:17.999cm;height:3.918cm;" class="odt-zoomable" data-zoom-src="images/100000000000076E0000019EAC026A07.png" /></td></tr></table>
+<p>The [Web] layer can be implemented without a framework and without following the MVC model. We do then have a multi-layer architecture, but the Web layer does not implement the MVC model.</p>
+<p>Thus, the [Web] layercan be implemented with ASP.NET and MVC, resulting in a layered architecture with a [Web] layer of the MVC type. Once this is done, we can replace this ASP.NET MVC layer with a standard ASP.NET layer (WebForms) while keeping the rest (business logic, DAO, ORM) <strong>unchanged</strong>.  We then have a layered architecture with a [Web] layer that is no longer of type MVC.</p>
+<p>In MVC, we stated that the M model was that of the V view, c.a.d—the set of data displayed by the V view. Another definition of the M model of MVC is provided:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000076E0000019EAC026A07.png" width="680" height="148" style="display:inline-block; margin:4px;width:17.999cm;height:3.918cm;" class="odt-zoomable" data-zoom-src="images/100000000000076E0000019EAC026A07.png" /></td></tr></table>
 
-<p>Many authors consider that what lies to the right of the [Web] layer forms the M model of MVC. To avoid ambiguity, we can refer to:</p>
+<p>Many authors consider that what is to the right of the layer [Web] forms the model M of MVC. To avoid ambiguities, we can refer to:</p>
 <ul>
   <li><b>the domain model </b>when referring to everything to the right of the [Web] layer
   </li>
@@ -791,52 +803,53 @@
   </li>
 </ul>
 
-<p>Hereinafter, the term &quot;M model&quot; will refer exclusively to the <strong>model of a</strong> V <strong>view</strong>.</p>
-<p><a id="refheading99551454977699"></a></p>
-<h2 id="13-tools-used">1.3. Tools Used</h2>
+<p>Hereinafter, the term &quot;M model&quot; will refer exclusively to the <strong>model of a view</strong> V.</p>
+<p><span id="refheading99551454977699" name="refheading99551454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="13-the-tools-used">1.3. <span style="color: #4f81bd">The tools used</span></h2>
 <p>Moving forward, we are using (as of September 2013) the Express versions of Visual Studio 2012:</p>
 <ul>
-  <li>[<a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop">http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop</a>  ] for desktop applications;
+  <li>[http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop ] <a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop">for desktop applications;</a>
   </li>
-  <li>[<a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-web">http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-Web</a> ] for web applications.
+  <li>[http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-Web ] <a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-web">for web applications.</a>
   </li>
 </ul>
 
-<p>To install the latest versions of these products, you can use Microsoft’s [Web Platform Installer] (<a href="http://www.microsoft.com/web/downloads/platform.aspx">http://www.microsoft.com/Web/downloads/platform.aspx</a>).</p>
-<p>Additionally, use Google’s <strong>Chrome</strong> browser (<a href="http://www.google.fr/intl/fr/chrome/browser/">http://www.google.fr/intl/fr/chrome/browser/</a>). Install the [<a id="advanced-rest-client"></a> Advanced Rest Client] extension ( ). Here’s how to do it:</p>
+<p>To install the latest versions of these products, you can use Microsoft’s [Web Platform Installer] (<a href="http://www.microsoft.com/web/downloads/platform.aspx"><u><span style="color: #0563c1">http://www.microsoft.com/Web/downloads/platform.aspx</span></u></a>).</p>
+<p>In addition, use Google’s <strong>Chrome</strong> browser (<a href="http://www.google.fr/intl/fr/chrome/browser/"><u><span style="color: #0563c1">http://www.google.fr/intl/fr/chrome/browser/</span></u></a>). Add the [Advanced Rest Client] extension<span id="advanced-rest-client" name="advanced-rest-client" class="odt-bookmark-anchor"></span> . You can proceed as follows:</p>
 <ul>
-  <li>Go to the [Google Web Store] (<a href="https://chrome.google.com/webstore">https://chrome.google.com/webstore</a>) using the Chrome browser;
+  <li>Go to the [Google Web store] website (<a href="https://chrome.google.com/webstore"><u><span style="color: #0563c1">https://chrome.google.com/webstore</span></u></a>) using the Chrome browser;
   </li>
   <li>search for the [Advanced Rest Client] app:
   </li>
 </ul>
 
-<p><img src="images/10000000000001B0000000D21DA44C58.png" width="302" height="147" style="width:7.999cm;height:3.889cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B0000000D21DA44C58.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001B0000000D21DA44C58.png" width="302" height="147" style="display:inline-block; margin:4px;width:7.999cm;height:3.888cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B0000000D21DA44C58.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
+
 <ul>
   <li>the app is then available for download:
   </li>
 </ul>
 
-<p><img src="images/10000000000003BB000000AE1112526C.png" width="661" height="120" style="width:17.48cm;height:3.184cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003BB000000AE1112526C.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003BB000000AE1112526C.png" width="661" height="120" style="display:inline-block; margin:4px;width:17.48cm;height:3.186cm;" class="odt-zoomable" data-zoom-src="images/10000000000003BB000000AE1112526C.png" /></td></tr></table>
+
 <ul>
-  <li>to get it, you’ll need to create a Google account. The [Google Web Store] will then ask for confirmation [1]:
+  <li>to get it, you’ll need to create a Google account. [Google Web Store] then asks for confirmation [1]:
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000083800000381099DA849.png" width="680" height="290" style="display:inline-block; margin:4px;width:17.999cm;height:7.673cm;" class="odt-zoomable" data-zoom-src="images/100000000000083800000381099DA849.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000083800000381099DA849.png" width="680" height="290" style="display:inline-block; margin:4px;width:17.999cm;height:7.675cm;" class="odt-zoomable" data-zoom-src="images/100000000000083800000381099DA849.png" /></td></tr></table>
 
 <ul>
-  <li>In [2], the added extension is available under the [Applications] option [3]. This option appears on every new tab you create (CTRL-T) in the browser.
+  <li>In [2], the added extension is available in the option [Applications] [3]. This option is displayed on every new tab you create (CTRL-T) in the browser.
   </li>
 </ul>
+<p><span id="refheading99631454977699" name="refheading99631454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="14-examples">1.4. <span style="color: #4f81bd">Examples</span></h2>
+<p>Most of the learning examples will be limited to the Web layer only:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000006370000023DEEFC5AC7.png" width="680" height="245" style="display:inline-block; margin:4px;width:17.999cm;height:6.482cm;" class="odt-zoomable" data-zoom-src="images/10000000000006370000023DEEFC5AC7.png" /></td></tr></table>
 
-<p><a id="refheading99631454977699"></a></p>
-<h2 id="14-examples">1.4. Examples</h2>
-<p>Most of the learning examples will be limited to the web layer alone:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006370000023DEEFC5AC7.png" width="680" height="245" style="display:inline-block; margin:4px;width:17.999cm;height:6.482cm;" class="odt-zoomable" data-zoom-src="images/10000000000006370000023DEEFC5AC7.png" /></td></tr></table>
-
-<p>Once this tutorial is complete, we will present a multi-layer web application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000071F000002349B70ADB8.png" width="680" height="210" style="display:inline-block; margin:4px;width:17.999cm;height:5.567cm;" class="odt-zoomable" data-zoom-src="images/100000000000071F000002349B70ADB8.png" /></td></tr></table>
+<p>Once you have completed this tutorial, we will introduce a multi-tier web application:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000071F000002349B70ADB8.png" width="680" height="210" style="display:inline-block; margin:4px;width:17.999cm;height:5.569cm;" class="odt-zoomable" data-zoom-src="images/100000000000071F000002349B70ADB8.png" /></td></tr></table>
 
 
 
